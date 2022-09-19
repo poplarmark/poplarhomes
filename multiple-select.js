@@ -2,7 +2,7 @@ var select = document.querySelector('select[multiple]');
 var selectOptions = select.querySelectorAll('option');
 
 var newSelect = document.createElement('div');
-newSelect.classList.add('selectMultiple');
+newSelect.classList.add('selectmultiple.w-select');
 var active = document.createElement('div');
 active.classList.add('active');
 var optionList = document.createElement('ul');
@@ -40,11 +40,11 @@ span.appendChild(select);
 // newSelect.appendChild(select);
 //select.style.display = "none";
 //1
-//document.querySelectorAll('.selectMultiple ul li').forEach((li) => {
-document.querySelector('.selectMultiple ul').addEventListener('click', (e) => {
+//document.querySelectorAll('.selectmultiple.w-select ul li').forEach((li) => {
+document.querySelector('.selectmultiple.w-select ul').addEventListener('click', (e) => {
     let li = e.target.closest('li');
     if(!li){return;}
-    let select = li.closest('.selectMultiple');
+    let select = li.closest('.selectmultiple.w-select');
     if(!select.classList.contains('clicked')){
         select.classList.add('clicked');
         if(li.previousElementSibling){
@@ -112,10 +112,10 @@ document.querySelector('.selectMultiple ul').addEventListener('click', (e) => {
     }
 });
 //2
-//document.querySelectorAll('.selectMultiple > div a').forEach((a) => {
-document.querySelector('.selectMultiple > div').addEventListener('click', (e) => {
+//document.querySelectorAll('.selectmultiple.w-select > div a').forEach((a) => {
+document.querySelector('.selectmultiple.w-select > div').addEventListener('click', (e) => {
     let a = e.target.closest('a');
-    let select = e.target.closest('.selectMultiple');
+    let select = e.target.closest('.selectmultiple.w-select');
     if(!a){return;}
     a.className = '';
     a.classList.add('remove');
@@ -170,8 +170,8 @@ document.querySelector('.selectMultiple > div').addEventListener('click', (e) =>
 });
 //});
 //3
-document.querySelectorAll('.selectMultiple > div .arrow, .selectMultiple > div span').forEach((el) => {
+document.querySelectorAll('.selectmultiple.w-select > div .arrow, .selectmultiple.w-select > div span').forEach((el) => {
 	el.addEventListener('click', (e) => {
-		el.closest('.selectMultiple').classList.toggle('open');
+		el.closest('.selectmultiple.w-select').classList.toggle('open');
 	});
 });
