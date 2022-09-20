@@ -1,15 +1,17 @@
+/*Enclose these code inside a <script></script> tag*/
+
 var select = document.querySelector('select[multiple]');
 var selectOptions = select.querySelectorAll('option');
 
 var newSelect = document.createElement('div');
-newSelect.classList.add('selectmultiple.w-select');
+newSelect.classList.add('w-select');
 var active = document.createElement('div');
 active.classList.add('active');
 var optionList = document.createElement('ul');
 var placeholder = select.dataset.placeholder;
 
 var span = document.createElement('span');
-span.innerText = placeholder;
+span.innerText = "Select city/cities";
 active.appendChild(span);
 
 selectOptions.forEach((option) => {
@@ -40,11 +42,11 @@ span.appendChild(select);
 // newSelect.appendChild(select);
 //select.style.display = "none";
 //1
-//document.querySelectorAll('.selectmultiple.w-select ul li').forEach((li) => {
-document.querySelector('.selectmultiple.w-select ul').addEventListener('click', (e) => {
+//document.querySelectorAll('.w-select ul li').forEach((li) => {
+document.querySelector('.w-select ul').addEventListener('click', (e) => {
     let li = e.target.closest('li');
     if(!li){return;}
-    let select = li.closest('.selectmultiple.w-select');
+    let select = li.closest('.w-select');
     if(!select.classList.contains('clicked')){
         select.classList.add('clicked');
         if(li.previousElementSibling){
@@ -112,10 +114,10 @@ document.querySelector('.selectmultiple.w-select ul').addEventListener('click', 
     }
 });
 //2
-//document.querySelectorAll('.selectmultiple.w-select > div a').forEach((a) => {
-document.querySelector('.selectmultiple.w-select > div').addEventListener('click', (e) => {
+//document.querySelectorAll('.w-select > div a').forEach((a) => {
+document.querySelector('.w-select > div').addEventListener('click', (e) => {
     let a = e.target.closest('a');
-    let select = e.target.closest('.selectmultiple.w-select');
+    let select = e.target.closest('.w-select');
     if(!a){return;}
     a.className = '';
     a.classList.add('remove');
@@ -170,8 +172,8 @@ document.querySelector('.selectmultiple.w-select > div').addEventListener('click
 });
 //});
 //3
-document.querySelectorAll('.selectmultiple.w-select > div .arrow, .selectmultiple.w-select > div span').forEach((el) => {
+document.querySelectorAll('.w-select > div .arrow, .w-select > div span').forEach((el) => {
 	el.addEventListener('click', (e) => {
-		el.closest('.selectmultiple.w-select').classList.toggle('open');
+		el.closest('.w-select').classList.toggle('open');
 	});
 });

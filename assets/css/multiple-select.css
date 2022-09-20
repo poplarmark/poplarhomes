@@ -1,29 +1,40 @@
-.w-slider-nav-invert>div {background-color: #DFDFDF;}
-.w-slider-nav-invert>div.w-active {background-color: #f80;}
-.w-slider-dot {width: 1.25em; height: 1.25em;}
+/*Enclose these code inside a <style></style> tag*/
 
-.selectmultiple.w-select {
-  width: 240px;
-  position: relative;
+.notShown.shown em {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Ein03;
 }
-.selectmultiple.w-select select {
+
+.w-select {
+  width: auto;
+  position: relative;
+  height: auto; 
+  padding: 0; 
+  margin-bottom: 0;
+  border: none;
+}
+.w-select select {
   display: none;
 }
-.selectmultiple.w-select > div {
+.w-select > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
   position: relative;
   z-index: 2;
-  padding: 8px 12px 2px 12px;
   border-radius: 8px;
   background: #fff;
-  font-size: 14px;
-  min-height: 44px;
-  box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.12);
+  min-height: 60px;
+  border: 2px solid #000;
+  border-radius: 5px;
   transition: box-shadow 0.3s ease;
+  max-width: 335px;
 }
-.selectmultiple.w-select > div:hover {
-  box-shadow: 0 4px 24px -1px rgba(22, 42, 90, 0.16);
+.w-select > div:hover {
 }
-.selectmultiple.w-select > div .arrow {
+.w-select > div .arrow {
   right: 1px;
   top: 0;
   bottom: 0;
@@ -31,7 +42,7 @@
   width: 28px;
   position: absolute;
 }
-.selectmultiple.w-select > div .arrow:before, .selectmultiple.w-select > div .arrow:after {
+.w-select > div .arrow:before, .w-select > div .arrow:after {
   content: "";
   position: absolute;
   display: block;
@@ -41,30 +52,33 @@
   top: 43%;
   transition: all 0.3s ease;
 }
-.selectmultiple.w-select > div .arrow:before {
+.w-select > div .arrow:before {
   right: 12px;
   transform: rotate(-130deg);
 }
-.selectmultiple.w-select > div .arrow:after {
+.w-select > div .arrow:after {
   left: 9px;
   transform: rotate(130deg);
 }
-.selectmultiple.w-select > div span {
+.w-select > div span {
   color: #99A3BA;
   display: block;
   position: absolute;
   left: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Eina03', sans-serif;
   cursor: pointer;
-  top: 8px;
+  top: 14px;
   line-height: 28px;
   transition: all 0.3s ease;
 }
-.selectmultiple.w-select > div span.hide {
+.w-select > div span.hide {
   opacity: 0;
   visibility: hidden;
   transform: translate(-4px, 0);
 }
-.selectmultiple.w-select > div a {
+.w-select > div a {
   position: relative;
   padding: 0 24px 6px 8px;
   line-height: 28px;
@@ -73,12 +87,12 @@
   vertical-align: top;
   margin: 0 6px 0 0;
 }
-.selectmultiple.w-select > div a em {
+.w-select > div a em {
   font-style: normal;
   display: block;
   white-space: nowrap;
 }
-.selectmultiple.w-select > div a:before {
+.w-select > div a:before {
   content: "";
   left: 0;
   top: 0;
@@ -90,7 +104,7 @@
   z-index: -1;
   border-radius: 4px;
 }
-.selectmultiple.w-select > div a i {
+.w-select > div a i {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -99,7 +113,7 @@
   height: 28px;
   display: block;
 }
-.selectmultiple.w-select > div a i:before, .selectmultiple.w-select > div a i:after {
+.w-select > div a i:before, .w-select > div a i:after {
   content: "";
   display: block;
   width: 2px;
@@ -107,70 +121,70 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  background: #4D18FF;
+  background: #ff8800;
   border-radius: 1px;
 }
-.selectmultiple.w-select > div a i:before {
+.w-select > div a i:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.selectmultiple.w-select > div a i:after {
+.w-select > div a i:after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.selectmultiple.w-select > div a.notShown {
+.w-select > div a.notShown {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.selectmultiple.w-select > div a.notShown:before {
+.w-select > div a.notShown:before {
   width: 28px;
   transition: width 0.45s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0.2s;
 }
-.selectmultiple.w-select > div a.notShown i {
+.w-select > div a.notShown i {
   opacity: 0;
   transition: all 0.3s ease 0.3s;
 }
-.selectmultiple.w-select > div a.notShown em {
+.w-select > div a.notShown em {
   opacity: 0;
   transform: translate(-6px, 0);
   transition: all 0.4s ease 0.3s;
 }
-.selectmultiple.w-select > div a.notShown.shown {
+.w-select > div a.notShown.shown {
   opacity: 1;
 }
-.selectmultiple.w-select > div a.notShown.shown:before {
+.w-select > div a.notShown.shown:before {
   width: 100%;
 }
-.selectmultiple.w-select > div a.notShown.shown i {
+.w-select > div a.notShown.shown i {
   opacity: 1;
 }
-.selectmultiple.w-select > div a.notShown.shown em {
+.w-select > div a.notShown.shown em {
   opacity: 1;
   transform: translate(0, 0);
 }
-.selectmultiple.w-select > div a.remove {
+.w-select > div a.remove {
   pointer-events: none;
 }
-.selectmultiple.w-select > div a.remove:before {
+.w-select > div a.remove:before {
   width: 28px;
   transition: width 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0s;
 }
-.selectmultiple.w-select > div a.remove i {
+.w-select > div a.remove i {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-.selectmultiple.w-select > div a.remove em {
+.w-select > div a.remove em {
   opacity: 0;
   transform: translate(-12px, 0);
   transition: all 0.4s ease 0s;
 }
-.selectmultiple.w-select > div a.remove.disappear {
+.w-select > div a.remove.disappear {
   opacity: 0;
   transition: opacity 0.5s ease 0s;
 }
-.selectmultiple.w-select > ul {
+.w-select > ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 16px;
+  font-size: 18px;
   z-index: 1;
   position: absolute;
   top: 100%;
@@ -184,7 +198,8 @@
   box-shadow: 0 12px 20px rgba(22, 42, 90, 0.08);
   transition: all 0.4s ease, transform 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44), filter 0.3s ease 0.2s;
 }
-.selectmultiple.w-select > ul li {
+.w-select > ul li {
+  font-family: 'Eina03', sans-serif;
   color: #1E2330;
   background: #fff;
   padding: 12px 16px;
@@ -193,23 +208,23 @@
   position: relative;
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease 0.3s, opacity 0.5s ease 0.3s, border-radius 0.3s ease;
 }
-.selectmultiple.w-select > ul li:first-child {
+.w-select > ul li:first-child {
   border-radius: 8px 8px 0 0;
 }
-.selectmultiple.w-select > ul li:first-child:last-child {
+.w-select > ul li:first-child:last-child {
   border-radius: 8px;
 }
-.selectmultiple.w-select > ul li:last-child {
+.w-select > ul li:last-child {
   border-radius: 0 0 8px 8px;
 }
-.selectmultiple.w-select > ul li:last-child:first-child {
+.w-select > ul li:last-child:first-child {
   border-radius: 8px;
 }
-.selectmultiple.w-select > ul li:hover {
-  background: #4D18FF;
+.w-select > ul li:hover {
+  background: #ff8800;
   color: #fff;
 }
-.selectmultiple.w-select > ul li:after {
+.w-select > ul li:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -222,42 +237,42 @@
   transform: scale(1, 1) translate(-50%, -50%);
   transform-origin: 50% 50%;
 }
-.selectmultiple.w-select > ul li.beforeRemove {
+.w-select > ul li.beforeRemove {
   border-radius: 0 0 8px 8px;
 }
-.selectmultiple.w-select > ul li.beforeRemove:first-child {
+.w-select > ul li.beforeRemove:first-child {
   border-radius: 8px;
 }
-.selectmultiple.w-select > ul li.afterRemove {
+.w-select > ul li.afterRemove {
   border-radius: 8px 8px 0 0;
 }
-.selectmultiple.w-select > ul li.afterRemove:last-child {
+.w-select > ul li.afterRemove:last-child {
   border-radius: 8px;
 }
-.selectmultiple.w-select > ul li.remove {
+.w-select > ul li.remove {
   transform: scale(0);
   opacity: 0;
 }
-.selectmultiple.w-select > ul li.remove:after {
+.w-select > ul li.remove:after {
   -webkit-animation: ripple 0.4s ease-out;
           animation: ripple 0.4s ease-out;
 }
-.selectmultiple.w-select > ul li.show {
+.w-select > ul li.show {
   transform: scale(0);
   opacity: 0;
   -webkit-animation: scale-up 0.35s ease forwards;
           animation: scale-up 0.35s ease forwards;
 }
-.selectmultiple.w-select.open > div {
+.w-select.open > div {
   box-shadow: 0 4px 20px -1px rgba(22, 42, 90, 0.12);
 }
-.selectmultiple.w-select.open > div .arrow:before {
+.w-select.open > div .arrow:before {
   transform: rotate(-50deg);
 }
-.selectmultiple.w-select.open > div .arrow:after {
+.w-select.open > div .arrow:after {
   transform: rotate(50deg);
 }
-.selectmultiple.w-select.open > ul {
+.w-select.open > ul {
   transform: translate(0, 12px) scale(1);
   opacity: 1;
   visibility: visible;
@@ -324,17 +339,7 @@ html {
 *:before, *:after {
   box-sizing: inherit;
 }
-
-body {
-  min-height: 100vh;
-  font-family: Roboto, Arial;
-  color: #ADAFB6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-}
-body .selectmultiple.w-select {
+body .w-select {
   margin-top: -12%;
 }
 body .dribbble {
