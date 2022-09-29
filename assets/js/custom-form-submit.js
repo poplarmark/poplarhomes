@@ -1,6 +1,4 @@
-var Webflow = Webflow || [];
-Webflow.push(function() {  
-  // unbind webflow form handling (keep this if you only want to affect specific forms)
+// unbind webflow form handling (keep this if you only want to affect specific forms)
   $(document).off('submit');
 
   /* Any form on the page */
@@ -44,4 +42,3 @@ Webflow.push(function() {
       $submit.val(buttonText);
     });
   });
-});
