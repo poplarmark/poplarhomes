@@ -29,7 +29,7 @@
       if (formRedirect) { window.location = formRedirect; return; }
 
     	$form
-      	.hide() // optional hiding of form
+      	 // .hide() optional hiding of form
     		.siblings('.w-form-done').show() // Show success
       	.siblings('.w-form-fail').hide(); // Hide failure
     })
