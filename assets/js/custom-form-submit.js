@@ -1,3 +1,4 @@
+<script>
 // unbind webflow form handling (keep this if you only want to affect specific forms)
   $(document).off('submit');
 
@@ -42,3 +43,4 @@
       $submit.val(buttonText);
     });
   });
+</script>
