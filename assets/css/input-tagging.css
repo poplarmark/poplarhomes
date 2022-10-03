@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     align-items: center;
-    overflow-x: auto;
+    overflow-x: none;
 }
 
 .form-container .tag {
