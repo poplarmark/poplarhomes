@@ -5,10 +5,11 @@
     height: 100%;
     width: 100%;
     cursor: text;
+    border-radius: 5px;
 }
 
 .bootstrap-tagsinput:focus {
-   border-color: #ff8800;
+   outline: solid 1px #ff8800;
 }
 
 .bootstrap-tagsinput input {
