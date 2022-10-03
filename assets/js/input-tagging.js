@@ -1,6 +1,6 @@
 <script>
-const tagContainer = document.querySelector('.tag-container');
-const input = document.querySelector('.tag-container input');
+const tagContainer = document.querySelector('.form-container');
+const input = document.querySelector('.form-container input');
 
 let tags = [];
 
