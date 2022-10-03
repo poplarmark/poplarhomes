@@ -51,4 +51,3 @@ document.addEventListener('click', (e) => {
 })
 
 input.focus();
-<script/>
