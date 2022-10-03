@@ -1,8 +1,14 @@
-<style>.form-container {
+<style>
+.form-container {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     overflow-x: auto;
+}
+
+.tag {
+    position: absolute;
+    bottom: 10px;
 }
 
 .form-container .tag {
@@ -27,5 +33,4 @@
 .form-container input {
     flex: 1;
 }
-
 </style>
