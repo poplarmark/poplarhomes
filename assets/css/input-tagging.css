@@ -6,11 +6,6 @@
     overflow-x: auto;
 }
 
-.tag {
-    position: absolute;
-    bottom: 10px;
-}
-
 .form-container .tag {
     height: 30px;
     margin: 5px;
