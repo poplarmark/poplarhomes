@@ -1,3 +1,4 @@
+<script>
 const tagContainer = document.querySelector('.form-container');
 const input = document.querySelector('.form-container input');
 
@@ -51,3 +52,4 @@ document.addEventListener('click', (e) => {
 })
 
 input.focus();
+</script>
