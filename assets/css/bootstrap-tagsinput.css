@@ -1,7 +1,7 @@
 <style>
 
 .form-container:focus {
-    background-color: #ff7300;
+    border: 1px solid #ff7300;
 }
 
 .bootstrap-tagsinput {
