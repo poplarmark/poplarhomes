@@ -10,6 +10,7 @@ function createTag(label) {
   const span = document.createElement('span');
   span.innerHTML = label;
   const closeIcon = document.createElement('i');
+  closeIcon.innerHTML = 'f00d';
   closeIcon.setAttribute('class', 'fa-solid fa-xmark');
   closeIcon.setAttribute('data-item', label);
   div.appendChild(span);

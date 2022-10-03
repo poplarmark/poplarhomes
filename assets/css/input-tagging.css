@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    align-items: center;
     overflow-x: auto;
 }
 
@@ -22,6 +23,7 @@
 }
 
 .tag i {
+    font-family: 'Ein03','sans-serif';
     font-size: 16px;
     margin-left: 5px;
 }
