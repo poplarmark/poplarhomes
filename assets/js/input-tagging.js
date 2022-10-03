@@ -1,4 +1,3 @@
-<script>
 const tagContainer = document.querySelector('.form-container');
 const input = document.querySelector('.form-container input');
 
@@ -11,6 +10,7 @@ function createTag(label) {
   span.innerHTML = label;
   const closeIcon = document.createElement('i');
   closeIcon.innerHTML = 'close';
+  closeIcon.setAttribute('class', 'material-icons');
   closeIcon.setAttribute('data-item', label);
   div.appendChild(span);
   div.appendChild(closeIcon);
