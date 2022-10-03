@@ -9,7 +9,7 @@
     border-radius: 5px;
 }
 
-.bootstrap-tagsinput {
+.bootstrap-tagsinput:focus {
     outline: 1px solid #ff7300;
 }
 
