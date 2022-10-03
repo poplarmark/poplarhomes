@@ -1,5 +1,4 @@
 <style>
-/*! jQuery v2.1.4 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !(function (a, b) {
     "object" == typeof module && "object" == typeof module.exports
         ? (module.exports = a.document
