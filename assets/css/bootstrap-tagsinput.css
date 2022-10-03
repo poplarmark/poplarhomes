@@ -1,4 +1,9 @@
 <style>
+
+.form-container:focus {
+    background-color: #ff7300;
+}
+
 .bootstrap-tagsinput {
     padding-left: 20px;
     padding-right: 20px;
@@ -6,10 +11,6 @@
     width: 100%;
     cursor: text;
     border-radius: 5px;
-}
-
-.bootstrap-tagsinput:focus {
-   outline: solid 1px #ff8800;
 }
 
 .bootstrap-tagsinput input {
