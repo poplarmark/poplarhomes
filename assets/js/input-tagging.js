@@ -32,7 +32,7 @@ function addTags() {
 }
 
 input.addEventListener('keyup', (e) => {
-    if (e.key === 'Space') {
+    if (e.key === 'Space' || e.keyCode == 32) {
       e.target.value.split(',').forEach(tag => {
         tags.push(tag);  
       });
