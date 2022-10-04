@@ -32,6 +32,11 @@
       	 // .hide() optional hiding of form
     		.siblings('.w-form-done').show() // Show success
       	.siblings('.w-form-fail').hide(); // Hide failure
+        .submit(function (event) { //reload?
+          setTimeout(function () {
+            location.reload(true);
+          }, 3000);
+        });
     })
     .fail((res) => {
       $form
@@ -43,4 +48,3 @@
       $submit.val(buttonText);
     });
   });
-</script>
