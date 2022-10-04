@@ -7,13 +7,6 @@
     --error-color: #e74c3c;
 }
 
-
-.form-control{
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
 .form-control label{
     color:#777;
     display: block;
