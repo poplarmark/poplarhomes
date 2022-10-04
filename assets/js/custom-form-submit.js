@@ -43,4 +43,10 @@
       $submit.val(buttonText);
     });
   });
+
+  $(document).ready(function() {
+    $("#modal-contact__body").submit(function(e) {
+        $("#blk-form__modal-body").hide();
+    });
+});
 </script>
