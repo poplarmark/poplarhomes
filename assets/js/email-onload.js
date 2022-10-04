@@ -11,11 +11,11 @@ document
     emailjs.sendForm(serviceID, templateID, this).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
-        alert("SUCCESS!");
+        // alert("SUCCESS!");
       },
       (error) => {
         console.log("FAILED...", error);
-        alert("FAILED...", error);
+        // alert("FAILED...", error);
       }
     );
   });
