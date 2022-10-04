@@ -10,7 +10,8 @@
 }
 
 .bootstrap-tagsinput.focus {
-    border: 10px solid #ff7300;
+    border: 1px solid #ff7300;
+    outline: 1px solid #ff7300;
 }
 
 .bootstrap-tagsinput input {
