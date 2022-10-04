@@ -43,5 +43,4 @@
       $submit.val(buttonText);
     });
   });
-  
 </script>
