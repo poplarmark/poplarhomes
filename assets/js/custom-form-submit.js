@@ -41,7 +41,6 @@
     .always(() => {
       // Reset text
       $submit.val(buttonText);
-      $form.Reset();
     });
   });
 </script>
