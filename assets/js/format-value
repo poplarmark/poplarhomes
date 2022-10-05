@@ -23,7 +23,7 @@ $(document).on("keypress", ".format-value", function (e) {
     }
   });
   
-  $(document).ready(function(){
-    $('.format-value').focus();
-  })
+//   $(document).ready(function(){
+//     $('.format-value').focus();
+//   })
 </script>
