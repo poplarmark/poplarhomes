@@ -1,5 +1,5 @@
 <script type="text/javascript">
-const cardNumber = document.getElementById("cardNumber");
+const cardNumber = document.getElementByClassName("input-phone");
 
 cardNumber.oninput = (e) => {
   e.target.value = patternMatch({
