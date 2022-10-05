@@ -1,5 +1,5 @@
 <script type="text/javascript">
-const phone = document.getElementByClassName("input-phone")
+const phone = document.getElementById("input__telephone")
 
 phone.oninput = (e) => {
   e.target.value = autoFormatPhoneNumber(e.target.value)
