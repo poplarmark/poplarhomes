@@ -22,8 +22,4 @@ $(document).on("keypress", ".format-value", function (e) {
       this.value = val;
     }
   });
-  
-//   $(document).ready(function(){
-//     $('.format-value').focus();
-//   })
 </script>
