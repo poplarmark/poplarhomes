@@ -1,49 +1,29 @@
 <script type="text/javascript">
-const cardNumber = document.getElementByClassName("input-phone");
+const phone = document.getElementById("input-phone")
 
-cardNumber.oninput = (e) => {
-  e.target.value = patternMatch({
-      input: e.target.value,
-      template: "xxxx xxxx xxxx xxxx",
-   });
-};
+phone.oninput = (e) => {
+  e.target.value = autoFormatPhoneNumber(e.target.value)
+}
 
-function patternMatch({
-  input,
-  template
-}) {
+function autoFormatPhoneNumber(phoneNumberString) {
   try {
+    var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
+    var match = cleaned.match(/^(1|)?(\d{0,3})?(\d{0,3})?(\d{0,4})?$/);
+    var intlCode = match[1] ? "+1 " : "";
+    return [intlCode, 
+            match[2] ? "(": "",
+            match[2], 
+            match[3] ? ") ": "",
+            match[3],
+            match[4] ? "-": "",
+            match[4]].join("")
     
-
-    let j = 0;
-    let plaintext = "";
-    let countj = 0;
-    while (j < template.length) {
-      // code block to be
-      
-      if (countj > input.length - 1) {
-        template = template.substring(0, j);
-        break;
-      }
-
-      if (template[j] == input[j]) {
-        j++;
-        countj++;
-        continue;
-      }
-
-      if (template[j] == "x") {
-        template = template.substring(0, j) + input[countj] + template.substring(j + 1);
-        plaintext = plaintext + input[countj];
-        countj++;
-      }
-      j++;
-    }
-
-    return template
- 
-  } catch {
-    return ""
+  } catch(err) {
+    return "";
   }
 }
+
+console.log(autoFormatPhoneNumber("+12345678900")); // => "+1 (234) 567-8900"
+
+console.log(autoFormatPhoneNumber("2345678900")); // => "(234) 567-8900"
 </script>
