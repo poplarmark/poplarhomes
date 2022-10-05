@@ -22,8 +22,4 @@ function autoFormatPhoneNumber(phoneNumberString) {
     return "";
   }
 }
-
-console.log(autoFormatPhoneNumber("+12345678900")); // => "+1 (234) 567-8900"
-
-console.log(autoFormatPhoneNumber("2345678900")); // => "(234) 567-8900"
 </script>
