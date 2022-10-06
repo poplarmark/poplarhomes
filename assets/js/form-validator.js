@@ -69,5 +69,6 @@ form.addEventListener('submit',function(e) {
     checkRequired([businessName, firstName, lastName, position, email, managedDoors, averageRents, monthlyDoorFee, cities]);
     checkEmail(email);
     checkMobile(mobile);
+    return;
 });
 </script>
