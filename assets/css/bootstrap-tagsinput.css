@@ -27,12 +27,12 @@
 
 .bootstrap-tagsinput.form-control input::placeholder {
     color: #777;
-    opacity: .85;
+    opacity: .5;
 }
 
 .bootstrap-tagsinput.form-control input::-moz-placeholder {
     color: #777;
-    opacity: .85;
+    opacity: .5;
 }
 
 .bootstrap-tagsinput.form-control input:-ms-input-placeholder {
