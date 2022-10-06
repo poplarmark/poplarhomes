@@ -4,20 +4,20 @@
     --error-color: #e74c3c;
 }
 
-.form-control.success input {
+.form-wrapper.success input {
     border-color: var(--succes-color);
 }
 
-.form-control.error input {
+.form-wrapper.error input {
     border-color: var(--error-color);    
 }
 
-.form-control .form-alert{
+.form-wrapper .form-alert{
     color: var(--error-color);
     visibility: hidden;
 }
 
-.form-control.error .form-alert{
+.form-wrapper.error .form-alert{
     visibility: visible;
 }
 </style>

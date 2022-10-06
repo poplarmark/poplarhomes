@@ -15,7 +15,7 @@ const cities = document.getElementById('cities');
 //Show input error messages
 function showError(input, message) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control error';
+    formControl.className = 'form-wrapper error';
     const form_alert = formControl.querySelector('.form-alert');
     form_alert.innerText = message;
 }
@@ -23,7 +23,7 @@ function showError(input, message) {
 //show success colour
 function showSucces(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
+    formControl.className = 'form-wrapper success';
 }
 
 //check email is valid
