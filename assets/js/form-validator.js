@@ -1,5 +1,5 @@
 <script>
-const webform = document.getElementById("#form__indication");
+const webform = document.getElementById("form__indication");
 const businessname = document.getElementsByName("business-name");
 const firstname = document.getElementsByName("first-name");
 const lastname = document.getElementsByName("last-name");
