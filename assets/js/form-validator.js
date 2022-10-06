@@ -1,15 +1,15 @@
 <script>
 const form = document.getElementById('form__indication');
-const businessName = document.getElementById('business-name');
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
-const position = document.getElementById('position');
-const mobile = document.getElementById('telephone');
-const email = document.getElementById('email');
-const managedDoors = document.getElementById('managed-doors');
-const averageRents = document.getElementById('average-rents');
-const monthlyDoorFee = document.getElementById('monthly-door-fee');
-const cities = document.getElementById('cities');
+const businessName = document.getElementById('input__business-name');
+const firstName = document.getElementById('input__first-name');
+const lastName = document.getElementById('input__last-name');
+const position = document.getElementById('input__position');
+const mobile = document.getElementById('input__telephone');
+const email = document.getElementById(input__email');
+const managedDoors = document.getElementById('input__managed-doors');
+const averageRents = document.getElementById('input__average-rents');
+const monthlyDoorFee = document.getElementById('input__monthly-door-fee');
+const cities = document.getElementById('input__cities');
 
 //Show input error messages
 function showError(input, message) {
@@ -66,7 +66,7 @@ function getFieldName(input) {
 form.addEventListener('submit',function(e) {
     e.preventDefault();
 
-    checkRequired([businessName, firstName, lastName, position, email, mobile, managedDoors, averageRents, monthlyDoorFee, cities]);
+    checkRequired([businessName, firstName, lastName, position, email, managedDoors, averageRents, monthlyDoorFee, cities]);
     checkEmail(email);
     checkMobile(mobile);
 });
