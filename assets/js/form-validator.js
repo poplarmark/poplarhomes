@@ -1,4 +1,4 @@
-const form = document.getElementById('form__indication');
+<script>const form = document.getElementById('form__indication');
 const firstname = document.getElementById('input__first-name');
 const lastname = document.getElementById('input__last-name');
 const telephone = document.getElementById('input__telephone');
@@ -67,4 +67,4 @@ form.addEventListener('submit',function(e) {
     checkLength(firstname,2,35);
     checkLength(firstname,2,35);
     checkEmail(email);
-});
+});</script>
