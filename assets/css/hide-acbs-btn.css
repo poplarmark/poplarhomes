@@ -1,4 +1,1 @@
-.acsb-trigger, .acsb-trigger-icon{
-    display:none!important;
-    visibility:hidden!important;
-}
+<style>.acsb-trigger, .acsb-trigger-icon{display:none!important;visibility:hidden!important;}</style>
