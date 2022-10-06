@@ -1,5 +1,5 @@
-<script type="text/javascript">
-const form = document.getElementById('blk-form__inidication-body');
+<script>
+const form = document.getElementById('form__indication');
 const businessName = document.getElementById('business-name');
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
@@ -47,15 +47,15 @@ function checkMobile(input) {
 
 
 //checkRequired fields
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
-        }else {
-            showSucces(input);
-        }
-    });
-}
+// function checkRequired(inputArr) {
+//     inputArr.forEach(function(input){
+//         if(input.value.trim() === ''){
+//             showError(input,`${getFieldName(input)} is required`)
+//         }else {
+//             showSucces(input);
+//         }
+//     });
+// }
 
 //get FieldName
 function getFieldName(input) {
@@ -66,7 +66,7 @@ function getFieldName(input) {
 form.addEventListener('submit',function(e) {
     e.preventDefault();
 
-    checkRequired([businessName, firstName, lastName, position, email, managedDoors, averageRents, monthlyDoorFee, cities]);
+    // checkRequired([businessName, firstName, lastName, position, email, mobile, managedDoors, averageRents, monthlyDoorFee, cities]);
     checkEmail(email);
     checkMobile(mobile);
 });
