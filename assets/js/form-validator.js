@@ -1,76 +1,34 @@
-<script>
+const webform = document.getElementById("#form__indication");
+const businessname = document.getElementsByName("business-name");
+const firstname = document.getElementsByName("first-name");
+const lastname = document.getElementsByName("last-name");
+const position = document.getElementsByName("position");
+const telephone = document.getElementsByName("telephone");
+const website = document.getElementsByName("website");
+const email = document.getElementsByName("email");
+const managed_doors = document.getElementsByName("managed-doors");
+const average_rents = document.getElementsByName("average-rents");
+const monthly_door_fee = document.getElementsByName("monthly-door-fee");
+const cities = document.getElementsByName("cities");
 
-const form = document.getElementById('form__indication');
-const firstname = document.getElementById('input__first-name');
-const lastname = document.getElementById('input__last-name');
-const telephone = document.getElementById('input__telephone');
-const email = document.getElementById('input__email');
-const manageddoors = document.getElementById('input__managed-doors');
-const averagerents = document.getElementById('input__average-rents');
-const monthlydoorfee = document.getElementById('input__monthly-door-fee');
+webform.addEventListener("submit", submitForm);
 
-//Show input error messages
-function showError(input, message) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control error';
-    const small = formControl.querySelector('small');
-    small.innerText = message;
+function submitForm(e) {
+  e.preventDefault();
+
+  const businessnameValue = businessname.value;
+  const firstnameValue = firstname.value;
+  const lastnameValue = lastname.value;
+
+  if (businessnameValue === "") {
+    businessname.style.border = "1px solid red"
+  }
+
+  if (firstnameValue === "") {
+    firstname.style.border = "1px solid red";
+  }
+
+  if (lastnameValue === "") {
+    lastname.style.border = "1px solid red";
+  }
 }
-
-//show success colour
-function showSucces(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control success';
-}
-
-//check email is valid
-function checkEmail(input) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(re.test(input.value.trim())) {
-        showSucces(input)
-    }else {
-        showError(input,'Email is not invalid');
-    }
-}
-
-
-//checkRequired fields
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
-        }else {
-            showSucces(input);
-        }
-    });
-}
-
-
-//check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
-    }else {
-        showSucces(input);
-    }
-}
-
-//get FieldName
-function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-
-//Event Listeners
-form.addEventListener('submit',function(e) {
-    e.preventDefault();
-
-    checkRequired([firstname, lastname, telephone, email, manageddoors, averagerents, monthlydoorfee]);
-    checkLength(firstname,2,35);
-    checkLength(firstname,2,35);
-    checkEmail(email);
-});
-
-</script>
