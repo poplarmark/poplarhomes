@@ -7,11 +7,11 @@
     --error-color: #e74c3c;
 }
 
-.form-control.success input {
+.form-wrapper.success input {
     border-color: var(--succes-color);
 }
 
-.form-control.error input {
+.form-wrapper.error input {
     border-color: var(--error-color);    
 }
 

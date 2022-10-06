@@ -1,4 +1,5 @@
-<script>const form = document.getElementById('form__indication');
+<script>
+const form = document.getElementById('form__indication');
 const firstname = document.getElementById('input__first-name');
 const lastname = document.getElementById('input__last-name');
 const telephone = document.getElementById('input__telephone');
@@ -10,13 +11,13 @@ const monthlydoorfee = document.getElementById('input__monthly-door-fee');
 //Show input error messages
 function showError(input, message) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control error';
+    formControl.className = 'form-wrapper error';
 }
 
 //show success colour
 function showSucces(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
+    formControl.className = 'form-wrapper success';
 }
 
 //check email is valid
