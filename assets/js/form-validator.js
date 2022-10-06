@@ -1,6 +1,5 @@
 <script>
 const form = document.getElementById('form__indication');
-const username = document.getElementById('username');
 const businessName = document.getElementById('business-name');
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
