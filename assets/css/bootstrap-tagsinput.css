@@ -25,9 +25,14 @@
     max-width: inherit;
 }
 
+.bootstrap-tagsinput.form-control input::placeholder {
+    color: #777;
+    opacity: .85;
+}
+
 .bootstrap-tagsinput.form-control input::-moz-placeholder {
     color: #777;
-    opacity: .05;
+    opacity: .85;
 }
 
 .bootstrap-tagsinput.form-control input:-ms-input-placeholder {
