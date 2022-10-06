@@ -1,3 +1,4 @@
+<script>
 const webform = document.getElementById("#form__indication");
 const businessname = document.getElementsByName("business-name");
 const firstname = document.getElementsByName("first-name");
@@ -32,3 +33,4 @@ function submitForm(e) {
     lastname.style.border = "1px solid red";
   }
 }
+</script>
