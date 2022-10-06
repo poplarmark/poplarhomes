@@ -1,5 +1,5 @@
-<script>
-const form = document.getElementById('form__indication');
+<script type="text/javascript">
+const form = document.getElementById('blk-form__inidication-body');
 const businessName = document.getElementById('business-name');
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
