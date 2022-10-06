@@ -1,5 +1,6 @@
 <script>
 const form = document.getElementById('form__indication');
+const business = document.getElementById('input__business-name');
 const firstname = document.getElementById('input__first-name');
 const lastname = document.getElementById('input__last-name');
 const telephoney = document.getElementById('input__telephone');
@@ -11,13 +12,13 @@ const monthlydoorfee = document.getElementById('input__monthly-door-fee');
 //Show input error messages
 function showError(input, message) {
     const formControl = input.parentElement;
-    formControl.className = 'form-wrapper error';
+    formControl.className = 'form-control error';
 }
 
 //show success colour
 function showSucces(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-wrapper success';
+    formControl.className = 'form-control success';
 }
 
 //check email is valid
@@ -26,7 +27,7 @@ function checkEmail(input) {
     if(re.test(input.value.trim())) {
         showSucces(input)
     }else {
-        showError(input,'Email is not invalid');
+        showError(input);
     }
 }
 
@@ -46,9 +47,9 @@ function checkRequired(inputArr) {
 //check input Length
 function checkLength(input, min ,max) {
     if(input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+        showError(input, `${getFieldName(input)}`);
     }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
+        showError(input, `${getFieldName(input)}`);
     }else {
         showSucces(input);
     }
@@ -64,7 +65,7 @@ function getFieldName(input) {
 form.addEventListener('submit',function(e) {
     e.preventDefault();
 
-    checkRequired([firstname, lastname, email, manageddoors, averagerents, monthlydoorfee]);
+    checkRequired([business, firstname, lastname, email, manageddoors, averagerents, monthlydoorfee]);
     checkLength(firstname,2,35);
     checkLength(firstname,2,35);
     checkEmail(email);

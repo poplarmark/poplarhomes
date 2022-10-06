@@ -4,11 +4,11 @@
     --error-color: #e74c3c;
 }
 
-.form-wrapper.success input {
+.form-control.success input {
     border-color: var(--succes-color);
 }
 
-.form-wrapper.error input {
+.form-control.error input {
     border-color: var(--error-color);    
 }
 
