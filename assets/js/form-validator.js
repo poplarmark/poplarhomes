@@ -1,72 +1,19 @@
-<script>
-const form = document.getElementById('form__indication');
-const business = document.getElementById('input__business-name');
-const firstname = document.getElementById('input__first-name');
-const lastname = document.getElementById('input__last-name');
-const telephoney = document.getElementById('input__telephone');
-const email = document.getElementById('input__email');
-const manageddoors = document.getElementById('input__managed-doors');
-const averagerents = document.getElementById('input__average-rents');
-const monthlydoorfee = document.getElementById('input__monthly-door-fee');
-
-//Show input error messages
-function showError(input, message) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control error';
-}
-
-//show success colour
-function showSucces(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control success';
-}
-
-//check email is valid
-function checkEmail(input) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(re.test(input.value.trim())) {
-        showSucces(input)
-    }else {
-        showError(input);
-    }
-}
-
-
-//checkRequired fields
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
+$(document).ready(function(){
+    $('.required').blur(function(){
+        
+        if($(this).val() != ''){
+            $(this).removeClass('add-border-red');
         }else {
-            showSucces(input);
-        }
+            $(this).addClass('add-border-red');
+        }      
     });
-}
 
-
-//check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
-        showError(input, `${getFieldName(input)}`);
-    }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)}`);
-    }else {
-        showSucces(input);
-    }
-}
-
-//get FieldName
-function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-
-//Event Listeners
-form.addEventListener('submit',function(e) {
-    e.preventDefault();
-
-    checkRequired([business, firstname, lastname, email, manageddoors, averagerents, monthlydoorfee]);
-    checkLength(firstname,2,35);
-    checkLength(firstname,2,35);
-    checkEmail(email);
-});</script>
+    $('.bootstrap-tagsinput').blur(function(){
+        
+        if($(this).val() != ''){
+            $(this).removeClass('add-border-red');
+        }else {
+            $(this).addClass('add-border-red');
+        }      
+    });
+});

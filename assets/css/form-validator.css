@@ -1,15 +1,5 @@
 <style>
-:root{
-    --succes-color: #2ecc71;;
-    --error-color: #e74c3c;
+.add-border-red{
+    border: 1px solid #E2788A !important;
 }
-
-.form-control.success input {
-    border-color: var(--succes-color);
-}
-
-.form-control.error input {
-    border-color: var(--error-color);    
-}
-
 </style>
