@@ -1,3 +1,4 @@
+<script>
 $(document).ready(function(){
     $('.required').blur(function(){
         
@@ -17,3 +18,4 @@ $(document).ready(function(){
         }      
     });
 });
+</script>
