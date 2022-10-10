@@ -1,15 +1,15 @@
 <script>
-const form = document.getElementById('form__indication2');
-const businessName = document.getElementById('input__business-name2');
-const firstName = document.getElementById('input__first-name2');
-const lastName = document.getElementById('input__last-name2');
-const position = document.getElementById('input__position2');
-const mobile = document.getElementById('input__telephone2');
-const email = document.getElementById('input__email2');
-const managedDoors = document.getElementById('input__managed-doors2');
-const averageRents = document.getElementById('input__average-rents2');
-const monthlyDoorFee = document.getElementById('input__monthly-door-fee2');
-const cities = document.getElementById('input__cities2');
+const form = document.getElementById('form__indication');
+const businessName = document.getElementById('input__business-name');
+const firstName = document.getElementById('input__first-name');
+const lastName = document.getElementById('input__last-name');
+const position = document.getElementById('input__position');
+const mobile = document.getElementById('input__telephone');
+const email = document.getElementById('input__email');
+const managedDoors = document.getElementById('input__managed-doors');
+const averageRents = document.getElementById('input__average-rents');
+const monthlyDoorFee = document.getElementById('input__monthly-door-fee');
+const cities = document.getElementById('input__cities');
 
 //Show input error messages
 function showError(input, message) {
