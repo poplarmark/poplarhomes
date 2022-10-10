@@ -50,7 +50,7 @@ function checkMobile(input) {
 function checkRequired(inputArr) {
     inputArr.forEach(function(input){
         if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
+            showError(input,`This field is required`)
         }else {
             showSucces(input);
         }
