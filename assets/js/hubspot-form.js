@@ -94,9 +94,9 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       url: e.target.action,
       type: "POST",
       dataType: "json",
+      data: final_data,
       contentType: "application/json;charset=utf-8",
       accept: "application/json"
-      data: final_data,
       success: function (response) {
         if (response) {
           if (response.inlineMessage) {
