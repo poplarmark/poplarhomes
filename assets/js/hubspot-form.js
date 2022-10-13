@@ -108,7 +108,7 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       },
       error: function () {
           console.log("error on the form submission")
-          $(e.target).css('display', 'none').siblings('.w-form-fail').css('display', 'block') // replace .w-form-fail with your own form done section
+          $(e.target).css('display', 'none').siblings('.w-form-fail').show() // replace .w-form-fail with your own form done section
       }
     });
   });
