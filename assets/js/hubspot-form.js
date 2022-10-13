@@ -1,4 +1,4 @@
-<script>
+<script  charset="utf-8" type="text/javascript">
 $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept forms whos action goes to hubspot
     $(this).find("input[type=checkbox]").val("true")
     $(this).submit(function (e) { // when the form submits
@@ -54,12 +54,12 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
             url: e.target.action,
             method: "POST",
             data: final_data,
-            contentType: "application/json; charset=utf-8",
+            contentType: "application/json",
             success: function (response) {
                 if (response) {
                     if (response.inlineMessage) {
                         const parent = $(e.target).parent()
-                        parent.children("form").css("display", "none") // hide form
+                        // parent.children("form").css("display", "none") // hide form
                         parent.children(".w-form-done").css("display", "block").html(response.inlineMessage) // replace .w-form-done with your own form done section
                     } else if (response.redirectUri) {
                         window.location.href = response.redirectUri
@@ -75,4 +75,4 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
         })
     })
 })
-</script>
+ </script>
