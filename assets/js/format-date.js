@@ -1,7 +1,7 @@
 <script>
-const dateInput = document.getElementById('input__date');
-dateInput.value = new Date().toISOString().split('T')[0];
-
-console.log(new Date().toISOString().split('T')[0]);
-
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+document.getElementById("input__date").value = dateTime;
 </script>
