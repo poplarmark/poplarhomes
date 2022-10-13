@@ -95,11 +95,8 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       type: "POST",
       dataType: "json",
       data: final_data,
-    }),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
+      contentType: "application/json;charset=utf-8",
+      accept: "application/json",
       success: function (response) {
         if (response) {
           if (response.inlineMessage) {
@@ -115,4 +112,5 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       }
     });
   });
+});
 </script>
