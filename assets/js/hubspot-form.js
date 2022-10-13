@@ -60,7 +60,7 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
                     if (response.inlineMessage) {
                         const parent = $(e.target).parent()
                         // parent.children("form").css("display", "none") // hide form
-                        parent.children(".modal-success").css("display", "block").html(response.inlineMessage) // replace .w-form-done with your own form done section
+                        // parent.children(".modal-success").css("display", "block").html(response.inlineMessage) // replace .w-form-done with your own form done section
                         console.log('response success 1')
                     } else if (response.redirectUri) {
                         window.location.href = response.redirectUri
