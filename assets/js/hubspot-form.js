@@ -69,10 +69,10 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
                     console.log('response but no inlineMessage or redirectUri')
                 }
             },
-            error: function () {
-                console.log("error on the form submitting")
-                $(e.target).css('display', 'none').siblings('.w-form-fail').css('display', 'block') // replace .w-form-fail with your own form done section
-            }
+            // error: function () {
+            //     console.log("error on the form submitting")
+            //     $(e.target).css('display', 'none').siblings('.w-form-fail').css('display', 'block') // replace .w-form-fail with your own form done section
+            // }
         })
     })
 })
