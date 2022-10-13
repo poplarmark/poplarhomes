@@ -1,6 +1,6 @@
 <script type="text/javascript">
 
-document.getElementById('input__date').value = Date();
+// document.getElementById('input__date').value = Date();
 
 document
   .getElementById("blk-form__inidication-body")
