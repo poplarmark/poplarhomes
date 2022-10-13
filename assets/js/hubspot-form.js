@@ -1,4 +1,3 @@
-<script>
 $('form[action^="https://api.hsforms.com"]').each(function (i) {
   // intercept forms whos action goes to hubspot
   $(this).find("input[type=checkbox]").val("true");
@@ -95,8 +94,11 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       type: "POST",
       dataType: "json",
       data: final_data,
-      contentType: "application/json;charset=utf-8",
-      accept: "application/json",
+    }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
       success: function (response) {
         if (response) {
           if (response.inlineMessage) {
@@ -112,5 +114,3 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       }
     });
   });
-});
-</script>
