@@ -98,6 +98,7 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       contentType: "application/json;charset=utf-8",
       accept: "application/json",
       success: function (response) {
+        console.log(response)
         if (response) {
           if (response.inlineMessage) {
             const parent = $(e.target).parent();
