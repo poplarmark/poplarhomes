@@ -98,13 +98,11 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
       contentType: "application/json;charset=utf-8",
       accept: "application/json",
       success: function (response) {
-        console.log(response)
         if (response) {
           if (response.inlineMessage) {
             const parent = $(e.target).parent();
             // parent.children("form").css("display", "none") // hide form
             parent.children(".w-form-done").show(); // replace .w-form-done with your own form done section
-            console.log("success")
           }
         }
       },
