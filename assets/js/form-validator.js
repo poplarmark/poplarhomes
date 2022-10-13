@@ -1,4 +1,3 @@
-<script>
 const form = document.getElementById('form__indication');
 const businessName = document.getElementById('input__business-name');
 const firstName = document.getElementById('input__first-name');
@@ -71,4 +70,3 @@ form.addEventListener('submit',function(e) {
     checkMobile(mobile);
     return;
 });
-</script>
