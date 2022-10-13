@@ -1,3 +1,4 @@
+<script>
 $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept forms whos action goes to hubspot
     $(this).find("input[type=checkbox]").val("true")
     $(this).submit(function (e) { // when the form submits
@@ -74,3 +75,4 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
         })
     })
 })
+</script>
