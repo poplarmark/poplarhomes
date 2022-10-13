@@ -1,4 +1,4 @@
-<script  charset="utf-8" type="text/javascript">
+<script type="text/javascript">
 $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept forms whos action goes to hubspot
     $(this).find("input[type=checkbox]").val("true")
     $(this).submit(function (e) { // when the form submits
