@@ -54,8 +54,7 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
             url: e.target.action,
             method: "POST",
             data: final_data,
-            contentType: "application/json",
-            charset: "utf-8",
+            contentType: "application/json; charset=utf-8",
             success: function (response) {
                 if (response) {
                     if (response.inlineMessage) {
