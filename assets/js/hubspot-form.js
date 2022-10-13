@@ -59,8 +59,8 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) { // intercept fo
                 if (response) {
                     if (response.inlineMessage) {
                         const parent = $(e.target).parent()
-                        parent.children("form").css("display", "none") // hide form
-                        parent.children(".w-form-done").css("display", "block").html(response.inlineMessage) // replace .w-form-done with your own form done section
+                        // parent.children("form").css("display", "none") // hide form
+                        parent.children(".modal-success").css("display", "block").html(response.inlineMessage) // replace .w-form-done with your own form done section
                     } else if (response.redirectUri) {
                         window.location.href = response.redirectUri
                     }
