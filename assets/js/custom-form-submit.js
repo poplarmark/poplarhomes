@@ -5,7 +5,7 @@ Webflow.push(function() {
   $(document).off('submit');
 
   /* Any form on the page */
-  $('.form__contact-us--body').submit(function(e) {
+  $('#form__contact-us--body').submit(function(e) {
     e.preventDefault();
 
   	const $form = $(this); // The submitted form
