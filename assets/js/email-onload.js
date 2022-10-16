@@ -3,7 +3,7 @@
 // document.getElementById('input__date').value = Date();
 
 document
-  .getElementById("blk-form__inidication-body")
+  .getElementById("form-body--indication")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
