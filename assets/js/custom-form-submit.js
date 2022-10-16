@@ -5,7 +5,7 @@ Webflow.push(function() {
   $(document).off('submit');
 
   /* Any form on the page */
-  $('#form__contact-us').submit(function(e) {
+  $('.form__contact-us--body').submit(function(e) {
     e.preventDefault();
 
   	const $form = $(this); // The submitted form
@@ -31,7 +31,7 @@ Webflow.push(function() {
       if (formRedirect) { window.location = formRedirect; return; }
 
     	$form
-      	.hide() // optional hiding of form
+      	 // optional hiding of form .hide()
     		.siblings('.w-form-done').show() // Show success
       	.siblings('.w-form-fail').hide(); // Hide failure
     })
