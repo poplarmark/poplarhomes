@@ -1,3 +1,4 @@
+<script>
 $(document).on("keypress", ".format-value", function (e) {
   let charCode = (e.which) ? e.which : e.keyCode;
   if (charCode > 31 && (charCode < 48 || charCode > 57)) {
@@ -21,3 +22,4 @@ $(document).on('keyup', '.format-value', function (e) {
     this.value = val;
   }
 });
+</script>
