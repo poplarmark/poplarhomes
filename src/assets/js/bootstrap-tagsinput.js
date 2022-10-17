@@ -1,3 +1,4 @@
+<script>
 !(function (t) {
     "use strict";
     function e(e, i) {
@@ -370,3 +371,4 @@
         t("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
     });
 })(window.jQuery);
+</script>
