@@ -1,4 +1,3 @@
-<script>
 const telephone = document.getElementById("mna__input-phone")
 telephone.oninput = (e) => {
   e.target.value = autoFormatPhoneNumber(e.target.value)
@@ -44,4 +43,3 @@ function autoFormatPhoneNumber(phoneNumberString) {
     return "";
   }
 }
-</script>

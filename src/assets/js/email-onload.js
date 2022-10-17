@@ -1,5 +1,4 @@
-<script>
-// document.getElementById('input__date').value = Date();
+document.getElementById('input__date').value = Date();
 document
   .getElementById("form-body--indication")
   .addEventListener("submit", function (event) {
@@ -18,4 +17,3 @@ document
       }
     );
   });
-</script>

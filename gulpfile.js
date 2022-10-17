@@ -13,7 +13,6 @@ const cssPath = 'src/assets/css/**/*.css';
 function jsBundler() {
     return src(jsPath)
     .pipe(sourcemaps.init())
-    .pipe(concat('webflow-mna.js'))
     .pipe(terser())
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/assets/js'));

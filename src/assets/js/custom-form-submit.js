@@ -1,4 +1,3 @@
-<script>
 var Webflow = Webflow || [];
 Webflow.push(function() {  
   // unbind webflow form handling (keep this if you only want to affect specific forms)
@@ -43,4 +42,3 @@ Webflow.push(function() {
     });
   });
 });
-</script>
