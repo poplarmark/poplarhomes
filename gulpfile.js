@@ -1,14 +1,14 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
 const sourcemaps = require ('gulp-sourcemaps');
 const {src, series, parallel, dest, watch} = require('gulp');
 
 const jsPath = 'src/assets/js/**/*.js';
-
-function copyHTML() {
-    return src('src/*.html').pipe(gulp.dest('dist'));
-}
+const cssPath = 'src/assets/css/**/*.css';
 
 function jsBundler() {
     return src(jsPath)
@@ -19,5 +19,14 @@ function jsBundler() {
     .pipe(dest('dist/assets/js'));
 }
 
-exports.default = copyHTML;
+function cssBundler() {
+    return src(cssPath)
+    .pipe(sourcemaps.init())
+    .pipe(concat('webflow-mna.css'))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist/assets/css'));
+}
+
 exports.default = jsBundler;
+exports.default = cssBundler;
