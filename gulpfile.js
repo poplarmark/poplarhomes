@@ -22,11 +22,10 @@ function jsBundler() {
 function cssBundler() {
     return src(cssPath)
     .pipe(sourcemaps.init())
-    .pipe(concat('webflow-mna.css'))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/assets/css'));
 }
 
-exports.default = jsBundler;
-exports.default = cssBundler;
+exports.jsBundler = jsBundler;
+exports.cssBundler = cssBundler;
