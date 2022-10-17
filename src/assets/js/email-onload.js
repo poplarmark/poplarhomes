@@ -1,4 +1,3 @@
-<script type="text/javascript">
 // document.getElementById('input__date').value = Date();
 document
   .getElementById("form-body--indication")
@@ -18,4 +17,3 @@ document
       }
     );
   });
-</script>
