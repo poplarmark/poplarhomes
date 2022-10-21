@@ -1,5 +1,5 @@
-const telephone = document.getElementById("mna__input-phone")
-telephone.oninput = (e) => {
+const phone__indication = document.getElementById("mna__input-phone")
+phone__indication.oninput = (e) => {
   e.target.value = autoFormatPhoneNumber(e.target.value)
 }
 
@@ -21,8 +21,8 @@ function autoFormatPhoneNumber(phoneNumberString) {
   }
 }
 
-const phone = document.getElementById("modal__input-phone")
-phone.oninput = (e) => {
+const phone__contact = document.getElementById("modal__input-phone")
+phone__contact.oninput = (e) => {
   e.target.value = autoFormatPhoneNumber(e.target.value)
 }
 
