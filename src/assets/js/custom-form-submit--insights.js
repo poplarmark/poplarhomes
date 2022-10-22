@@ -1,11 +1,10 @@
-// for most forms
 var Webflow = Webflow || [];
 Webflow.push(function() {  
   // unbind webflow form handling (keep this if you only want to affect specific forms)
   $(document).off('submit');
 
   /* Any form on the page */
-  $('form').submit(function(e) {
+  $('#form__insights--body').submit(function(e) {
     e.preventDefault();
 
   	const $form = $(this); // The submitted form
@@ -31,14 +30,14 @@ Webflow.push(function() {
       if (formRedirect) { window.location = formRedirect; return; }
 
     	$form
-      	 // optional hiding of form .hide()
-    		.siblings('.w-form-done').show() // Show success
+      	.hide() // optional hiding of form
+    	.siblings('.w-form-done').show() // Show success
       	.siblings('.w-form-fail').hide(); // Hide failure
     })
     .fail((res) => {
       $form
       	.siblings('.w-form-done').hide() // Hide success
-    	  .siblings('.w-form-fail').show(); // show failure
+        .siblings('.w-form-fail').show(); // show failure
     })
     .always(() => {
       // Reset text
