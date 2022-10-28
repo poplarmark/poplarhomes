@@ -5,7 +5,7 @@ Webflow.push(function() {
   $(document).off('submit');
 
   /* Any form on the page */
-  $('#form__refer--body').submit(function(e) {
+  $('#blk-form__refer-body').submit(function(e) {
     e.preventDefault();
 
   	const $form = $(this); // The submitted form
