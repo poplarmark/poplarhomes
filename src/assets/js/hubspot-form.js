@@ -100,7 +100,7 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
         if (response) {
           if (response.inlineMessage) {
             const parent = $(e.target).parent();
-            // parent.children("form").css("display", "none") // hide form
+            parent.children("form").css("display", "none") // hide form
             parent.children(".w-form-done").show(); // replace .w-form-done with your own form done section
           }
         }
