@@ -73,7 +73,7 @@
   }
   .selectMultiple > div a em {
     font-style: normal;
-    color: white;
+    color: black;
     display: block;
     white-space: nowrap;
   }
@@ -85,7 +85,7 @@
     width: 100%;
     position: absolute;
     display: block;
-    background: #f80;
+    background: rgba(228, 236, 250, 0.7);
     z-index: -1;
     border-radius: 5px;
   }
@@ -106,7 +106,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    background: white;
+    background: #ff7300;
     border-radius: 1px;
   }
   .selectMultiple > div a i:before {
