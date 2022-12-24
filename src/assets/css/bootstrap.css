@@ -846,7 +846,7 @@ a.label:hover {
     background-color: #449d44;
 }
 .label-info {
-    background-color: #ff7300;
+    background-color: rgba(228,236,250,.7);
 }
 .label-info[href]:focus,
 .label-info[href]:hover {
