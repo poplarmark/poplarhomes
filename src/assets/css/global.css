@@ -23,6 +23,11 @@
 .navbar-main_link:hover .navbar-main_link-underline {
     opacity: 100;
 }
+@media screen and (max-width: 767px) {
+    .navbar-main_link-underline {
+        display: none;
+    }
+}
 /** Navbar end **/
 /** Bootstrap specific start **/
 @font-face {
