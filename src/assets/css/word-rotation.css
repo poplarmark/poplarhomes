@@ -14,3 +14,38 @@
     transform: translateY(-500%);
     transition: .5s all ease-in-out;
 }
+
+@media screen and (max-width: 830px) {
+    .grid_feature {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .image_poplardoes-phone {
+        right: -46px;
+    }
+    .shape_poplardoes-circle {
+        right: 14rem;
+    }
+    .shape_poplardoes-mint {
+        right: 10rem;
+    }
+    .shape_poplardoes-orange {
+        right: -2rem;
+    }
+    .shape_poplardoes-swirl {
+        right: -8%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .animation_word-rotation-mask {
+        height: 215px;
+    }
+    .shape_poplardoes-circle {
+        bottom: 4rem;
+    }
+    .shape_poplardoes-swirl {
+        bottom: -1rem;
+    }
+
+}
