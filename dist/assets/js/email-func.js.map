@@ -1,1 +1,0 @@
-{"version":3,"file":"email-func.js","names":["emailjs","init"],"sources":["email-func.js"],"mappings":"AACEA,QAAQC,KAAK","sourcesContent":["(function () {\n  emailjs.init(\"qC9qQXkWNw1FGSV1Q\");\n})();"]}
