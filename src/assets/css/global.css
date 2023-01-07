@@ -1,3 +1,30 @@
+/** Webflow start **/
+.w-webflow-badge {
+    display: none !important;
+    visibility: hidden !important;
+}
+/** Webflow end **/
+/** Slider start **/
+.w-slider-nav-invert>div {
+    background-color: #dfdfdf;
+}
+
+.w-slider-nav-invert>div.w-active {
+    background-color: #f80;
+}
+
+.w-slider-dot {
+    width: 1.25em;
+    height: 1.25em;
+}
+/** Slider end **/
+/** Navbar start **/
+.navbar-main_link.w--current .navbar-main_link-underline,
+.navbar-main_link:hover .navbar-main_link-underline {
+    opacity: 100;
+}
+/** Navbar end **/
+/** Bootstrap specific start **/
 @font-face {
     font-family: "Glyphicons Halflings";
     src: url(../fonts/glyphicons-halflings-regular.eot);
@@ -866,3 +893,4 @@ a.label:hover {
 .label-danger[href]:hover {
     background-color: #c9302c;
 }
+/** Bootstrap specific end **/
