@@ -28,6 +28,7 @@
     }
 
     #rent-estimate_button {
+        margin-top: 1rem;
         -ms-grid-row: span 1;
         grid-row-start: span 1;
         -ms-grid-row-span: 1;
