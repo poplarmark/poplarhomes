@@ -1,0 +1,49 @@
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+.mapboxgl-canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+.geocoder {
+    border-radius: 5px;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search {
+    display: none;
+}
+
+.mapboxgl-ctrl-geocoder {
+    width: 100%;
+    max-width: 100%;
+}
+
+.mapboxgl-ctrl-geocoder--button {
+    transform: translateY(50%);
+}
+
+.mapboxgl-ctrl-geocoder--input {
+    border-style: none;
+    background-color: #fff;
+    color: #383f4a;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 0;
+    padding: 10px 20px 10px 16px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: Eina03, sans-serif;
+    color: #000;
+    font-size: 16px;
+    line-height: 1em;
+}
+
+@media screen and (max-width: 479px) {
+    .mapboxgl-ctrl-geocoder {
+        min-width: 100%;
+    }
+}
