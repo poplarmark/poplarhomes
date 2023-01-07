@@ -15,6 +15,12 @@
     transition: .5s all ease-in-out;
 }
 
+@media screen and (max-width: 1439px) {
+    .animation_word-rotation-mask {
+        height: 232px;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .grid_feature {
         padding-left: 4rem;
@@ -47,5 +53,4 @@
     .shape_poplardoes-swirl {
         bottom: -1rem;
     }
-
 }
