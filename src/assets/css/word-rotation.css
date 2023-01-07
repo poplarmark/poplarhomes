@@ -15,7 +15,7 @@
     transition: .5s all ease-in-out;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (min-width: 1439px) {
     .animation_word-rotation-mask {
         height: 232px;
     }
