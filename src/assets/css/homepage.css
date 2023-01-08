@@ -84,32 +84,31 @@
 }
 /** Poplarwill end **/
 
-/* @media screen and (max-width: 830px) {
+@media screen and (max-width: 830px) {
     .image_poplarwill-phone {
-        left: -1rem;
+        left: -2rem;
     }
 
     .image_poplarwill-piggybank {
         top: 64%;
-        left: 13rem;
+        left: 12.3rem;
         width: 100px;
     }
 
     .image_poplarwill-streetcred {
-        left: 0.5%;
-        top: 8rem;
-        width: 270px;
+        left: -4%;
     }
 
     .shape_poplarwill-orange {
-        left: 12.6rem;
+        left: 11.6rem;
+        top: 7rem;
     }
 
     .shape_poplarwill-mint {
-        left: -1%;
+        left: -5%;
     }
 
     .shape_poplarwill-signal {
         left: 13.5rem;
     }
-} */
+}
