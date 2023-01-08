@@ -1,3 +1,4 @@
+/** Word rotation start **/
 .animation_word-rotation-mask .animated_text {
     display: block;
     box-sizing: border-box;
@@ -54,3 +55,61 @@
         bottom: -1rem;
     }
 }
+/** Word rotation end**/
+/** Poplarwill start **/
+@media screen and (max-width: 925px) {
+    .image_poplarwill-phone {
+        left: 0;
+    }
+
+    .image_poplarwill-piggybank {
+        left: 13.3rem;
+    }
+
+    .image_poplarwill-streetcred {
+        left: -2%;
+    }
+
+    .shape_poplarwill-orange {
+        left: 12.6rem;
+    }
+
+    .shape_poplarwill-mint {
+        left: -4%;
+    }
+
+    .shape_poplarwill-signal {
+        left: 15.6rem;
+    }
+}
+/** Poplarwill end **/
+
+/* @media screen and (max-width: 830px) {
+    .image_poplarwill-phone {
+        left: -1rem;
+    }
+
+    .image_poplarwill-piggybank {
+        top: 64%;
+        left: 13rem;
+        width: 100px;
+    }
+
+    .image_poplarwill-streetcred {
+        left: 0.5%;
+        top: 8rem;
+        width: 270px;
+    }
+
+    .shape_poplarwill-orange {
+        left: 12.6rem;
+    }
+
+    .shape_poplarwill-mint {
+        left: -1%;
+    }
+
+    .shape_poplarwill-signal {
+        left: 13.5rem;
+    }
+} */
