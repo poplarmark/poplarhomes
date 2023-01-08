@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (max-width: 830px) {
+@media sreen and (max-width: 830px) and (min-width: 768px) {
     .grid_feature {
         padding-left: 4rem;
         padding-right: 4rem;
