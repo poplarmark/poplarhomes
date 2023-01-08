@@ -44,6 +44,21 @@
     }
 }
 
+@media screen and (max-width: 534px) and (min-width: 480px) {
+    .heading-style-h1.text-color-orange span.show-mobile {
+        display: block;
+    }
+    .grid_feature.feature_poplardoes {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 510px) and (min-width: 480px) {
+    .grid_feature.feature_poplardoes {
+        padding-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 770px) {
     .animation_word-rotation-mask {
         height: 215px;
