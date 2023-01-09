@@ -27,18 +27,23 @@
         padding-left: 4rem;
         padding-right: 4rem;
     }
+
     .image_poplardoes-phone {
         right: -46px;
     }
+
     .shape_poplardoes-circle {
         right: 14rem;
     }
+
     .shape_poplardoes-mint {
         right: 10rem;
     }
+
     .shape_poplardoes-orange {
         right: -2rem;
     }
+
     .shape_poplardoes-swirl {
         right: -8%;
     }
@@ -48,12 +53,7 @@
     .heading-style-h1.text-color-orange span.show-mobile {
         display: block;
     }
-    .grid_feature.feature_poplardoes {
-        padding-bottom: 0;
-    }
-}
 
-@media screen and (max-width: 510px) and (min-width: 480px) {
     .grid_feature.feature_poplardoes {
         padding-bottom: 0;
     }
@@ -63,16 +63,19 @@
     .animation_word-rotation-mask {
         height: 215px;
     }
+
     .shape_poplardoes-circle {
         bottom: 4rem;
     }
+
     .shape_poplardoes-swirl {
         bottom: -1rem;
     }
 }
+
 /** Word rotation end**/
 /** Poplarwill start **/
-@media screen and (max-width: 925px) and (min-width: 768px){
+@media screen and (max-width: 925px) and (min-width: 768px) {
     .image_poplarwill-phone {
         left: 0;
     }
@@ -124,6 +127,29 @@
 
     .shape_poplarwill-signal {
         left: 13.5rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .image_poplarwill-streetcred {
+        -webkit-transform: translate(-60%, 0);
+        -ms-transform: translate(-60%, 0);
+        transform: translate(-60%, 0);
+    }
+    .shape_poplarwill-orange {
+        -webkit-transform: translate(170%,0);
+        -ms-transform: translate(170%,0);
+        transform: translate(170%,0);
+    }
+    .image_poplarwill-piggybank {
+        -webkit-transform: translate(160%,0);
+        -ms-transform: translate(160%,0);
+        transform: translate(160%,0);
+    }
+    .shape_poplarwill-mint {
+        -webkit-transform: translate(-500%,0);
+        -ms-transform: translate(-500%,0);
+        transform: translate(-500%,0);
     }
 }
 /** Poplarwill end **/
