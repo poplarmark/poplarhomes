@@ -132,24 +132,24 @@
 
 @media screen and (max-width: 479px) {
     .image_poplarwill-streetcred {
-        -webkit-transform: translate(-60%, 0);
-        -ms-transform: translate(-60%, 0);
-        transform: translate(-60%, 0);
+        -webkit-transform: translate(-60%, 0) !important;
+        -ms-transform: translate(-60%, 0) !important;
+        transform: translate(-60%, 0) !important;
     }
     .shape_poplarwill-orange {
-        -webkit-transform: translate(170%,0);
-        -ms-transform: translate(170%,0);
-        transform: translate(170%,0);
+        -webkit-transform: translate(170%,0) !important;
+        -ms-transform: translate(170%,0) !important;
+        transform: translate(170%,0) !important;
     }
     .image_poplarwill-piggybank {
-        -webkit-transform: translate(160%,0);
-        -ms-transform: translate(160%,0);
-        transform: translate(160%,0);
+        -webkit-transform: translate(160%,0) !important;
+        -ms-transform: translate(160%,0) !important;
+        transform: translate(160%,0) !important;
     }
     .shape_poplarwill-mint {
-        -webkit-transform: translate(-500%,0);
-        -ms-transform: translate(-500%,0);
-        transform: translate(-500%,0);
+        -webkit-transform: translate(-500%,0) !important;
+        -ms-transform: translate(-500%,0) !important;
+        transform: translate(-500%,0) !important;
     }
 }
 /** Poplarwill end **/
