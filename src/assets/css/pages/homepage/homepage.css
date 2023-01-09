@@ -73,6 +73,19 @@
     }
 }
 
+@media screen and (max-width: 479px) {
+    .shape_poplardoes-mint {
+        -webkit-transform: translate(-120%,0) !important;
+        -ms-transform: translate(-120%,0) !important;
+        transform: translate(-120%,0) !important;
+    }
+    .shape_poplardoes-orange {
+        -webkit-transform: translate(340%,0) !important;
+        -ms-transform: translate(340%,0) !important;
+        transform: translate(340%,0) !important;
+    }
+}
+
 /** Word rotation end**/
 /** Poplarwill start **/
 @media screen and (max-width: 925px) and (min-width: 768px) {
