@@ -165,19 +165,14 @@
         transform: translate(-500%,0) !important;
     }
 }
-@media screen and (min-width: 470px) {
+@media screen and (max-width: 470px) {
     .animation_word-rotation-mask {
         height: 5.7rem;
     }
 }
-@media screen and (min-width: 340px) {
+@media screen and (max-width: 340px) {
     .animation_word-rotation-mask {
         height: 6rem;
-    }
-    .grid_feature.feature_poplardoes,
-    .grid_feature.feature_poplarwill {
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 }
 /** Poplarwill end **/
