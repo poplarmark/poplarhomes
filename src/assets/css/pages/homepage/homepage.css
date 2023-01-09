@@ -165,12 +165,12 @@
         transform: translate(-500%,0) !important;
     }
 }
-@media screen and (max-width: 470px) {
+@media screen and (min-width: 470px) {
     .animation_word-rotation-mask {
         height: 5rem;
     }
 }
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 340px) {
     .animation_word-rotation-mask {
         height: 6rem;
     }
