@@ -1,4 +1,4 @@
-const phone__refer = document.getElementById("refer__input-phone")
+const phone__refer = document.getElementById("refer_input-phone")
 phone__refer.oninput = (e) => {
   e.target.value = autoFormatPhoneNumber(e.target.value)
 }

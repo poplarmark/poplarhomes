@@ -4,7 +4,7 @@ Webflow.push(function() {
   // unbind webflow form handling (keep this if you only want to affect specific forms)
   $(document).off('submit');
   /* Any form on the page */
-  $('#form__contact-us--body').submit(function(e) {
+  $('#form_contact-us').submit(function(e) {
     e.preventDefault();
   	const $form = $(this); // The submitted form
     const $submit = $('[type=submit]', $form); // Submit button of form

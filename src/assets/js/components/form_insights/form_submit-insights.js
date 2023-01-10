@@ -4,7 +4,7 @@ Webflow.push(function() {
   $(document).off('submit');
 
   /* Any form on the page */
-  $('#form__insights--body').submit(function(e) {
+  $('#form_insights').submit(function(e) {
     e.preventDefault();
 
   	const $form = $(this); // The submitted form

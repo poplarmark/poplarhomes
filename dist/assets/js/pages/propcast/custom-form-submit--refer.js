@@ -1,4 +1,0 @@
-<script>
-var Webflow=Webflow||[];Webflow.push((function(){$(document).off("submit"),$("#blk-form__refer-body").submit((function(t){t.preventDefault();const a=$(this),i=$("[type=submit]",a),o=i.val(),e=i.attr("data-wait"),l=a.attr("method"),s=a.attr("action"),f=a.attr("data-redirect"),n=a.serialize();e&&i.val(e),$.ajax(s,{data:n,method:l}).done((t=>{f?window.location=f:a.siblings(".w-form-done").show().siblings(".w-form-fail").hide()})).fail((t=>{a.siblings(".w-form-done").hide().siblings(".w-form-fail").show()})).always((()=>{i.val(o)}))}))}));
-//# sourceMappingURL=custom-form-submit--refer.js.map
-</script>
