@@ -3,7 +3,7 @@ Webflow.push(function() {
   // unbind webflow form handling (keep this if you only want to affect specific forms)
   $(document).off('submit');
   /* Any form on the page */
-  $('#form_serviced').submit(function(e) {
+  $('#form_unserviced').submit(function(e) {
     e.preventDefault();
   	const $form = $(this); // The submitted form
     const $submit = $('[type=submit]', $form); // Submit button of form
@@ -42,27 +42,3 @@ Webflow.push(function() {
     });
   });
 });
-
-// Form phone formatter
-const serviced_phone = document.getElementById("serviced_input-phone");
-serviced_phone.oninput = (e) => {
-  e.target.value = autoFormatPhoneNumber(e.target.value)
-}
-
-function autoFormatPhoneNumber(phoneNumberString) {
-  try {
-    var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
-    var match = cleaned.match(/^(1|)?(\d{0,3})?(\d{0,3})?(\d{0,4})?$/);
-    var intlCode = match[1] ? "+1 " : "";
-    return [intlCode, 
-            match[2] ? "(": "",
-            match[2], 
-            match[3] ? ") ": "",
-            match[3],
-            match[4] ? "-": "",
-            match[4]].join("")
-    
-  } catch(err) {
-    return "";
-  }
-}

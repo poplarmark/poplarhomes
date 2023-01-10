@@ -28,7 +28,7 @@ Webflow.push(function() {
       if (formRedirect) { window.location = formRedirect; return; }
 
     	$form
-      	.hide()
+      	.hide() // Hide form after submit
     		.siblings('.w-form-done').show() // Show success
       	.siblings('.w-form-fail').hide(); // Hide failure
     })
