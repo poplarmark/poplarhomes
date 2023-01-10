@@ -1,5 +1,6 @@
-const phone__refer = document.getElementById("refer_input-phone")
-phone__refer.oninput = (e) => {
+// Form phone formatter
+const subsidiary_phone = document.getElementById("subsidiary_input-phone");
+subsidiary_phone.oninput = (e) => {
   e.target.value = autoFormatPhoneNumber(e.target.value)
 }
 

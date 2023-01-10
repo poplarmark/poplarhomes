@@ -1,11 +1,13 @@
-// for specific forms
+// for most forms
 var Webflow = Webflow || [];
 Webflow.push(function() {  
   // unbind webflow form handling (keep this if you only want to affect specific forms)
   $(document).off('submit');
+
   /* Any form on the page */
-  $('#form_contact-us').submit(function(e) {
+  $('#form_refer').submit(function(e) {
     e.preventDefault();
+
   	const $form = $(this); // The submitted form
     const $submit = $('[type=submit]', $form); // Submit button of form
     const buttonText = $submit.val(); // Original button text
@@ -19,6 +21,7 @@ Webflow.push(function() {
     if (buttonWaitingText) {
       $submit.val(buttonWaitingText); 
     }
+    
     $.ajax(formAction, {
     	data: formData,
       method: formMethod
@@ -43,3 +46,27 @@ Webflow.push(function() {
     });
   });
 });
+
+// Form phone formatter
+const refer_phone = document.getElementById("refer_input-phone")
+refer_phone.oninput = (e) => {
+  e.target.value = autoFormatPhoneNumber(e.target.value)
+}
+
+function autoFormatPhoneNumber(phoneNumberString) {
+  try {
+    var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
+    var match = cleaned.match(/^(1|)?(\d{0,3})?(\d{0,3})?(\d{0,4})?$/);
+    var intlCode = match[1] ? "+1 " : "";
+    return [intlCode, 
+            match[2] ? "(": "",
+            match[2], 
+            match[3] ? ") ": "",
+            match[3],
+            match[4] ? "-": "",
+            match[4]].join("")
+    
+  } catch(err) {
+    return "";
+  }
+}
