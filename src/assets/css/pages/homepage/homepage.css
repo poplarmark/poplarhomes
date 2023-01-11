@@ -16,6 +16,19 @@
     transition: .5s all ease-in-out;
 }
 
+@media screen and (min-width: 1440px) {
+    .shape_poplardoes-mint {
+        -webkit-transform: translate(650%,0) !important;
+        -ms-transform: translate(650%,0) !important;
+        transform: translate(650%,0) !important;
+    }
+    .shape_poplardoes-orange {
+        -webkit-transform: translate(950%,0) !important;
+        -ms-transform: translate(950%,0) !important;
+        transform: translate(950%,0) !important;
+    }
+}
+
 @media sreen and (max-width: 830px) and (min-width: 768px) {
     .grid_feature {
         padding-left: 4rem;
