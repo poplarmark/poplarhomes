@@ -19,6 +19,9 @@
 }
 /** Slider end **/
 /** Navbar start **/
+.navbar-main_link-underline {
+    transform: translateX(-50%) !important;
+}
 .navbar-main_link.w--current .navbar-main_link-underline,
 .navbar-main_link:hover .navbar-main_link-underline {
     opacity: 100;
