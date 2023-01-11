@@ -23,21 +23,4 @@
 }
 /** Word rotation end**/
 /** Poplarwill start **/
-@media screen and (max-width: 820px) and (min-width: 768px){
-    .image_poplarwill-phone {
-        left: 0vw;
-    }
-    .image_poplarwill-streetcred {
-        left: -6%;
-    }
-    .shape_poplarwill-mint {
-        left: -5%;
-    }
-    .image_poplarwill-piggybank {
-        left: 10.5rem;
-    }
-    .shape_poplarwill-signal {
-        left: 11.5rem;
-    }
-}
 /** Poplarwill end **/
