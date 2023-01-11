@@ -12,4 +12,4 @@ setInterval(function () {
   show.removeAttribute("data-show");
   show.setAttribute("data-up", "");
   next.setAttribute("data-show", "");
-}, 2000);
+}, 3000);

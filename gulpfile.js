@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const sourcemaps = require ('gulp-sourcemaps');
 const {src, series, parallel, dest, watch} = require('gulp');
 // Edit working path here
-const jsPath = 'src/assets/js/components/form_rent-estimate/**/*.js';
+const jsPath = 'src/assets/js/utils/word-rotation.js';
 const cssPath = 'src/assets/css/**/*.css';
 
 function jsBundler() {
