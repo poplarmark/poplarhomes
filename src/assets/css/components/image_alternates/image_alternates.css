@@ -1,0 +1,14 @@
+/** Image alternates start **/
+.image_alternates {
+    transition: all 120ms ease;
+}
+.image_alternates-back {
+    display: none;
+}
+.image_alternates:hover .image_alternates-back {
+    display: inline-block;
+} 
+.image_alternates:hover .image_alternates-front {
+    display: none;
+}
+/** Image alternatesend **/
