@@ -51,12 +51,7 @@ label {
     font-family: 'Eina03',sans-serif;
     color: #000;
 }
-.hs-form-field input:active,
-.hs-form-field input:focus,
-.hs-form-field input:focus-visible {
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.hs-form-field input:focus {
     border-bottom: 1px solid #f80;
 }
 .inputs-list.multi-container {
