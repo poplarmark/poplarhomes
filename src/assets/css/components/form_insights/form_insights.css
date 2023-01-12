@@ -12,7 +12,7 @@ label {
 }
 .hs-form-field label {
     text-align: left;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 .hs-form-field label span {
     margin-bottom: 0;
@@ -52,6 +52,10 @@ label {
     border-right: none;
     border-bottom: 1px solid #f80;
 }
+.inputs-list.multi-container {
+    display: flex;
+    column-gap: 1rem;
+}
 .hs-form-checkbox-display {
     display: flex;
     align-items: center;
@@ -69,6 +73,8 @@ label {
 }
 .hs-submit {
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
 .hs-submit .hs-button {
     border: 1px solid #f80;
