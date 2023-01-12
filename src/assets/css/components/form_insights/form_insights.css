@@ -54,6 +54,10 @@ label {
 .hs-form-field input:focus {
     border-bottom: 1px solid #f80;
 }
+.hs-form-field input:focus-visible {
+    border-bottom: 1px solid #f80;
+    outline: none;
+}
 .inputs-list.multi-container {
     display: flex;
     column-gap: 1rem;
