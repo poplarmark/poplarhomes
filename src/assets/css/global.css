@@ -37,6 +37,11 @@
         display: none;
     }
 }
+/** Form start **/
+.form_input:focus-visible {
+    outline: none;
+}
+/** From end**/
 /** Navbar end **/
 /** Bootstrap specific start **/
 @font-face {
