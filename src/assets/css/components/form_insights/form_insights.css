@@ -3,13 +3,16 @@ ul, li, ol {
     padding: 0;
     margin-bottom: 0;
 }
+label {
+    margin-bottom: 0;
+}
 
 .hs-form-field {
     position: relative;
 }
 .hs-form-field label {
     text-align: left;
-    margin-bottom: 0;
+    margin-bottom: 0.8rem;
 }
 .hs-form-field label span {
     margin-bottom: 0;
@@ -63,6 +66,9 @@ ul, li, ol {
 }
 .hs-form-checkbox-display span {
     margin-bottom: 0;
+}
+.hs-submit {
+    margin-top: 2rem;
 }
 .hs-submit .hs-button {
     border: 1px solid #f80;
