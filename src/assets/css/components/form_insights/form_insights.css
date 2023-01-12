@@ -49,6 +49,8 @@ label {
     font-family: 'Eina03',sans-serif;
     color: #000;
 }
+.hs-form-field input:active,
+.hs-form-field input:focus,
 .hs-form-field input:focus-visible {
     border-top: none;
     border-left: none;
