@@ -1,5 +1,7 @@
 ul, li, ol {
     list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .hs-form-field {
@@ -7,6 +9,7 @@ ul, li, ol {
 }
 .hs-form-field label {
     text-align: left;
+    margin-bottom: 0;
 }
 .hs-form-field label span {
     margin-bottom: 0;
@@ -88,6 +91,7 @@ ul, li, ol {
     font-size: 1rem;
     line-height: 1.5;
     cursor: pointer;
+    background-color: transparent;
 }
 .hs-button:hover {
     background-color: rgba(255,136,0,.15);
