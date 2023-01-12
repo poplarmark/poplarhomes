@@ -1,3 +1,7 @@
+ul, li, ol {
+    list-style-type: none;
+}
+
 .hs-form-field {
     position: relative;
 }
@@ -12,7 +16,7 @@
     font-weight: 600;
     line-height: 1.5em;
 }
-.hs-form-field label span.hs-error-msg {
+.hs-form-field label.hs-error-msg {
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1em;
@@ -45,6 +49,14 @@
 .hs-form-checkbox-display {
     display: flex;
     align-items: center;
+    padding: 0;
+}
+.hs-form-checkbox-display input {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem 0 0;
+    border-radius: 0.125rem;
+    border: 1px solid #ccc;
 }
 .hs-form-checkbox-display span {
     margin-bottom: 0;
@@ -78,5 +90,5 @@
     cursor: pointer;
 }
 .hs-button:hover {
-    background-color: #ff9224;
+    background-color: rgba(255,136,0,.15);
 }
