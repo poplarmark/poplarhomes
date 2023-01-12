@@ -7,6 +7,10 @@ label {
     margin-bottom: 0;
 }
 
+.hs-error-msgs {
+    color: red;
+}
+
 .hs-form-field {
     position: relative;
     margin-bottom: 1.5rem;
@@ -14,6 +18,8 @@ label {
 .hs-form-field label {
     text-align: left;
     margin-bottom: 0.5rem;
+    position: relative;
+    top: 0.5rem;
 }
 .hs-form-field label span {
     margin-bottom: 0;
@@ -28,9 +34,6 @@ label {
     font-weight: 400;
     line-height: 1em;
     color: red;
-    position: absolute;
-    left: 0;
-    bottom: 10px;
 }
 .hs-form-field input {
     width: 100%;
