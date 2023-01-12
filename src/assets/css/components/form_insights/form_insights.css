@@ -10,7 +10,9 @@ label {
 .hs-error-msgs {
     color: red;
 }
-
+.hs-main-font-element h1 {
+    line-height: auto;
+}
 .hs-form-field {
     position: relative;
     margin-bottom: 1.5rem;
