@@ -1,6 +1,9 @@
 .hubspot-link__container.sproket {
     display: none;
 }
+#hsForm_0c337e42-ff20-4283-a7e9-cda4f0aa897d label {
+    text-align: left;
+}
 #hsForm_0c337e42-ff20-4283-a7e9-cda4f0aa897d label span {
     margin-bottom: 8px;
     font-family: 'Eina03',sans-serif;
@@ -39,7 +42,7 @@
 #hsForm_0c337e42-ff20-4283-a7e9-cda4f0aa897d .inputs-list>li {
     display: inline-block;
 }
-.hs-button {
+#hsForm_0c337e42-ff20-4283-a7e9-cda4f0aa897d input.hs-button {
     border: 1px solid #f80;
     -webkit-transition: .2s;
     transition: .2s;
