@@ -11,7 +11,7 @@ label {
     color: red;
 }
 .hs-main-font-element h1 {
-    line-height: auto;
+    line-height: 1.5rem;
 }
 .hs-form-field {
     position: relative;
