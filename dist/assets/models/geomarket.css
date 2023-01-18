@@ -1,4 +1,4 @@
 <style>
-path{cursor:pointer}path:hover{fill:#ff7300}
+path{cursor:pointer;transition:all .25s ease}path:hover{fill:#ff7300}
 /*# sourceMappingURL=geomarket.css.map */
 </style>

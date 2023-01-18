@@ -23,7 +23,7 @@ function cssBundler() {
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/assets/css'));
+    .pipe(dest('dist/assets/models'));
 }
 
 exports.jsBundler = jsBundler;
