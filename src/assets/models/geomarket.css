@@ -6,3 +6,8 @@ path {
 path:hover {
     fill: #f80;
 }
+
+path.cls-7 {
+    pointer-events: none;
+    cursor: none;
+}
