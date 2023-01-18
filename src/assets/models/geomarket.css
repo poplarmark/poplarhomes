@@ -8,7 +8,10 @@ circle:hover {
 }
 
 #path_circle {
+    cursor: pointer;
     fill: #393f4a;
+    transition: all .25s ease;
+    outline: 1px solid white;
 }
 
 #path_circle:hover{
