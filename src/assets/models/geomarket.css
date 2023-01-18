@@ -1,13 +1,8 @@
-path {
+circle {
     cursor: pointer;
     transition: all .25s ease;
 }
 
-path:hover {
+circle:hover {
     fill: #f80;
-}
-
-path.cls-7 {
-    pointer-events: none;
-    cursor: none;
 }
