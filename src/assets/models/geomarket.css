@@ -1,0 +1,7 @@
+path {
+    cursor: pointer;
+}
+
+path:hover {
+    fill: #ff7300;
+}
