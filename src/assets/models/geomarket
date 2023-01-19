@@ -151,7 +151,7 @@
           <path class="cls-11" d="M884.06,400a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(904.46 380.51)">Kansas City</text>
         </g>
-        <g id="St._Louis" data-name="St. Louis">
+        <g id="St_Louis" data-name="St. Louis">
           <line class="cls-10" x1="988.23" y1="428.61" x2="972.04" y2="444.89"/>
           <circle class="cls-7" cx="997.52" cy="421.19" r="9.77"/>
           <path class="cls-11" d="M997.52,411.65a9.54,9.54,0,1,1-9.54,9.53,9.54,9.54,0,0,1,9.54-9.53m0-.47a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>

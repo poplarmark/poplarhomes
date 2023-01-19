@@ -20,6 +20,146 @@ g {
     transition: all .25s ease;
 }
 
+#Greater_Seattle_Area {
+    animation: 1s fadeIn;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#San_Francisco_Oakland {
+    animation: 1s fadeIn;
+    animation-delay: 0.15s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#San_Jose {
+    animation: 1s fadeIn;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Las_Vegas {
+    animation: 1s fadeIn;
+    animation-delay: 0.35s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Inland_Empire {
+    animation: 1s fadeIn;
+    animation-delay: 0.45s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Greater_Los_Angeles {
+    animation: 1s fadeIn;
+    animation-delay: 0.55s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Orange_Riverside_Country {
+    animation: 1s fadeIn;
+    animation-delay: 0.65s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Greater_San_Diego {
+    animation: 1s fadeIn;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Phoenix_Scottsdale {
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Denver {
+    animation: 1s fadeIn;
+    animation-delay: 0.95s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#San_Antonio {
+    animation: 1s fadeIn;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Austin {
+    animation: 1s fadeIn;
+    animation-delay: 1.15s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Houston {
+    animation: 1s fadeIn;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Kansas {
+    animation: 1s fadeIn;
+    animation-delay: 1.35s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#St_Louis {
+    animation: 1s fadeIn;
+    animation-delay: 1.45s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Chicago {
+    animation: 1s fadeIn;
+    animation-delay: 1.55s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Nashville {
+    animation: 1s fadeIn;
+    animation-delay: 1.65s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Columbus {
+    animation: 1s fadeIn;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Charleston {
+    animation: 1s fadeIn;
+    animation-delay: 1.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Raleigh {
+    animation: 1s fadeIn;
+    animation-delay: 1.95s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
 #DC_Bowie {
     animation: 1s fadeIn;
     animation-delay: 2s;
