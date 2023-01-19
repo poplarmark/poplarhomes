@@ -12,6 +12,27 @@ circle:hover {
     transition: all .25s ease;
 }
 
-#path_circle:hover{
+#path_circle:hover {
     fill: #f80;
+}
+
+g {
+    transition: all .25s ease;
+}
+
+#DC_Bowie {
+    animation: 1s fadeIn;
+    animation-delay: 2s;
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
