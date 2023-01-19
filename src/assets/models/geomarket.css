@@ -7,12 +7,12 @@ circle:hover {
     fill: #f80;
 }
 
-#path_circle {
+.path_circle {
     cursor: pointer;
     transition: all .25s ease;
 }
 
-#path_circle:hover {
+.path_circle:hover {
     fill: #f80;
 }
 
