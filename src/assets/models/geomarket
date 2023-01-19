@@ -91,127 +91,127 @@
         <path class="cls-8" d="M1185.68,502l.1-.07c.19-.13.44-.32.71-.53l-.69.51Z"/>
       </g>
       <g id="Labels">
-        <g id="DC_Bowie" data-name="DC / Bowie">
+        <g id="DC_Bowie" data-name="DC / Bowie" data-aos="fade-up">
           <line class="cls-10" x1="1340.23" y1="359.98" x2="1401.34" y2="357.87"/>
           <path id="path_circle" class="cls-7" d="M1335,370.36a9.77,9.77,0,1,1,9.77-9.77A9.78,9.78,0,0,1,1335,370.36Z"/>
           <path class="cls-11" d="M1335,351.05a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(1405.2 365.58)">DC/Bowie</text>
         </g>
-        <g id="Raleigh">
+        <g id="Raleigh" data-aos="fade-up">
           <line class="cls-10" x1="1340.16" y1="475.93" x2="1404.4" y2="476.14"/>
           <circle class="cls-7" cx="1329.19" cy="477.3" r="9.77"/>
           <path class="cls-11" d="M1329.19,467.76a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(1410.12 480.97)">Raleigh</text>
         </g>
-        <g id="Charleston">
+        <g id="Charleston" data-aos="fade-up">
           <line class="cls-10" x1="1294.76" y1="586.87" x2="1369.19" y2="586.7"/>
           <circle class="cls-7" cx="1283.48" cy="587.23" r="9.77"/>
           <path class="cls-11" d="M1283.48,577.69a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(1376.88 593.03)">Charleston</text>
         </g>
-        <g id="Houston">
+        <g id="Houston" data-aos="fade-up">
           <line class="cls-10" x1="855.79" y1="732.33" x2="881.63" y2="749.61"/>
           <circle class="cls-7" cx="845.38" cy="726.61" r="9.77"/>
           <path class="cls-11" d="M845.38,717.07a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(885.25 762.78)">Houston</text>
         </g>
-        <g id="Austin">
+        <g id="Austin" data-aos="fade-up">
           <line class="cls-10" x1="809.81" y1="666.98" x2="828.9" y2="662.06"/>
           <circle class="cls-7" cx="798.25" cy="668.19" r="9.77"/>
           <path class="cls-11" d="M798.25,658.66a9.54,9.54,0,1,1-9.54,9.53,9.54,9.54,0,0,1,9.54-9.53m0-.47a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(831.46 662.24)">Austin</text>
         </g>
-        <g id="San_Antonio" data-name="San Antonio">
+        <g id="San_Antonio" data-name="San Antonio" data-aos="fade-up">
           <line class="cls-10" x1="766.15" y1="708.91" x2="755.45" y2="693.58"/>
           <circle class="cls-7" cx="772.45" cy="716.78" r="9.77"/>
           <path class="cls-11" d="M772.45,707.24a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(657.38 694.01)">San Antonio</text>
         </g>
-        <g id="Nashville">
+        <g id="Nashville" data-aos="fade-up">
           <line class="cls-10" x1="1093.31" y1="496.37" x2="1127.83" y2="498.53"/>
           <circle class="cls-7" cx="1080.91" cy="496.37" r="9.77"/>
           <path class="cls-11" d="M1080.91,486.83a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(1136.47 504.19)">Nashville</text>
         </g>
-        <g id="Columbus">
+        <g id="Columbus" data-aos="fade-up">
           <line class="cls-10" x1="1173.5" y1="340.08" x2="1174.75" y2="327.49"/>
           <circle class="cls-7" cx="1173.5" cy="352.48" r="9.77"/>
           <path class="cls-11" d="M1173.5,342.94a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(1142.74 323.55)">Columbus</text>
         </g>
-        <g id="Chicago">
+        <g id="Chicago" data-aos="fade-up">
           <line class="cls-10" x1="1050.98" y1="313.75" x2="1047.1" y2="326.91"/>
           <circle class="cls-7" cx="1053.78" cy="301.88" r="9.77"/>
           <path class="cls-11" d="M1053.78,292.34a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(980.51 339.74)">Chicago</text>
         </g>
-        <g id="Kansas">
+        <g id="Kansas" data-aos="fade-up">
           <line class="cls-10" x1="893.1" y1="402.67" x2="920.28" y2="385.32"/>
           <circle class="cls-7" cx="884.06" cy="409.57" r="9.77"/>
           <path class="cls-11" d="M884.06,400a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(904.46 380.51)">Kansas City</text>
         </g>
-        <g id="St_Louis" data-name="St. Louis">
+        <g id="St_Louis" data-name="St. Louis" data-aos="fade-up">
           <line class="cls-10" x1="988.23" y1="428.61" x2="972.04" y2="444.89"/>
           <circle class="cls-7" cx="997.52" cy="421.19" r="9.77"/>
           <path class="cls-11" d="M997.52,411.65a9.54,9.54,0,1,1-9.54,9.53,9.54,9.54,0,0,1,9.54-9.53m0-.47a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(902.72 460.04)">St. Louis</text>
         </g>
-        <g id="Denver">
+        <g id="Denver" data-aos="fade-up">
           <line class="cls-10" x1="623.73" y1="370.14" x2="600.16" y2="369.96"/>
           <circle class="cls-7" cx="634.21" cy="370.43" r="9.77"/>
           <path class="cls-11" d="M634.21,360.9a9.54,9.54,0,1,1-9.54,9.53,9.54,9.54,0,0,1,9.54-9.53m0-.47a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(539.96 375.7)">Denver</text>
         </g>
-        <g id="Las_Vegas" data-name="Las Vegas">
+        <g id="Las_Vegas" data-name="Las Vegas" data-aos="fade-up">
           <line class="cls-10" x1="344.73" y1="440.36" x2="344.73" y2="413.37"/>
           <circle class="cls-7" cx="345.52" cy="452.41" r="9.77"/>
           <path class="cls-11" d="M345.52,442.87a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(299.87 406.78)">Las Vegas</text>
         </g>
-        <g id="Inland_Empire" data-name="Inland Empire">
+        <g id="Inland_Empire" data-name="Inland Empire" data-aos="fade-up">
           <line class="cls-10" x1="268.68" y1="478.7" x2="268" y2="457.71"/>
           <path class="cls-7" d="M268.89,496.67a10,10,0,1,1,10-10A10,10,0,0,1,268.89,496.67Z"/>
           <path class="cls-11" d="M268.89,477.39a9.28,9.28,0,1,1-9.28,9.28,9.27,9.27,0,0,1,9.28-9.28m0-.6a9.88,9.88,0,1,0,9.88,9.88,9.89,9.89,0,0,0-9.88-9.88Z"/>
           <text class="cls-12" transform="translate(210.18 453.01)">Inland Empire</text>
         </g>
-        <g id="Greater_San_Diego" data-name="Greater San Diego">
+        <g id="Greater_San_Diego" data-name="Greater San Diego" data-aos="fade-up">
           <line class="cls-10" x1="262.43" y1="545.23" x2="241.05" y2="560.91"/>
           <circle class="cls-7" cx="271.11" cy="539.36" r="9.77"/>
           <path class="cls-11" d="M271.11,529.82a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(89.65 568.62)">Greater San Diego</text>
         </g>
-        <g id="Orange_Riverside_Country" data-name="Orange / Riverside Country">
+        <g id="Orange_Riverside_Country" data-name="Orange / Riverside Country" data-aos="fade-up">
           <line class="cls-10" x1="254.46" y1="510.39" x2="207.19" y2="525.23"/>
           <circle class="cls-7" cx="262.43" cy="509.42" r="9.7"/>
           <path class="cls-11" d="M262.43,500a9.4,9.4,0,1,1-9.39,9.4,9.4,9.4,0,0,1,9.39-9.4m0-.6a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(0 529.9)">Orange / Riverside County</text>
         </g>
-        <g id="Greater_Los_Angeles" data-name="Greater Los Angeles">
+        <g id="Greater_Los_Angeles" data-name="Greater Los Angeles" data-aos="fade-up">
           <line class="cls-10" x1="229.93" y1="494.21" x2="197.05" y2="487.84"/>
           <circle class="cls-7" cx="237.56" cy="495.83" r="9.7"/>
           <path class="cls-11" d="M237.56,486.43a9.4,9.4,0,1,1-9.39,9.4,9.4,9.4,0,0,1,9.39-9.4m0-.6a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(32.77 493)">Greater Los Angeles</text>
         </g>
-        <g id="San_Jose" data-name="San Jose">
+        <g id="San_Jose" data-name="San Jose" data-aos="fade-up">
           <line class="cls-10" x1="178.74" y1="389.37" x2="116.59" y2="398.14"/>
           <circle class="cls-7" cx="186.07" cy="389.06" r="9.7"/>
           <path class="cls-11" d="M186.07,379.67a9.39,9.39,0,1,1-9.39,9.39,9.39,9.39,0,0,1,9.39-9.39m0-.61a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(38.92 402.01)">San Jose</text>
         </g>
-        <g id="San_Francisco_Oakland" data-name="San Francisco &amp; Oakland">
+        <g id="San_Francisco_Oakland" data-name="San Francisco &amp; Oakland" data-aos="fade-up">
           <line class="cls-10" x1="166.69" y1="366.24" x2="131.09" y2="355.13"/>
           <circle class="cls-7" cx="173.93" cy="368.99" r="9.7"/>
           <path class="cls-11" d="M173.93,359.6a9.4,9.4,0,1,1-9.4,9.39,9.39,9.39,0,0,1,9.4-9.39m0-.61a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(32.77 348.56)">San Francisco &amp; Oakland</text>
         </g>
-        <g id="Greater_Seattle_Area" data-name="Greater Seattle Area">
+        <g id="Greater_Seattle_Area" data-name="Greater Seattle Area" data-aos="fade-up">
           <line class="cls-10" x1="264.58" y1="29.78" x2="201.28" y2="29.36"/>
           <circle class="cls-7" cx="275.36" cy="30.61" r="9.77"/>
           <path class="cls-11" d="M275.36,21.07a9.54,9.54,0,1,1-9.54,9.54,9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
           <text class="cls-12" transform="translate(33.48 34.65)">Greater Seattle Area</text>
         </g>
-        <g id="Phoenix_Scottsdale" data-name="Phoenix &amp; Scottsdale">
+        <g id="Phoenix_Scottsdale" data-name="Phoenix &amp; Scottsdale" data-aos="fade-up">
           <line class="cls-10" x1="422.34" y1="560.85" x2="429.74" y2="645.72"/>
           <circle class="cls-7" cx="419.94" cy="549.96" r="9.77"/>
           <path class="cls-11" d="M419.94,540.42A9.54,9.54,0,1,1,410.4,550a9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"/>
