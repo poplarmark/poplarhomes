@@ -24,7 +24,6 @@ g {
     animation: 1s fadeIn;
     animation-delay: 2s;
     animation-fill-mode: forwards;
-    visibility: hidden;
 }
 
 @keyframes fadeIn {

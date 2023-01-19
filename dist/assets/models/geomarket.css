@@ -1,4 +1,4 @@
 <style>
-circle{cursor:pointer;transition:all .25s ease}circle:hover{fill:#f80}#path_circle{cursor:pointer;transition:all .25s ease}#path_circle:hover{fill:#f80}g{transition:all .25s ease}#DC_Bowie{animation:fadeIn 1s;animation-delay:2s;animation-fill-mode:forwards;visibility:hidden}@keyframes fadeIn{0%{opacity:0}to{opacity:1;visibility:visible}}
+circle{cursor:pointer;transition:all .25s ease}circle:hover{fill:#f80}#path_circle{cursor:pointer;transition:all .25s ease}#path_circle:hover{fill:#f80}g{transition:all .25s ease}#DC_Bowie{animation:fadeIn 1s;animation-delay:2s;animation-fill-mode:forwards}@keyframes fadeIn{0%{opacity:0}to{opacity:1;visibility:visible}}
 /*# sourceMappingURL=geomarket.css.map */
 </style>
