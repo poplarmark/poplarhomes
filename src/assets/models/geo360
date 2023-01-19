@@ -38,41 +38,8 @@
         font-family: Eina03, sans-serif;
         font-weight: 700;
       }
-      .cls-20,
-      .cls-7 {
-        letter-spacing: -0.01em;
-      }
-      .cls-14,
-      .cls-8 {
-        letter-spacing: -0.03em;
-      }
-      .cls-13,
-      .cls-9 {
-        letter-spacing: -0.01em;
-      }
-      .cls-10 {
-        letter-spacing: -0.01em;
-      }
-      .cls-11 {
-        letter-spacing: -0.1em;
-      }
-      .cls-12 {
-        letter-spacing: -0.03em;
-      }
       .cls-15 {
         fill: #e2cca3;
-      }
-      .cls-16 {
-        letter-spacing: -0.01em;
-      }
-      .cls-18 {
-        letter-spacing: -0.02em;
-      }
-      .cls-19 {
-        letter-spacing: -0.02em;
-      }
-      .cls-21 {
-        letter-spacing: -0.06em;
       }
       .cls-22 {
         stroke: #393f4a;
@@ -362,10 +329,12 @@
             class="cls-4"
             d="M297.44,514.62l1.3-.48c-.08-.18-.17-.36-.24-.55l-1.44.53-1.17.43-52.5,19.31.21.57L296.32,515Z"
           />
-          <path
-            class="cls-4 path_circle"
-            d="M297.37,510.07a10,10,0,1,0,10-10A10,10,0,0,0,297.37,510.07Z"
-          />
+          <a target="_blank" href="#">
+            <path
+              class="cls-4 path_circle"
+              d="M297.37,510.07a10,10,0,1,0,10-10A10,10,0,0,0,297.37,510.07Z"
+            />
+          </a>
           <text class="cls-7" transform="translate(0 544.35)">
             Orange County, CA
           </text>
@@ -375,15 +344,17 @@
             class="cls-4"
             d="M305.54,547.3l-1.52,1L277.63,565l-4.43,2.8-19.67,12.43.32.51,20.76-13.13,2.18-1.37,27.74-17.54,1.35-.85.41-.27c-.11-.16-.22-.33-.32-.5Z"
           />
-          <circle
-            class="cls-4"
-            cx="317.01"
-            cy="540.21"
-            r="10"
-            transform="translate(-182.6 162.43) rotate(-22.5)"
-          />
+          <a target="_blank" href="#">
+            <circle
+              class="cls-4"
+              cx="317.01"
+              cy="540.21"
+              r="10"
+              transform="translate(-182.6 162.43) rotate(-22.5)"
+            />
+          </a>
           <text class="cls-13" transform="translate(135.73 586.35)">
-            San Diego,CA
+            San Diego, CA
           </text>
         </g>
         <g id="Los_Angeles" data-name="Los Angeles">
@@ -391,7 +362,9 @@
             class="cls-4"
             d="M269,496.88h4c0-.1,0-.2,0-.3s0-.2,0-.3H223.46v.6H269Z"
           />
-          <circle class="cls-4" cx="282.52" cy="496.58" r="10" />
+          <a target="_blank" href="#">
+            <circle class="cls-4" cx="282.52" cy="496.58" r="10" />
+          </a>
           <text class="cls-14" transform="translate(90.37 501.35)">
             Los Angeles, CA
           </text>
@@ -405,10 +378,12 @@
             class="cls-4"
             d="M165.18,381.18v.59h48.56c0-.1,0-.19,0-.3s0-.19,0-.29Z"
           />
-          <path
-            class="cls-4 path_circle"
-            d="M233.28,381.47a10,10,0,1,0-10,10A10,10,0,0,0,233.28,381.47Z"
-          />
+          <a target="_blank" href="#">
+            <path
+              class="cls-4 path_circle"
+              d="M233.28,381.47a10,10,0,1,0-10,10A10,10,0,0,0,233.28,381.47Z"
+            />
+          </a>
           <text class="cls-7" transform="translate(59.1 385.35)">
             Bay Area, CA
           </text>
@@ -422,7 +397,9 @@
             class="cls-4"
             d="M239.76,344.05c0-.2,0-.4,0-.6L209.3,340l-45.25-5.08-.06.59,45.3,5.1Z"
           />
-          <circle class="cls-4" cx="249.29" cy="344.52" r="10" />
+          <a target="_blank" href="#">
+            <circle class="cls-4" cx="249.29" cy="344.52" r="10" />
+          </a>
           <text class="cls-13" transform="translate(32.33 339.35)">
             Sacramento, CA
           </text>
@@ -432,7 +409,9 @@
             Seattle, WA
           </text>
           <line class="cls-22" x1="292.06" y1="31.21" x2="228.76" y2="30.79" />
-          <circle class="cls-4" cx="302.84" cy="31.03" r="9.77" />
+          <a target="_blank" href="#">
+            <circle class="cls-4" cx="302.84" cy="31.03" r="9.77" />
+          </a>
           <path
             class="cls-23"
             d="M302.84,21.49A9.54,9.54,0,1,1,293.3,31a9.54,9.54,0,0,1,9.54-9.54m0-.46a10,10,0,1,0,10,10,10,10,0,0,0-10-10Z"
