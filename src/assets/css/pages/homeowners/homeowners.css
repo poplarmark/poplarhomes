@@ -17,7 +17,7 @@
     transition: .5s all ease-in-out;
 }
 
-@media screen and (max-width: 526px){
+@media screen and (max-width: 526px) and (min-width: 480px) {
     .animation_word-rotation-mask.for-homeowners-hero {
         height: 110px;
     }
