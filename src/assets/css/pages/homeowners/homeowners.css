@@ -24,7 +24,7 @@
         top: 110px;
     }
     .animation_word-rotation-mask span.animated_text[data-show] {
-        top: -180px;
+        top: 250px;
     }
     .display-block-mobile {
         display: block;
