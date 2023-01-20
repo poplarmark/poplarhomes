@@ -35,6 +35,12 @@
     }
 }
 
+@media screen and (max-width: 479px) {
+    .animation_word-rotation-mask .animated_text {
+        top: 50px;
+    }
+}
+
 /** Word rotation end **/
 /** Homeowners' hero section start **/
 @media screen and (max-width: 767px) and (min-width: 480px) {
