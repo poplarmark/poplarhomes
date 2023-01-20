@@ -1,0 +1,19 @@
+/** Word rotation start **/
+.animation_word-rotation-mask .animated_text {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100;
+}
+
+.animation_word-rotation-mask span.animated_text[data-show] {
+    top: 0;
+    transform: translateY(-100%);
+    transition: .5s all ease-in-out;
+}
+
+.animation_word-rotation-mask span.animated_text[data-up] {
+    transform: translateY(-200%);
+    transition: .5s all ease-in-out;
+}
+/** Word rotation end**/
