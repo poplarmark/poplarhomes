@@ -7,8 +7,8 @@ const autoprefixer = require('autoprefixer');
 const sourcemaps = require ('gulp-sourcemaps');
 const {src, series, parallel, dest, watch} = require('gulp');
 // Edit working path here
-const jsPath = 'src/assets/js/**/*.js';
-const cssPath = 'src/assets/css/pages/homeowners/homeowners.css';
+const jsPath = 'src/assets/js/utils/resize-zoom.js';
+const cssPath = 'src/assets/css/**/*.css';
 
 function jsBundler() {
     return src(jsPath)
@@ -23,7 +23,7 @@ function cssBundler() {
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/assets/css/pages/homeowners'));
+    .pipe(dest('dist/assets/css'));
 }
 
 exports.jsBundler = jsBundler;
