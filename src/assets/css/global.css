@@ -30,7 +30,7 @@
 
 .navbar-main_link.w--current .navbar-main_link-underline,
 .navbar-main_link:hover .navbar-main_link-underline {
-    opacity: 100;
+    opacity: 100
 }
 @media screen and (max-width: 767px) {
     .navbar-main_link-underline {
