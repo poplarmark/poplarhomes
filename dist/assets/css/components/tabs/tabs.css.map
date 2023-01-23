@@ -1,1 +1,0 @@
-{"version":3,"sources":["tabs.css"],"names":[],"mappings":"AAAA,oCACI,WACI,iBACJ,CACJ","file":"tabs.css","sourcesContent":["@media screen and (max-width: 479px) {\n    .tabs-link {\n        font-size: 0.875rem;\n    }   \n}"]}

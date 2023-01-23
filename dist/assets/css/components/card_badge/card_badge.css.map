@@ -1,0 +1,1 @@
+{"version":3,"sources":["card_badge.css"],"names":[],"mappings":"AAAA,oCACI,WACI,mBACJ,CACJ","file":"card_badge.css","sourcesContent":["@media screen and (max-width: 479px) {\n    .badge_box {\n        pointer-events: none;\n    }\n}"]}
