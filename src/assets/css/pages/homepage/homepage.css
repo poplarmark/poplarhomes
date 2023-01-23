@@ -32,7 +32,7 @@
     }
 }
 @media screen and (min-width: 992px) {
-    span.animated_text:first-child .line-break {
+    span.animated_text:nth-child(3) .line-break {
         display: inline-block;
     }
 }

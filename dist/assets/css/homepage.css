@@ -1,0 +1,4 @@
+<style>
+.animation_word-rotation-mask .animated_text{box-sizing:border-box;display:block;position:absolute;top:220px}.animation_word-rotation-mask span.animated_text[data-show]{top:0;transition:all .5s ease-in-out}.animation_word-rotation-mask span.animated_text[data-up]{transform:translateY(-500%);transition:all .5s ease-in-out}@media screen and (min-width:768px){span.animated_text:last-child .line-break{display:block}}@media screen and (min-width:820px){span.animated_text:nth-child(3) .line-break{display:block}}@media screen and (min-width:937px){span.animated_text:first-child .line-break{display:block}}@media screen and (min-width:992px){span.animated_text:nth-child(3) .line-break{display:inline-block}}@media screen and (max-width:534px) and (min-width:480px){.heading-style-h1.text-color-orange span.show-mobile{display:block}}
+/*# sourceMappingURL=homepage.css.map */
+</style>
