@@ -17,17 +17,17 @@
 }
 
 @media screen and (min-width: 768px) {
-    .animated_text span:last-child .line-break {
+    span.animated_text:last-child .line-break {
         display: block;
     }
 }
 @media screen and (min-width: 820px) {
-    .animated_text span:nth-child(3) .line-break {
+    span.animated_text:nth-child(3) .line-break {
         display: block;
     }
 }
 @media screen and (min-width: 937px) {
-    .animated_text span:first-child .line-break {
+    span.animated_text:first-child .line-break {
         display: block;
     }
 }
