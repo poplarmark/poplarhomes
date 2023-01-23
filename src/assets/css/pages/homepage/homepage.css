@@ -21,31 +21,73 @@
         display: block;
     }
 }
+
 @media screen and (min-width: 820px) {
     span.animated_text:nth-child(3) .line-break {
         display: block;
     }
 }
+
 @media screen and (min-width: 937px) {
     span.animated_text:first-child .line-break {
         display: block;
     }
 }
+
 @media screen and (min-width: 992px) {
+
     span.animated_text:nth-child(3) .line-break,
     span.animated_text:first-child .line-break {
         display: inline;
     }
 }
+
 @media screen and (min-width: 993px) {
     span.animated_text:nth-child(3) .line-break {
         display: block;
     }
 }
 
+@media screen and (max-width:767px) {
+    span.animated_text .line-break {
+        display: block;
+    }
+
+    .word-rotation_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 572px) and (min-width: 480px) {
+    .animation_word-rotation-mask {
+        height: 160px;
+    }
+
+    span.animated_text:not(:first-child) {
+        padding-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    span.animated_text:nth-child(2) {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    span.animated_text:nth-child(3) {
+        padding-top: 0;
+    }
+}
+
+
+
 @media screen and (max-width: 534px) and (min-width: 480px) {
     .heading-style-h1.text-color-orange span.show-mobile {
         display: block;
     }
 }
+
 /** Word rotation end**/
