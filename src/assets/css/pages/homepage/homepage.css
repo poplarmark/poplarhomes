@@ -16,6 +16,22 @@
     transition: .5s all ease-in-out;
 }
 
+@media screen and (min-width: 768px) {
+    .animated_text span:last-child .line-break {
+        display: block;
+    }
+}
+@media screen and (min-width: 820px) {
+    .animated_text span:nth-child(3) .line-break {
+        display: block;
+    }
+}
+@media screen and (min-width: 937px) {
+    .animated_text span:first-child .line-break {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 534px) and (min-width: 480px) {
     .heading-style-h1.text-color-orange span.show-mobile {
         display: block;
