@@ -37,6 +37,11 @@
         display: inline;
     }
 }
+@media screen and (min-width: 993px) {
+    span.animated_text:nth-child(3) .line-break {
+        display: block;
+    }
+}
 
 @media screen and (max-width: 534px) and (min-width: 480px) {
     .heading-style-h1.text-color-orange span.show-mobile {
