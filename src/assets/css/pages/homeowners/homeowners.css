@@ -51,10 +51,10 @@
 
 /** Homeowners' hero section end **/
 /** Homeowners' maps start **/
-.in-viewport {
+g.in-viewport {
     cursor: pointer;
 }
-.in-viewport:hover {
+g.in-viewport:hover {
     font-size: 1.5rem;
     color: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
