@@ -50,16 +50,3 @@
 }
 
 /** Homeowners' hero section end **/
-/** Homeowners' maps start **/
-g.in-viewport {
-    cursor: pointer;
-}
-g.in-viewport:hover {
-    font-size: 1.5rem;
-    color: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-}
-
-/** Homeowners' maps end **/
