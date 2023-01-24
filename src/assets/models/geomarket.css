@@ -31,9 +31,7 @@ g {
 #Greater_Seattle_Area:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #San_Francisco_Oakland {
@@ -47,9 +45,7 @@ g {
 #San_Francisco_Oakland:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #San_Jose {
@@ -65,9 +61,7 @@ g {
 #San_Jose:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 #San_Jose:hover .cls-12 {
     font-size: 1.5rem;
@@ -84,9 +78,7 @@ g {
 #Las_Vegas:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Inland_Empire {
@@ -100,9 +92,7 @@ g {
 #Inland_Empire:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Greater_Los_Angeles {
@@ -116,9 +106,7 @@ g {
 #Greater_Los_Angeles:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Orange_Riverside_Country {
@@ -132,9 +120,7 @@ g {
 #Orange_Riverside_Country:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Greater_San_Diego {
@@ -148,9 +134,7 @@ g {
 #Greater_San_Diego:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Phoenix_Scottsdale {
@@ -165,9 +149,7 @@ g {
 #Phoenix_Scottsdale:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Denver {
@@ -181,9 +163,7 @@ g {
 #Denver:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #San_Antonio {
@@ -198,9 +178,7 @@ g {
 #San_Antonio:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 #San_Antonio:hover .cls-12 {
     font-size: 1.5rem;
@@ -217,9 +195,7 @@ g {
 #Austin:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Houston {
@@ -234,9 +210,7 @@ g {
 #Houston:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Kansas {
@@ -250,9 +224,7 @@ g {
 #Kansas:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #St_Louis {
@@ -267,9 +239,7 @@ g {
 #St_Louis:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Chicago {
@@ -283,9 +253,7 @@ g {
 #Chicago:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Nashville {
@@ -299,9 +267,7 @@ g {
 #Nashville:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Columbus {
@@ -315,9 +281,7 @@ g {
 #Columbus:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Charleston {
@@ -332,9 +296,7 @@ g {
 #Charleston:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #Raleigh {
@@ -348,9 +310,7 @@ g {
 #Raleigh:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 #DC_Bowie {
     cursor: pointer;
@@ -363,9 +323,7 @@ g {
 #DC_Bowie:hover {
     font-size: 1.5rem;
     fill: white;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 @keyframes fadeIn {
