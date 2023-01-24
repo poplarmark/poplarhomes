@@ -1,3 +1,17 @@
+#Riverside_360 {
+    cursor: pointer;
+    font-size: 1.25rem;
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+#Riverside_360:hover {
+    font-size: 1.5rem;
+    fill: white;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
 #San_Diego_360 {
     cursor: pointer;
     font-size: 1.25rem;
