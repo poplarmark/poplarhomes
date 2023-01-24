@@ -1,0 +1,74 @@
+#San_Diego_360 {
+    cursor: pointer;
+    font-size: 1.25rem;
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#San_Diego_360:hover {
+    font-size: 1.5rem;
+    fill: white;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+#Los_Angeles_360 {
+    cursor: pointer;
+    font-size: 1.25rem;
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Los_Angeles_360:hover {
+    font-size: 1.5rem;
+    fill: white;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+#Bay_Area_360 {
+    cursor: pointer;
+    font-size: 1.25rem;
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Bay_Area_360:hover {
+    font-size: 1.5rem;
+    fill: white;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+#Sacramento_360 {
+    cursor: pointer;
+    font-size: 1.25rem;
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Sacramento_360:hover {
+    font-size: 1.5rem;
+    fill: white;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+#Seattle_360 {
+    cursor: pointer;
+    font-size: 1.25rem;
+    animation: 1s fadeIn;
+    animation-delay: 0.85s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+#Seattle_360:hover {
+    font-size: 1.5rem;
+    fill: white;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}

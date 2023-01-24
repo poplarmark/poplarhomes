@@ -339,7 +339,7 @@
             Orange County, CA
           </text>
         </g>
-        <g id="San_Diego" data-name="San Diego">
+        <g id="San_Diego_360" data-name="San Diego">
           <path
             class="cls-4"
             d="M305.54,547.3l-1.52,1L277.63,565l-4.43,2.8-19.67,12.43.32.51,20.76-13.13,2.18-1.37,27.74-17.54,1.35-.85.41-.27c-.11-.16-.22-.33-.32-.5Z"
@@ -357,7 +357,7 @@
             San Diego, CA
           </text>
         </g>
-        <g id="Los_Angeles" data-name="Los Angeles">
+        <g id="Los_Angeles_360" data-name="Los Angeles">
           <path
             class="cls-4"
             d="M269,496.88h4c0-.1,0-.2,0-.3s0-.2,0-.3H223.46v.6H269Z"
@@ -369,7 +369,7 @@
             Los Angeles, CA
           </text>
         </g>
-        <g id="Bay_Area" data-name="Bay Area">
+        <g id="Bay_Area_360" data-name="Bay Area">
           <path
             class="cls-15"
             d="M223.05,397.56V398a3.89,3.89,0,0,0,.43-.48Z"
@@ -388,7 +388,7 @@
             Bay Area, CA
           </text>
         </g>
-        <g id="Sacramento">
+        <g id="Sacramento_360">
           <path
             class="cls-17"
             d="M239.73,344.52a9.65,9.65,0,1,0,.07-1.07c0,.2,0,.4,0,.6S239.73,344.36,239.73,344.52Zm9.56-9.12a9.12,9.12,0,1,1-9.11,9.12A9.11,9.11,0,0,1,249.29,335.4Z"
@@ -404,7 +404,7 @@
             Sacramento, CA
           </text>
         </g>
-        <g id="Seattle">
+        <g id="Seattle_360">
           <text class="cls-13" transform="translate(136.14 35.07)">
             Seattle, WA
           </text>

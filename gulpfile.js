@@ -8,7 +8,7 @@ const sourcemaps = require ('gulp-sourcemaps');
 const {src, series, parallel, dest, watch} = require('gulp');
 // Edit working path here
 const jsPath = 'src/assets/js/**/*.js';
-const cssPath = 'src/assets/models/**/*.css';
+const cssPath = 'src/assets/models/geo360.css';
 
 function jsBundler() {
     return src(jsPath)
