@@ -30,7 +30,7 @@ g {
 }
 #Greater_Seattle_Area:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -46,7 +46,7 @@ g {
 }
 #San_Francisco_Oakland:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -54,18 +54,23 @@ g {
 
 #San_Jose {
     cursor: pointer;
-    font-size: 1.25rem;
     animation: 1s fadeIn;
     animation-delay: 0.25s;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+#San_Jose .cls-12 {
+    font-size: 1.25rem;
+}
 #San_Jose:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+#San_Jose:hover .cls-12 {
+    font-size: 1.5rem;
 }
 
 #Las_Vegas {
@@ -78,7 +83,7 @@ g {
 }
 #Las_Vegas:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -94,7 +99,7 @@ g {
 }
 #Inland_Empire:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -110,7 +115,7 @@ g {
 }
 #Greater_Los_Angeles:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -126,7 +131,7 @@ g {
 }
 #Orange_Riverside_Country:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -142,7 +147,7 @@ g {
 }
 #Greater_San_Diego:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -159,7 +164,7 @@ g {
 
 #Phoenix_Scottsdale:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -175,7 +180,7 @@ g {
 }
 #Denver:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -187,12 +192,18 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+#San_Antonio .cls-12 {
+    font-size: 1.25rem;
+}
 #San_Antonio:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+#San_Antonio:hover .cls-12 {
+    font-size: 1.5rem;
 }
 
 #Austin {
@@ -205,7 +216,7 @@ g {
 }
 #Austin:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -222,7 +233,7 @@ g {
 
 #Houston:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -238,7 +249,7 @@ g {
 }
 #Kansas:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -255,7 +266,7 @@ g {
 
 #St_Louis:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -271,7 +282,7 @@ g {
 }
 #Chicago:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -287,7 +298,7 @@ g {
 }
 #Nashville:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -303,7 +314,7 @@ g {
 }
 #Columbus:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -320,7 +331,7 @@ g {
 
 #Charleston:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -336,7 +347,7 @@ g {
 }
 #Raleigh:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
@@ -351,7 +362,7 @@ g {
 }
 #DC_Bowie:hover {
     font-size: 1.5rem;
-    color: white;
+    fill: white;
     -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
