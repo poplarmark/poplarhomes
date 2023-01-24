@@ -34,7 +34,7 @@
       .cls-13,
       .cls-14,
       .cls-7 {
-        font-size: 1.25rem;
+        font-size: inherit;
         font-family: Eina03, sans-serif;
         font-weight: 700;
       }
