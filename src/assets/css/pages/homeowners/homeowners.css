@@ -51,6 +51,9 @@
 
 /** Homeowners' hero section end **/
 /** Homeowners' maps start **/
+.in-viewport {
+    cursor: pointer;
+}
 .in-viewport:hover {
     font-size: 1.5rem;
     color: white;
