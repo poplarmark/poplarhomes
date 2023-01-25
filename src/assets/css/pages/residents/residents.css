@@ -3,7 +3,7 @@
     display: block;
     box-sizing: border-box;
     position: absolute;
-    top: 60px;
+    top: 120px;
 }
 
 .animation_word-rotation-mask span.animated_text[data-show] {
@@ -13,8 +13,13 @@
 }
 
 .animation_word-rotation-mask span.animated_text[data-up] {
-    transform: translateY(-200%);
+    transform: translateY(-290%);
     transition: .5s all ease-in-out;
 }
 
+@media screen (min-width: 992px) {
+    .animated_text .line-break {
+        display: block;
+    }
+}
 /** Word rotation end **/
