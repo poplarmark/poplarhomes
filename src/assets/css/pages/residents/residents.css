@@ -28,7 +28,8 @@
     span.animated_text .line-break {
         display: inline;
     }
-    span.animated_text:nth-child(2) .line-break {
+    span.animated_text:nth-child(2) .line-break,
+    span.animated_text:last-child .line-break {
         display: block;
     }
     .animation_word-rotation-mask span.animated_text[data-show] {
