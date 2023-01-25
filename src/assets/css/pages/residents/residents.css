@@ -24,6 +24,7 @@
         max-width: 60%;
     }
 }
+
 @media screen and (max-width: 767px) and (min-width: 480px){
     span.animated_text .line-break {
         display: inline;
@@ -35,6 +36,9 @@
     .animation_word-rotation-mask span.animated_text[data-show] {
         top: 10px;
     }
+}
+
+@media screen and (max-width: 767px) and (min-width: 300px) {
     .animation_word-rotation-mask .animated_text {
         padding-top: 0;
         padding-bottom: 0;
