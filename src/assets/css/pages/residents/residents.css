@@ -50,7 +50,7 @@
         top: 6px;
     }
     span.animated_text .line-break {
-        display: inline;
+        display: block;
     }
 }
 /** Word rotation end **/
