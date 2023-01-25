@@ -49,5 +49,8 @@
     .animation_word-rotation-mask span.animated_text[data-show] {
         top: 6px;
     }
+    span.animated_text .line-break {
+        display: inline;
+    }
 }
 /** Word rotation end **/
