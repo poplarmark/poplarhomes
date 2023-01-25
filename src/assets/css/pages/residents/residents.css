@@ -22,4 +22,9 @@
         display: block;
     }
 }
+@media screen and (max-width: 991px) {
+    span.animated_text .line-break {
+        display: inline;
+    }
+}
 /** Word rotation end **/
