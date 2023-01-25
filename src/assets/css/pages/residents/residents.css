@@ -6,7 +6,7 @@
     box-sizing: border-box;
     position: absolute;
     top: 120px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
 }
 
 .animation_word-rotation-mask span.animated_text[data-show] {
@@ -19,7 +19,11 @@
     transform: translateY(-290%);
     transition: .5s all ease-in-out;
 }
-
+@media screen and (max-width: 880px) and (min-width: 768px) {
+    .section_residents-hero .section_subheader {
+        max-width: 60%;
+    }
+}
 @media screen and (max-width: 767px) {
     span.animated_text .line-break {
         display: inline;
