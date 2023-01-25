@@ -1,9 +1,12 @@
 /** Word rotation start **/
 .animation_word-rotation-mask .animated_text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: block;
     box-sizing: border-box;
     position: absolute;
     top: 120px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
 }
 
 .animation_word-rotation-mask span.animated_text[data-show] {
@@ -17,11 +20,6 @@
     transition: .5s all ease-in-out;
 }
 
-@media screen and (min-width: 768px) {
-    span.animated_text .line-break {
-        display: block;
-    }
-}
 @media screen and (max-width: 767px) {
     span.animated_text .line-break {
         display: inline;
