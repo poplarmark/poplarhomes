@@ -50,3 +50,13 @@
 }
 
 /** Homeowners' hero section end **/
+/** Pricing and features section start **/
+@media screen and (max-width: 690px) {
+    .table_pricing-mobile .table-pricing_columns-wrapper .table-pricing_columns-lists {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+}
+
+/** Pricing and features section end **/
