@@ -148,11 +148,12 @@ th.background-color-orange {
     }
 
     [role="table"][aria-labelledby][tabindex] {
-        height: 1020px;
+        height: 470px;
+        overflow-y: auto;
     }
 
     .table-pricing_mobile .table-pricing_column-border {
-        height: 1010px;
+        height: 475px;
     }
 
     .table-pricing_mobile tbody tr:last-child td {
