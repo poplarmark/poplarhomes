@@ -15,8 +15,8 @@
 	.st8{fill:#A7A7BB;}
 	.st9{fill:none;stroke:#393F4A;stroke-width:0.6;stroke-miterlimit:10;}
 	.st10{fill:#FBF9F0;}
-	.st11{font-family:'Arial-BoldMT';}
-	.st12{font-size:12px;}
+	.st11{font-family:'Eina03,sans-serif', font-weight: 700;}
+	.st12{font-size:1rem;}
   </style>
   <g id="Maps">
     <g id="Geomarket">
