@@ -533,218 +533,217 @@
         <path class="st7" d="M1185.7,506L1185.7,506c0.3-0.2,0.5-0.4,0.8-0.6l-0.7,0.5L1185.7,506z"/>
       </g>
       <g id="Labels">
-        <g id="DC_Bowie">
-          <line class="st9" x1="1340.2" y1="364" x2="1401.3" y2="361.9"/>
-          <a>
+        <a target="_blank" href="#">
+          <g id="DC_Bowie">
+            <line class="st9" x1="1340.2" y1="364" x2="1401.3" y2="361.9"/>
             <path class="st6" d="M1335,374.4c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8c5.4,0,9.8,4.4,9.8,9.8
 						C1344.8,370,1340.4,374.4,1335,374.4z"/>
-          </a>
-          <path class="st10" d="M1335,355.1c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M1335,355.1c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					C1325.5,359.3,1329.7,355.1,1335,355.1L1335,355.1 M1335,354.6c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S1340.5,354.6,1335,354.6z"/>
-          <text transform="matrix(1 0 0 1 1405.2 364.581)" class="st11 st12">DC/Bowie</text>
-        </g>
-        <g id="Raleigh">
-          <line class="st9" x1="1340.2" y1="479.9" x2="1404.4" y2="480.1"/>
-          <a>
+            <text transform="matrix(1 0 0 1 1405.2 364.581)" class="st11 st12">DC/Bowie</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Raleigh">
+            <line class="st9" x1="1340.2" y1="479.9" x2="1404.4" y2="480.1"/>
             <circle class="st6" cx="1329.2" cy="481.3" r="9.8"/>
-          </a>
-          <path class="st10" d="M1329.2,471.8c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M1329.2,471.8c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					C1319.6,476,1323.9,471.8,1329.2,471.8L1329.2,471.8 M1329.2,471.3c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S1334.7,471.3,1329.2,471.3z"/>
-          <text transform="matrix(1 0 0 1 1410.12 484.971)" class="st11 st12">Raleigh</text>
-        </g>
-        <g id="Charleston">
-          <line class="st9" x1="1294.8" y1="590.9" x2="1369.2" y2="590.7"/>
-          <a>
+            <text transform="matrix(1 0 0 1 1410.12 484.971)" class="st11 st12">Raleigh</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Charleston">
+            <line class="st9" x1="1294.8" y1="590.9" x2="1369.2" y2="590.7"/>
             <circle class="st6" cx="1283.5" cy="591.2" r="9.8"/>
-          </a>
-          <path class="st10" d="M1283.5,581.7c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M1283.5,581.7c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					S1278.2,581.7,1283.5,581.7L1283.5,581.7 M1283.5,581.2c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S1289,581.2,1283.5,581.2
 					z"/>
-          <text transform="matrix(1 0 0 1 1376.88 597.0311)" class="st11 st12">Charleston</text>
-        </g>
-        <g id="Houston">
-          <line class="st9" x1="855.8" y1="736.3" x2="881.6" y2="753.6"/>
-          <a>
+            <text transform="matrix(1 0 0 1 1376.88 597.0311)" class="st11 st12">Charleston</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Houston">
+            <line class="st9" x1="855.8" y1="736.3" x2="881.6" y2="753.6"/>
             <circle class="st6" cx="845.4" cy="730.6" r="9.8"/>
-          </a>
-          <path class="st10" d="M845.4,721.1c5.3,0,9.5,4.3,9.5,9.5s-4.3,9.5-9.5,9.5s-9.5-4.3-9.5-9.5c0,0,0,0,0,0
+            <path class="st10" d="M845.4,721.1c5.3,0,9.5,4.3,9.5,9.5s-4.3,9.5-9.5,9.5s-9.5-4.3-9.5-9.5c0,0,0,0,0,0
 					C835.8,725.3,840.1,721.1,845.4,721.1 M845.4,720.6c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S850.9,720.6,845.4,720.6z"/>
-          <text transform="matrix(1 0 0 1 885.25 766.7811)" class="st11 st12">Houston</text>
-        </g>
-        <g id="Austin">
-          <line class="st9" x1="809.8" y1="671" x2="828.9" y2="666.1"/>
-          <a>
+            <text transform="matrix(1 0 0 1 885.25 766.7811)" class="st11 st12">Houston</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Austin">
+            <line class="st9" x1="809.8" y1="671" x2="828.9" y2="666.1"/>
             <circle class="st6" cx="798.2" cy="672.2" r="9.8"/>
-          </a>
-          <path class="st10" d="M798.2,662.7c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5s-9.5-4.3-9.5-9.5c0,0,0,0,0,0
+            <path class="st10" d="M798.2,662.7c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5s-9.5-4.3-9.5-9.5c0,0,0,0,0,0
 					C788.7,666.9,793,662.7,798.2,662.7 M798.2,662.2c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S803.8,662.2,798.2,662.2z"/>
-          <text transform="matrix(1 0 0 1 831.46 666.241)" class="st11 st12">Austin</text>
-        </g>
-        <g id="San_Antonio">
-          <line class="st9" x1="766.2" y1="712.9" x2="755.5" y2="697.6"/>
-          <a>
+            <text transform="matrix(1 0 0 1 831.46 666.241)" class="st11 st12">Austin</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="San_Antonio">
+            <line class="st9" x1="766.2" y1="712.9" x2="755.5" y2="697.6"/>
             <circle class="st6" cx="772.5" cy="720.8" r="9.8"/>
-          </a>
-          <path class="st10" d="M772.5,711.2c5.3,0,9.5,4.3,9.5,9.5s-4.3,9.5-9.5,9.5s-9.5-4.3-9.5-9.5c0,0,0,0,0,0
+            <path class="st10" d="M772.5,711.2c5.3,0,9.5,4.3,9.5,9.5s-4.3,9.5-9.5,9.5s-9.5-4.3-9.5-9.5c0,0,0,0,0,0
 					C762.9,715.5,767.2,711.2,772.5,711.2 M772.5,710.8c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S778,710.8,772.5,710.8z"/>
-          <text transform="matrix(1 0 0 1 666.38 695.011)" class="st11 st12">San Antonio</text>
-        </g>
-        <g id="Nashville">
-          <line class="st9" x1="1093.3" y1="500.4" x2="1127.8" y2="502.5"/>
-          <a>
+            <text transform="matrix(1 0 0 1 666.38 695.011)" class="st11 st12">San Antonio</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Nashville">
+            <line class="st9" x1="1093.3" y1="500.4" x2="1127.8" y2="502.5"/>
             <circle class="st6" cx="1080.9" cy="500.4" r="9.8"/>
-          </a>
-          <path class="st10" d="M1080.9,490.8c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M1080.9,490.8c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					C1071.4,495.1,1075.6,490.8,1080.9,490.8L1080.9,490.8 M1080.9,490.4c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S1086.4,490.4,1080.9,490.4z"/>
-          <text transform="matrix(1 0 0 1 1130.47 508.191)" class="st11 st12">Nashville</text>
-        </g>
-        <g id="Columbus">
-          <line class="st9" x1="1173.5" y1="344.1" x2="1174.8" y2="331.5"/>
-          <a>
+            <text transform="matrix(1 0 0 1 1130.47 508.191)" class="st11 st12">Nashville</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Columbus">
+            <line class="st9" x1="1173.5" y1="344.1" x2="1174.8" y2="331.5"/>
             <circle class="st6" cx="1173.5" cy="356.5" r="9.8"/>
-          </a>
-          <path class="st10" d="M1173.5,346.9c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M1173.5,346.9c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					C1164,351.2,1168.2,346.9,1173.5,346.9L1173.5,346.9 M1173.5,346.5c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S1179,346.5,1173.5,346.5z"/>
-          <text transform="matrix(1 0 0 1 1142.74 327.551)" class="st11 st12">Columbus</text>
-        </g>
-        <g id="Chicago">
-          <line class="st9" x1="1051" y1="317.8" x2="1047.1" y2="330.9"/>
-          <a>
+            <text transform="matrix(1 0 0 1 1142.74 327.551)" class="st11 st12">Columbus</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Chicago">
+            <line class="st9" x1="1051" y1="317.8" x2="1047.1" y2="330.9"/>
             <circle class="st6" cx="1053.8" cy="305.9" r="9.8"/>
-          </a>
-          <path class="st10" d="M1053.8,296.3c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M1053.8,296.3c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					C1044.2,300.6,1048.5,296.3,1053.8,296.3L1053.8,296.3 M1053.8,295.9c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S1059.3,295.9,1053.8,295.9z"/>
-          <text transform="matrix(1 0 0 1 1008.51 342.741)" class="st11 st12">Chicago</text>
-        </g>
-        <g id="Kansas">
-          <line class="st9" x1="893.1" y1="406.7" x2="920.3" y2="389.3"/>
-          <a>
+            <text transform="matrix(1 0 0 1 1008.51 342.741)" class="st11 st12">Chicago</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Kansas">
+            <line class="st9" x1="893.1" y1="406.7" x2="920.3" y2="389.3"/>
             <circle class="st6" cx="884.1" cy="413.6" r="9.8"/>
-          </a>
-          <path class="st10" d="M884.1,404c5.3,0,9.5,4.3,9.5,9.5s-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5l0,0
+            <path class="st10" d="M884.1,404c5.3,0,9.5,4.3,9.5,9.5s-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5l0,0
 					C874.5,408.3,878.8,404,884.1,404 M884.1,403.5c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S889.6,403.5,884.1,403.5z"/>
-          <text transform="matrix(1 0 0 1 886.46 386.511)" class="st11 st12">Kansas City</text>
-        </g>
-        <g id="St_Louis">
-          <line class="st9" x1="988.2" y1="432.6" x2="972" y2="448.9"/>
-          <a>
+            <text transform="matrix(1 0 0 1 886.46 386.511)" class="st11 st12">Kansas City</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="St_Louis">
+            <line class="st9" x1="988.2" y1="432.6" x2="972" y2="448.9"/>
             <circle class="st6" cx="997.5" cy="425.2" r="9.8"/>
-          </a>
-          <path class="st10" d="M997.5,415.7c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5c0,0,0,0,0,0
+            <path class="st10" d="M997.5,415.7c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5c0,0,0,0,0,0
 					C988,419.9,992.3,415.7,997.5,415.7 M997.5,415.2c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S1003,415.2,997.5,415.2z"/>
-          <text transform="matrix(1 0 0 1 922.72 460.041)" class="st11 st12">St. Louis</text>
-        </g>
-        <g id="Denver">
-          <line class="st9" x1="623.7" y1="374.1" x2="600.2" y2="374"/>
-          <a>
+            <text transform="matrix(1 0 0 1 922.72 460.041)" class="st11 st12">St. Louis</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/denver/">
+          <g id="Denver">
+            <line class="st9" x1="623.7" y1="374.1" x2="600.2" y2="374"/>
             <circle class="st6" cx="634.2" cy="374.4" r="9.8"/>
-          </a>
-          <path class="st10" d="M634.2,364.9c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5c0,0,0,0,0,0
+            <path class="st10" d="M634.2,364.9c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5c0,0,0,0,0,0
 					C624.7,369.2,628.9,364.9,634.2,364.9 M634.2,364.4c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S639.7,364.4,634.2,364.4z"/>
-          <text transform="matrix(1 0 0 1 541.96 377.701)" class="st11 st12">Denver</text>
-        </g>
-        <g id="Las_Vegas">
-          <line class="st9" x1="344.7" y1="444.4" x2="344.7" y2="417.4"/>
-          <a>
+            <text transform="matrix(1 0 0 1 541.96 377.701)" class="st11 st12">Denver</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/las-vegas/">
+          <g id="Las_Vegas">
+            <line class="st9" x1="344.7" y1="444.4" x2="344.7" y2="417.4"/>
             <circle class="st6" cx="345.5" cy="456.4" r="9.8"/>
-          </a>
-          <path class="st10" d="M345.5,446.9c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M345.5,446.9c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					S340.3,446.9,345.5,446.9C345.5,446.9,345.5,446.9,345.5,446.9 M345.5,446.4c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S351,446.4,345.5,446.4z"/>
-          <text transform="matrix(1 0 0 1 309.87 410.781)" class="st11 st12">Las Vegas</text>
-        </g>
-        <g id="Inland_Empire">
-          <line class="st9" x1="268.7" y1="482.7" x2="268" y2="461.7"/>
-          <a>
+            <text transform="matrix(1 0 0 1 309.87 410.781)" class="st11 st12">Las Vegas</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/sacramento/">
+          <g id="Inland_Empire">
+            <line class="st9" x1="268.7" y1="482.7" x2="268" y2="461.7"/>
             <path class="st6" d="M268.9,500.7c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S274.4,500.7,268.9,500.7z"/>
-          </a>
-          <path class="st10" d="M268.9,481.4c5.1,0,9.3,4.2,9.3,9.3s-4.2,9.3-9.3,9.3s-9.3-4.2-9.3-9.3l0,0
+            <path class="st10" d="M268.9,481.4c5.1,0,9.3,4.2,9.3,9.3s-4.2,9.3-9.3,9.3s-9.3-4.2-9.3-9.3l0,0
 					C259.6,485.6,263.8,481.4,268.9,481.4C268.9,481.4,268.9,481.4,268.9,481.4 M268.9,480.8c-5.5,0-9.9,4.4-9.9,9.9
 					s4.4,9.9,9.9,9.9s9.9-4.4,9.9-9.9C278.8,485.2,274.3,480.8,268.9,480.8z"/>
-          <text transform="matrix(1 0 0 1 211.18 454.011)" class="st11 st12">Inland Empire</text>
-        </g>
-        <g id="Greater_San_Diego">
-          <line class="st9" x1="262.4" y1="549.2" x2="241.1" y2="564.9"/>
-          <a>
+            <text transform="matrix(1 0 0 1 211.18 454.011)" class="st11 st12">Inland Empire</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/san-diego">
+          <g id="Greater_San_Diego">
+            <line class="st9" x1="262.4" y1="549.2" x2="241.1" y2="564.9"/>
             <circle class="st6" cx="271.1" cy="543.4" r="9.8"/>
-          </a>
-          <path class="st10" d="M271.1,533.8c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5l0,0
+            <path class="st10" d="M271.1,533.8c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5l0,0
 					C261.6,538.1,265.8,533.8,271.1,533.8 M271.1,533.4c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S276.6,533.4,271.1,533.4z"/>
-          <text transform="matrix(1 0 0 1 119.65 577.621)" class="st11 st12">Greater San Diego</text>
-        </g>
-        <g id="Orange_Riverside_Country">
-          <line class="st9" x1="254.5" y1="514.4" x2="207.2" y2="529.2"/>
-          <a>
-
+            <text transform="matrix(1 0 0 1 119.65 577.621)" class="st11 st12">Greater San Diego</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Orange_Riverside_Country">
+            <line class="st9" x1="254.5" y1="514.4" x2="207.2" y2="529.2"/>
             <ellipse transform="matrix(9.853739e-02 -0.9951 0.9951 9.853739e-02 -274.3515 723.9827)" class="st6" cx="262.4" cy="513.4" rx="9.7" ry="9.7"/>
-          </a>
-          <path class="st10" d="M262.4,504c5.2,0,9.4,4.2,9.4,9.4c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4c0,0,0,0,0,0
+            <path class="st10" d="M262.4,504c5.2,0,9.4,4.2,9.4,9.4c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4c0,0,0,0,0,0
 					C253,508.2,257.2,504,262.4,504 M262.4,503.4c-5.5,0-10,4.5-10,10c0,5.5,4.5,10,10,10s10-4.5,10-10
 					C272.4,507.9,268,503.4,262.4,503.4z"/>
-          <text transform="matrix(1 0 0 1 40 542.9011)" class="st11 st12">Orange / Riverside County</text>
-        </g>
-        <g id="Greater_Los_Angeles">
-          <line class="st9" x1="229.9" y1="498.2" x2="197.1" y2="491.8"/>
-          <a>
+            <text transform="matrix(1 0 0 1 40 542.9011)" class="st11 st12">Orange / Riverside County</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/los-angeles/">
+          <g id="Greater_Los_Angeles">
+            <line class="st9" x1="229.9" y1="498.2" x2="197.1" y2="491.8"/>
             <circle class="st6" cx="237.6" cy="499.8" r="9.7"/>
-          </a>
-          <path class="st10" d="M237.6,490.4c5.2,0,9.4,4.2,9.4,9.4c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4c0,0,0,0,0,0
+            <path class="st10" d="M237.6,490.4c5.2,0,9.4,4.2,9.4,9.4c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4c0,0,0,0,0,0
 					C228.2,494.6,232.4,490.4,237.6,490.4 M237.6,489.8c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S243.1,489.8,237.6,489.8z"/>
-          <text transform="matrix(1 0 0 1 55.77 487.001)" class="st11 st12">Greater Los Angeles</text>
-        </g>
-        <g id="San_Jose">
-          <line class="st9" x1="178.7" y1="393.4" x2="116.6" y2="402.1"/>
-          <a>
+            <text transform="matrix(1 0 0 1 55.77 487.001)" class="st11 st12">Greater Los Angeles</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="San_Jose">
+            <line class="st9" x1="178.7" y1="393.4" x2="116.6" y2="402.1"/>
             <circle class="st6" cx="186.1" cy="393.1" r="9.7"/>
-          </a>
-          <path class="st10" d="M186.1,383.7c5.2,0,9.4,4.2,9.4,9.4c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4
+            <path class="st10" d="M186.1,383.7c5.2,0,9.4,4.2,9.4,9.4c0,5.2-4.2,9.4-9.4,9.4c-5.2,0-9.4-4.2-9.4-9.4
 					S180.9,383.7,186.1,383.7L186.1,383.7 M186.1,383.1c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S191.6,383.1,186.1,383.1z"/>
-          <text transform="matrix(1 0 0 1 54.92 406.011)" class="st11 st12">San Jose</text>
-        </g>
-        <g id="San_Francisco">
-          <line class="st9" x1="166.7" y1="370.2" x2="131.1" y2="359.1"/>
-          <a>
+            <text transform="matrix(1 0 0 1 54.92 406.011)" class="st11 st12">San Jose</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/san-francisco/">
+          <g id="San_Francisco">
+            <line class="st9" x1="166.7" y1="370.2" x2="131.1" y2="359.1"/>
             <circle class="st6" cx="173.9" cy="373" r="9.7"/>
-          </a>
-          <path class="st10" d="M173.9,363.6c5.2,0,9.4,4.2,9.4,9.4s-4.2,9.4-9.4,9.4s-9.4-4.2-9.4-9.4c0,0,0,0,0,0
+            <path class="st10" d="M173.9,363.6c5.2,0,9.4,4.2,9.4,9.4s-4.2,9.4-9.4,9.4s-9.4-4.2-9.4-9.4c0,0,0,0,0,0
 					C164.5,367.8,168.7,363.6,173.9,363.6C173.9,363.6,173.9,363.6,173.9,363.6 M173.9,363c-5.5,0-10,4.5-10,10s4.5,10,10,10
 					s10-4.5,10-10S179.5,363,173.9,363z"/>
-          <text transform="matrix(1 0 0 1 59.77 355.561)" class="st11 st12">San Francisco</text>
-        </g>
-        <g id="Greater_Seattle_Area">
-          <line class="st9" x1="264.6" y1="33.8" x2="201.3" y2="33.4"/>
-          <a>
+            <text transform="matrix(1 0 0 1 59.77 355.561)" class="st11 st12">San Francisco</text>
+          </g>
+        </a>
+        <a target="_blank" href="https://www.poplarhomes.com/property-management/seattle/">
+          <g id="Greater_Seattle_Area">
+            <line class="st9" x1="264.6" y1="33.8" x2="201.3" y2="33.4"/>
             <circle class="st6" cx="275.4" cy="34.6" r="9.8"/>
-          </a>
-          <path class="st10" d="M275.4,25.1c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
+            <path class="st10" d="M275.4,25.1c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.3-9.5-9.5
 					C265.8,29.3,270.1,25.1,275.4,25.1L275.4,25.1 M275.4,24.6c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10
 					S280.9,24.6,275.4,24.6z"/>
-          <text transform="matrix(1 0 0 1 44.48 37.651)" class="st11 st12">Greater Seattle Area</text>
-        </g>
-        <g id="Phoenix_Scottsdale">
-          <line class="st9" x1="422.3" y1="564.9" x2="429.7" y2="649.7"/>
-          <a>
+            <text transform="matrix(1 0 0 1 44.48 37.651)" class="st11 st12">Greater Seattle Area</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Phoenix_Scottsdale">
+            <line class="st9" x1="422.3" y1="564.9" x2="429.7" y2="649.7"/>
             <circle class="st6" cx="419.9" cy="554" r="9.8"/>
-          </a>
-          <path class="st10" d="M419.9,544.4c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.2-9.5-9.5
+            <path class="st10" d="M419.9,544.4c5.3,0,9.5,4.3,9.5,9.5c0,5.3-4.3,9.5-9.5,9.5c-5.3,0-9.5-4.2-9.5-9.5
 					C410.4,548.7,414.7,544.5,419.9,544.4 M419.9,544c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S425.5,544,419.9,544z"/>
-          <text transform="matrix(1 0 0 1 378.15 663.0211)" class="st11 st12">Phoenix &amp; Scottsdale</text>
-        </g>
-        <g id="Oakland">
-          <line class="st9" x1="220.9" y1="344.5" x2="213.1" y2="314.7"/>
-          <a>
+            <text transform="matrix(1 0 0 1 378.15 663.0211)" class="st11 st12">Phoenix &amp; Scottsdale</text>
+          </g>
+        </a>
+        <a target="_blank" href="#">
+          <g id="Oakland">
+            <line class="st9" x1="220.9" y1="344.5" x2="213.1" y2="314.7"/>
             <circle class="st6" cx="222.3" cy="349" r="9.7"/>
-          </a>
-          <path class="st10" d="M222.3,339.6c5.2,0,9.4,4.2,9.4,9.4s-4.2,9.4-9.4,9.4s-9.4-4.2-9.4-9.4c0,0,0,0,0,0
+            <path class="st10" d="M222.3,339.6c5.2,0,9.4,4.2,9.4,9.4s-4.2,9.4-9.4,9.4s-9.4-4.2-9.4-9.4c0,0,0,0,0,0
 					C212.9,343.8,217.1,339.6,222.3,339.6C222.3,339.6,222.3,339.6,222.3,339.6 M222.3,339c-5.5,0-10,4.5-10,10s4.5,10,10,10
 					s10-4.5,10-10S227.8,339,222.3,339z"/>
-          <text transform="matrix(1 0 0 1 177.93 313.4756)" class="st11 st12">Oakland</text>
-        </g>
+            <text transform="matrix(1 0 0 1 177.93 313.4756)" class="st11 st12">Oakland</text>
+          </g>
+        </a>
       </g>
     </g>
   </g>
