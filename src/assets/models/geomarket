@@ -16,7 +16,7 @@
 	.st9{fill:none;stroke:#393F4A;stroke-width:0.6;stroke-miterlimit:10;}
 	.st10{fill:#FBF9F0;}
 	.st11{font-family:'Eina03-SemiBold';}
-	.st12{font-size:16px;font-weight:700;}
+	.st12{font-size:inherit;font-weight:700;}
 	</style>
 	<g id="Maps">
 		<g id="Geomarket">
@@ -531,7 +531,7 @@
 				<path class="st7" d="M1047.3,329.8L1047.3,329.8l-0.6-0.4C1046.9,329.6,1047.1,329.7,1047.3,329.8z"/>
 				<path class="st7" d="M1185.7,506L1185.7,506c0.3-0.2,0.5-0.4,0.8-0.6l-0.7,0.5L1185.7,506z"/>
 			</g>
-			<g //id="Labels">
+			<g id="Labels">
 				<a target="_blank" href="#">
 					<g id="Washington_DC">
 						<line class="st9" x1="1340.2" y1="364" x2="1401.3" y2="361.9"/>
