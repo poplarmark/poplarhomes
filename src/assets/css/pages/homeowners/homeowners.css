@@ -60,3 +60,10 @@
 }
 
 /** Pricing and features section end **/
+/** Property management section start **/
+@media screen (max-width: 520px) {
+    .property-management_features {
+        grid-template-columns: 1fr;
+    }
+}
+/** Property management section end **/
