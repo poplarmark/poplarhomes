@@ -61,9 +61,12 @@
 
 /** Pricing and features section end **/
 /** Property management section start **/
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 520px) and (min-width: 480px) {
     .property-management_features {
         grid-template-columns: 1fr;
+    }
+    .property-management_headers {
+        max-width: 100%;
     }
 }
 /** Property management section end **/
