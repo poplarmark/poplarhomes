@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const sourcemaps = require ('gulp-sourcemaps');
 const {src, series, parallel, dest, watch} = require('gulp');
 // Edit working path here
-const jsPath = 'src/assets/js/**/*.js';
+const jsPath = 'src/assets/js/components/form_renters-estimate/renters-estimate.js';
 const cssPath = 'src/assets/css/**/*.css';
 
 function jsBundler() {
