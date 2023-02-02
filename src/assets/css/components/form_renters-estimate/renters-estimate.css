@@ -95,12 +95,14 @@
 .pac-container {
   top: 6.8rem !important;
   left: 1px !important;
+  right: 0 !important;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-left: 1px solid #f80;
   border-right: 1px solid #f80;
   border-bottom: 1px solid #f80;
   border-top: 1px solid white;
+  box-shadow: 0px 4px 10px 0px rgba(255, 136, 0,0.1);
 }
 
 .pac-container::after {
@@ -128,7 +130,7 @@
 
 @media screen and (min-width: 992px) {
   .pac-container {
-    width: 395px !important;
+    /* width: 395px !important; */
   }
 }
 
