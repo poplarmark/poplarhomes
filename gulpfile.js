@@ -1,33 +1,32 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const terser = require('gulp-terser');
-const postcss = require('gulp-postcss');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
-const sourcemaps = require ('gulp-sourcemaps');
-const {src, series, parallel, dest, watch} = require('gulp');
+const gulp = require("gulp");
+const concat = require("gulp-concat");
+const terser = require("gulp-terser");
+const postcss = require("gulp-postcss");
+const cssnano = require("cssnano");
+const autoprefixer = require("autoprefixer");
+const sourcemaps = require("gulp-sourcemaps");
+const { src, series, parallel, dest, watch } = require("gulp");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
 
-const jsPath = 'src/assets/js/components/form_rent-estimate/rent-estimate_modal-functions.js';
-const cssPath = 'src/assets/css/utils/maps.css';
-
+const jsPath = "src/assets/js/utils/onload-estimate.js";
+const cssPath = "src/assets/css/utils/maps.css";
 
 function jsBundler() {
-    return src(jsPath)
+  return src(jsPath)
     .pipe(sourcemaps.init())
     .pipe(terser())
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/assets/js'));
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("dist/assets/js"));
 }
 
 function cssBundler() {
-    return src(cssPath)
+  return src(cssPath)
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/assets/css'));
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("dist/assets/css"));
 }
 
 exports.jsBundler = jsBundler;
