@@ -2193,6 +2193,12 @@ function showModal() {
 
   // Checking of inputs
   // Initialize google autocomplete
+  var options = {
+    componentRestrictions: { country: "us" },
+  };
+  var gpaInput = document.getElementById("pac_input");
+  var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
+  
   var location_input = document.getElementById("pac_input").value.toLowerCase();
   var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
   var property_type = document.getElementById("property-type").value;
