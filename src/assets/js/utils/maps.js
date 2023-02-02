@@ -74,4 +74,4 @@ function initAutocomplete() {
   });
 }
 
-window.initAutocomplete = initAutocomplete;
+google.maps.event.addDomListener(window, 'load', initAutocomplete);
