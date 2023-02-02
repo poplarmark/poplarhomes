@@ -2192,9 +2192,15 @@ function showModal() {
   var code_zebulon = "27597"; // End subsidiary services --> RENTSAFE
 
   // Checking of inputs
+  // Initialize google autocomplete
+  var options = {
+    componentRestrictions: { country: "us" },
+  };
+  var gpaInput = document.getElementById("pac_input");
+  var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
+
   var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
-  var location_input_array = document.getElementsByClassName("mapboxgl-ctrl-geocoder--input");
-  var location_input = location_input_array[0].value.toLowerCase();
+  var location_input = document.getElementById("pac_input").value.toLowerCase();
   var property_type = document.getElementById("property-type").value;
   var footer_main = document.getElementById("footer-main");
   // Modal lists
