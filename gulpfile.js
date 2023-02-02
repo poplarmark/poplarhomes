@@ -10,7 +10,7 @@ const { src, series, parallel, dest, watch } = require("gulp");
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
 
-const jsPath = "src/assets/js/utils/onload-estimate.js";
+const jsPath = "src/assets/js/utils/maps.js";
 const cssPath = "src/assets/css/utils/maps.css";
 
 function jsBundler() {
