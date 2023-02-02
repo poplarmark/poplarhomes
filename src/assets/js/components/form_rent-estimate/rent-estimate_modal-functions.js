@@ -9866,5 +9866,5 @@ function showModal() {
 // Move pac-container  inside input_wrap-location
 window.addEventListener("load", function () {
   var child = document.getElementsByClassName("pac-container")[0];
-  document.querySelector(child).detach().appendTo("#input_wrap-location");
+  jQuery(child).detach().appendTo("#input_wrap-location");
 });
