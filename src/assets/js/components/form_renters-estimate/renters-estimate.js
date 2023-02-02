@@ -10,6 +10,7 @@ function showRentals() {
   var beds = document.getElementById("renters-estimate_input-bedroom").value;
   var baths = document.getElementById("renters-estimate_input-bathroom").value;
   var property_type = document.getElementById("property-type").value;
+  
   geocoder.geocode({ address: address }, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       var latitude = results[0].geometry.location.lat();

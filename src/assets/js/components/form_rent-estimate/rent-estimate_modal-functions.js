@@ -2193,14 +2193,8 @@ function showModal() {
 
   // Checking of inputs
   // Initialize google autocomplete
-  var options = {
-    componentRestrictions: { country: "us" },
-  };
-  var gpaInput = document.getElementById("pac_input");
-  var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
-
-  var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
   var location_input = document.getElementById("pac_input").value.toLowerCase();
+  var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
   var property_type = document.getElementById("property-type").value;
   var footer_main = document.getElementById("footer-main");
   // Modal lists
