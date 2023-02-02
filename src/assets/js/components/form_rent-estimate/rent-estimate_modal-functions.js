@@ -2198,7 +2198,7 @@ function showModal() {
   };
   var gpaInput = document.getElementById("pac_input");
   var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
-  
+
   var location_input = document.getElementById("pac_input").value.toLowerCase();
   var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
   var property_type = document.getElementById("property-type").value;
@@ -9855,3 +9855,10 @@ function showModal() {
     modal_empty.style.display = "block";
   }
 }
+
+
+ // Move pac-container  inside input_wrap-location
+ window.addEventListener("load", function () {
+  var child = document.getElementsByClassName("pac-container")[0];
+  jQuery(child).detach().appendTo("#input_wrap-location");
+});
