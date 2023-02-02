@@ -1,8 +1,33 @@
+/** Map start **/
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+#description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
 /** Autocomplete start **/
 #input_wrap-location {
     position: relative;
 }
 
+/** Map end **/
 .pac-container {
     top: 5rem !important;
     left: 0 !important;
