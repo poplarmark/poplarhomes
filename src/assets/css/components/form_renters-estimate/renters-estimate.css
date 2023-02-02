@@ -97,7 +97,7 @@
 }
 .pac-container {
   top: 6.8rem !important;
-  left: 1px !important;
+  left: 0 !important;
   right: 0 !important;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -133,7 +133,12 @@
 
 @media screen and (min-width: 992px) {
   .pac-container {
-    /* width: 395px !important; */
+    width: 348px !important;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pac-container {
+    width: 397px !important;
   }
 }
 
