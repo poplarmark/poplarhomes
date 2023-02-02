@@ -141,5 +141,10 @@
     width: 397px !important;
   }
 }
+@media screen and (min-width: 1920px) {
+  .pac-container {
+    width: 395px !important;
+  }
+}
 
 /** Autocomplete end **/
