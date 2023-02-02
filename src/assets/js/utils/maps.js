@@ -11,8 +11,7 @@ function initAutocomplete() {
     mapTypeId: "roadmap",
   });
   // Create the search box and link it to the UI element.
-  const input = document.getElementById("pac-input");
-  const searchBox = new google.maps.places.SearchBox(input);
+  const input = document.getElementById("pac_input").value;
 
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   // Bias the SearchBox results towards current map's viewport.
