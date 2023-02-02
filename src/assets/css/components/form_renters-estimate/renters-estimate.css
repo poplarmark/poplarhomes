@@ -1,31 +1,10 @@
 @media screen and (max-width: 991px) {
-	.form_renters-estimate-block {
-  	-ms-grid-columns: 1fr 1fr 1fr;
+  .form_renters-estimate-block {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-   }
-   #input_wrap-location {
-   	grid-column-start: span 3;
-    -ms-grid-column-span: 3;
-    grid-column-end: span 3;
-    -ms-grid-row: span 1;
-    grid-row-start: span 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: span 1;
-   }
-   #input_wrap-bedroom,
-   #input_wrap-bathroom,
-   #input_wrap-property-type {
-   	-ms-grid-column: span 1;
-    grid-column-start: span 1;
-    -ms-grid-column-span: 1;
-    grid-column-end: span 1;
-    -ms-grid-row: span 1;
-    grid-row-start: span 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: span 1;
-   }
-   .button-container.for-renters-estimate {
-   -ms-grid-column: span 3;
+  }
+
+  #input_wrap-location {
     grid-column-start: span 3;
     -ms-grid-column-span: 3;
     grid-column-end: span 3;
@@ -33,15 +12,41 @@
     grid-row-start: span 1;
     -ms-grid-row-span: 1;
     grid-row-end: span 1;
-   }
+  }
+
+  #input_wrap-bedroom,
+  #input_wrap-bathroom,
+  #input_wrap-property-type {
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
+
+  .button-container.for-renters-estimate {
+    -ms-grid-column: span 3;
+    grid-column-start: span 3;
+    -ms-grid-column-span: 3;
+    grid-column-end: span 3;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
 }
+
 @media screen and (max-width: 479px) {
-	.form_renters-estimate-block {
+  .form_renters-estimate-block {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-	}
+  }
+
   #input_wrap-location {
-  	-ms-grid-column: span 2;
+    -ms-grid-column: span 2;
     grid-column-start: span 2;
     -ms-grid-column-span: 2;
     grid-column-end: span 2;
@@ -50,9 +55,10 @@
     -ms-grid-row-span: 1;
     grid-row-end: span 1;
   }
+
   #input_wrap-bedroom,
-	#input_wrap-bathroom {
-  	-ms-grid-column: span 1;
+  #input_wrap-bathroom {
+    -ms-grid-column: span 1;
     grid-column-start: span 1;
     -ms-grid-column-span: 1;
     grid-column-end: span 1;
@@ -61,8 +67,9 @@
     -ms-grid-row-span: 1;
     grid-row-end: span 1;
   }
+
   #input_wrap-property-type {
-  	-ms-grid-column: 1;
+    -ms-grid-column: 1;
     grid-column-start: 1;
     -ms-grid-column-span: 2;
     grid-column-end: 3;
@@ -71,8 +78,9 @@
     -ms-grid-row-span: 1;
     grid-row-end: 4;
   }
+
   .button-container.for-renters-estimate {
-  	-ms-grid-column: span 2;
+    -ms-grid-column: span 2;
     grid-column-start: span 2;
     -ms-grid-column-span: 2;
     grid-column-end: span 2;
@@ -85,7 +93,43 @@
 
 /** Autocomplete start **/
 .pac-container {
-  top: 7rem !important;
+  top: 6.8rem !important;
   left: 1px !important;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid #f80;
+  border-right: 1px solid #f80;
+  border-bottom: 1px solid #f80;
+  border-top: 1px solid white;
 }
+
+.pac-container::after {
+  display: none;
+}
+
+.pac-item {
+  font-family: 'Eina03', sans-serif;
+  font-size: 0.75rem;
+  color: rgb(139, 139, 139);
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  box-shadow: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.pac-item-query {
+  font-family: 'Eina03', sans-serif;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 992px) {
+  .pac-container {
+    width: 395px !important;
+  }
+}
+
 /** Autocomplete end **/
