@@ -1,3 +1,11 @@
+// Initialize google autocomplete
+var options = {
+  componentRestrictions: { country: "us" },
+};
+var gpaInput = document.getElementById("pac_input");
+var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
+
+// Modal functions
 function showModal() {
   // Start postal codes for major services
   var code_portland = [
@@ -2193,19 +2201,25 @@ function showModal() {
 
   // Checking of inputs
   var location_input = document.getElementById("pac_input").value.toLowerCase();
-  var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
+  var postal_input = document.getElementById(
+    "rent-estimate_input-postal-code"
+  ).value;
   var property_type = document.getElementById("property-type").value;
   var footer_main = document.getElementById("footer-main");
   // Modal lists
   var modal_serviced = document.getElementById("serviced-block_trigger-layer");
-  var modal_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
-  var modal_unserviced = document.getElementById("unserviced-block_trigger-layer");
+  var modal_subsidiary = document.getElementById(
+    "subsidiary-block_trigger-layer"
+  );
+  var modal_unserviced = document.getElementById(
+    "unserviced-block_trigger-layer"
+  );
   var modal_mismatch = document.getElementById("mismatch-block_trigger-layer");
   var modal_empty = document.getElementById("emptyfield-block_trigger-layer");
 
   // Hide footer-main when Rent Estimate button is clicked
   footer_main.style.display = "none";
-  
+
   // first statement for poplar services
   if (postal_input.length < 1 || location_input.length < 1) {
     modal_empty.style.display = "block";
@@ -9849,9 +9863,8 @@ function showModal() {
   }
 }
 
-
- // Move pac-container  inside input_wrap-location
- window.addEventListener("load", function () {
+// Move pac-container  inside input_wrap-location
+window.addEventListener("load", function () {
   var child = document.getElementsByClassName("pac-container")[0];
   jQuery(child).detach().appendTo("#input_wrap-location");
 });
