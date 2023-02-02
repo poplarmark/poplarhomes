@@ -92,6 +92,9 @@
 }
 
 /** Autocomplete start **/
+#input_wrap-location {
+  position: relative;
+}
 .pac-container {
   top: 6.8rem !important;
   left: 1px !important;
