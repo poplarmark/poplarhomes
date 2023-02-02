@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#pac_input").oninput(function () {
+  $("#pac_input").on('input', function () {
     $('input[name="location"]').val($(this).val());
   });
 }),
