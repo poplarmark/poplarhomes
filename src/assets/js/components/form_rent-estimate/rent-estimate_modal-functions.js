@@ -9862,13 +9862,3 @@ function showModal() {
     modal_empty.style.display = "block";
   }
 }
-
-// Move pac-container  inside input_wrap-location
-window.addEventListener("load", function () {
-  
-});
-
-window.load(function(){
-  var child = document.getElementsByClassName("pac-container")[0];
-  jQuery(child).detach().appendTo("#input_wrap-location");
-});
