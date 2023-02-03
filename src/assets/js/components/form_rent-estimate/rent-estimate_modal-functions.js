@@ -4,6 +4,9 @@ var options = {
 };
 var gpaInput = document.getElementById("pac_input");
 var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
+var place = autocomplete.getPlace();
+var inputValue = place.formatted_address;
+console.log(inputValue);
 
 // Modal functions
 function showModal() {
@@ -2200,20 +2203,14 @@ function showModal() {
   var code_zebulon = "27597"; // End subsidiary services --> RENTSAFE
 
   // Checking of inputs
-  var location_input = document.getElementById("pac_input").value.toLowerCase();
-  var postal_input = document.getElementById(
-    "rent-estimate_input-postal-code"
-  ).value;
+  var location_input = inputValue.value.toLowerCase();
+  var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
   var property_type = document.getElementById("property-type").value;
   var footer_main = document.getElementById("footer-main");
   // Modal lists
   var modal_serviced = document.getElementById("serviced-block_trigger-layer");
-  var modal_subsidiary = document.getElementById(
-    "subsidiary-block_trigger-layer"
-  );
-  var modal_unserviced = document.getElementById(
-    "unserviced-block_trigger-layer"
-  );
+  var modal_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
+  var modal_unserviced = document.getElementById("unserviced-block_trigger-layer");
   var modal_mismatch = document.getElementById("mismatch-block_trigger-layer");
   var modal_empty = document.getElementById("emptyfield-block_trigger-layer");
 
@@ -9862,3 +9859,8 @@ function showModal() {
     modal_empty.style.display = "block";
   }
 }
+
+// Mirror autocomplete value to inputs with name=location
+$(document).ready(function () {
+  $('input[name="location"]').val(inputValue.val());
+});

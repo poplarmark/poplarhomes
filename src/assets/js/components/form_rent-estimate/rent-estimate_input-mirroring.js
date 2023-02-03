@@ -1,9 +1,4 @@
 $(document).ready(function () {
-  $("#pac_input").bind("change paste cut select keypress keyup keydown click", function () {
-    $('input[name="location"]').val($(this).val());
-  });
-});
-$(document).ready(function () {
   $('input[name="postal_code"]').change(function () {
     $('input[name="zipcode"]').val($(this).val());
   });
