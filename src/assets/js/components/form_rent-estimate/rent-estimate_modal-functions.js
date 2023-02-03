@@ -5,6 +5,10 @@ var options = {
 
 var input = document.getElementById('pac_input');
 var autocomplete = new google.maps.places.Autocomplete(input, options);
+var place = autocomplete.getPlace();
+var inputValue = place.name + " " + place.formatted_address;
+console.log(inputValue);
+
 var map;
 
 function initMap() {
@@ -30,10 +34,6 @@ function initMap() {
   autocomplete.addListener('place_changed', function() {
     infowindow.close();
     marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    var inputValue = place.name + " " + place.formatted_address;
-    console.log(inputValue);
-
     // Mirror autocomplete value to inputs with name=location
     $(document).ready(function () {
       $('input[name="location"]').val(inputValue.val());
