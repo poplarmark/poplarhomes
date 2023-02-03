@@ -9923,3 +9923,4 @@ function showModal() {
 }
 
 google.maps.event.addDomListener(window, 'load', initMap);
+console.log("Ready!")
