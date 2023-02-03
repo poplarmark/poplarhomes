@@ -1,5 +1,5 @@
 const mirror_trigger = document.getElementById("pac_input");
-const mirror_target_unserviced = document.getElementById("unserviced-block_trigger-layer");
+const mirror_target_unserviced = document.getElementById("unserviced_input-location");
 
 mirror_trigger.addEventListener("input", () => {
   mirror_target_unserviced.value = mirror_trigger.value;
