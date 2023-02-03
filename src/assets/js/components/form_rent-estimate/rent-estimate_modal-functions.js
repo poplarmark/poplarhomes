@@ -1,4 +1,12 @@
+// Autocomplete restrictions
+var options = {
+  componentRestrictions: { country: "us" },
+};
+
+var input = document.getElementById('pac_input');
+var autocomplete = new google.maps.places.Autocomplete(input, options);
 var map;
+
 function initMap() {
   console.log("initMap!")
   var mapProp = {
@@ -6,14 +14,6 @@ function initMap() {
     zoom: 13
   };
   map = new google.maps.Map(document.getElementById('map'), mapProp);
-  // Autocomplete restrictions
-  var options = {
-    componentRestrictions: { country: "us" },
-  };
-
-  var input = document.getElementById('pac_input');
-  var autocomplete = new google.maps.places.Autocomplete(input, options);
-
   // Bind the map's bounds (viewport) property to the autocomplete object,
   // so that the autocomplete requests use the current map bounds for the
   // bounds option in the request.
