@@ -1,7 +1,7 @@
 const location = document.getElementById("pac_input");
 const unserviced_input = document.getElementById("unserviced-block_trigger-layer");
 
-ogInput.addEventListener("input", () => {
+location.addEventListener("input", () => {
   unserviced_input.value = location.value;
 });
 
