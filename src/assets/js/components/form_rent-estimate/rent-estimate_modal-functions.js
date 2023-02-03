@@ -5,6 +5,15 @@ var options = {
 var gpaInput = document.getElementById("pac_input");
 var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
 
+// Bind the map's bounds (viewport) property to the autocomplete object,
+// so that the autocomplete requests use the current map bounds for the
+// bounds option in the request.
+autocomplete.bindTo('bounds', map);
+var marker = new google.maps.Marker({
+  map: map,
+  anchorPoint: new google.maps.Point(0, -29)
+});
+
 autocomplete.addListener('place_changed', function() {
   marker.setVisible(false);
   var place = autocomplete.getPlace();
