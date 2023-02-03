@@ -5,6 +5,16 @@ var options = {
 var gpaInput = document.getElementById("pac_input");
 var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
 
+autocomplete.bindTo('bounds', map);
+
+var infowindow = new google.maps.InfoWindow();
+var infowindowContent = document.getElementById('infowindow-content');
+infowindow.setContent(infowindowContent);
+var marker = new google.maps.Marker({
+  map: map,
+  anchorPoint: new google.maps.Point(0, -29)
+});
+
 autocomplete.addListener('place_changed', function() {
   infowindow.close();
   marker.setVisible(false);
