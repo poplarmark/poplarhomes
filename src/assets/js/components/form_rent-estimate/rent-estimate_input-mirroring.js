@@ -1,8 +1,8 @@
-const location = document.getElementById("pac_input");
-const unserviced_input = document.getElementById("unserviced-block_trigger-layer");
+const mirror_trigger = document.getElementById("pac_input");
+const mirror_target_unserviced = document.getElementById("unserviced-block_trigger-layer");
 
-location.addEventListener("input", () => {
-  unserviced_input.value = location.value;
+mirror_trigger.addEventListener("input", () => {
+  mirror_target_unserviced.value = mirror_trigger.value;
 });
 
 $(document).ready(function () {
