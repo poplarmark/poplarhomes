@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#pac_input").bind("change paste cut select keypress keyup keydown", function () {
+  $("#pac_input").bind("change paste cut select keypress keyup keydown click", function () {
     $('input[name="location"]').val($(this).val());
   });
 });
