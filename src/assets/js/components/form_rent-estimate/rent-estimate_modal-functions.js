@@ -4,9 +4,49 @@ var options = {
 };
 var gpaInput = document.getElementById("pac_input");
 var autocomplete = new google.maps.places.Autocomplete(gpaInput, options);
-var place = autocomplete.getPlace();
-var inputValue = place.formatted_address;
-console.log(inputValue);
+
+autocomplete.addListener('place_changed', function() {
+  infowindow.close();
+  marker.setVisible(false);
+  var place = autocomplete.getPlace();
+  var inputValue = place.name + " " + place.formatted_address;
+  console.log(inputValue);
+  // Mirror autocomplete value to inputs with name=location
+  $(document).ready(function () {
+    $('input[name="location"]').val(inputValue.val());
+  });
+
+  if (!place.geometry) {
+    // User entered the name of a Place that was not suggested and
+    // pressed the Enter key, or the Place Details request failed.
+    window.alert("No details available for input: '" + place.name + "'");
+    return;
+  }
+
+  // If the place has a geometry, then present it on a map.
+  if (place.geometry.viewport) {
+    map.fitBounds(place.geometry.viewport);
+  } else {
+    map.setCenter(place.geometry.location);
+    map.setZoom(17);  // Why 17? Because it looks good.
+  }
+  marker.setPosition(place.geometry.location);
+  marker.setVisible(true);
+
+  var address = '';
+  if (place.address_components) {
+    address = [
+      (place.address_components[0] && place.address_components[0].short_name || ''),
+      (place.address_components[1] && place.address_components[1].short_name || ''),
+      (place.address_components[2] && place.address_components[2].short_name || '')
+    ].join(' ');
+  }
+
+  infowindowContent.children['place-icon'].src = place.icon;
+  infowindowContent.children['place-name'].textContent = place.name;
+  infowindowContent.children['place-address'].textContent = address;
+  infowindow.open(map, marker);
+});
 
 // Modal functions
 function showModal() {
@@ -2203,7 +2243,7 @@ function showModal() {
   var code_zebulon = "27597"; // End subsidiary services --> RENTSAFE
 
   // Checking of inputs
-  var location_input = inputValue.value.toLowerCase();
+  var location_input = document.getElementById("pac_input").value.toLowerCase();
   var postal_input = document.getElementById("rent-estimate_input-postal-code").value;
   var property_type = document.getElementById("property-type").value;
   var footer_main = document.getElementById("footer-main");
@@ -9859,8 +9899,3 @@ function showModal() {
     modal_empty.style.display = "block";
   }
 }
-
-// Mirror autocomplete value to inputs with name=location
-$(document).ready(function () {
-  $('input[name="location"]').val(inputValue.val());
-});
