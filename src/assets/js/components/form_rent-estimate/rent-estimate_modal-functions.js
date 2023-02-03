@@ -1,4 +1,4 @@
-function initMap() {
+function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -33.8688, lng: 151.2195},
     zoom: 13
@@ -9920,3 +9920,5 @@ function showModal() {
     modal_empty.style.display = "block";
   }
 }
+
+google.maps.event.addDomListener(window, 'load', initAutocomplete);
