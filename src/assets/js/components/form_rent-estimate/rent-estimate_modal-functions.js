@@ -1,5 +1,7 @@
 var map;
 var autocomplete;
+var place;
+var inputValue;
 
 function initMap() {
   console.log("initMap call")
@@ -11,15 +13,15 @@ function initMap() {
   var options = {
     componentRestrictions: { country: "us" },
   };
-  var input = document.getElementById('pac_input');
+  input = document.getElementById('pac_input');
   autocomplete = new google.maps.places.Autocomplete(input, options);
   // Bind the map's bounds (viewport) property to the autocomplete object,
   // so that the autocomplete requests use the current map bounds for the
   // bounds option in the request.
   autocomplete.bindTo('bounds', map);
 
-  var infowindow = new google.maps.InfoWindow();
-  var infowindowContent = document.getElementById('infowindow-content');
+  infowindow = new google.maps.InfoWindow();
+  infowindowContent = document.getElementById('infowindow-content');
   infowindow.setContent(infowindowContent);
   var marker = new google.maps.Marker({
     map: map,
@@ -29,8 +31,8 @@ function initMap() {
   autocomplete.addListener('place_changed', function() {
     infowindow.close();
     marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    var inputValue = place.name + " " + place.formatted_address;
+    place = autocomplete.getPlace();
+    inputValue = place.name + " " + place.formatted_address;
     console.log(inputValue);
     // Mirror autocomplete value to inputs with name=location
     $(document).ready(function () {
