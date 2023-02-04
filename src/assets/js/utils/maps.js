@@ -69,4 +69,5 @@ function initMap() {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initMap);
+window.initMap = initMap;
+//google.maps.event.addDomListener(window, 'load', initMap);
