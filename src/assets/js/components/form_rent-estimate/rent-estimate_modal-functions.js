@@ -1,12 +1,11 @@
 var map;
 
 function initMap() {
-  console.log("initMap!")
-  var mapProp = {
+  console.log("initMap call")
+  map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -33.8688, lng: 151.2195},
     zoom: 13
-  };
-  map = new google.maps.Map(document.getElementById('map'), mapProp);
+  });
   // Autocomplete restrictions
   var options = {
     componentRestrictions: { country: "us" },
