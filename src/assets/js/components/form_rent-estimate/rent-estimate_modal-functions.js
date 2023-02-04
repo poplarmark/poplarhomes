@@ -9921,3 +9921,5 @@ function showModal() {
     modal_empty.style.display = "block";
   }
 }
+
+window.initMap = initMap;
