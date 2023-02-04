@@ -1,4 +1,4 @@
 <script>
-window.addEventListener("load",(function(){var e=document.getElementsByClassName("pac-container")[0];jQuery(e).detach().appendTo("#input_wrap-location")}));
+window.addEventListener("load",(function(){var n=document.getElementsByClassName("pac-container")[0];jQuery(n).detach().appendTo("#input_wrap-location")})),window.addEventListener("load",(function(){$(document).ready((function(){$("#onload-estimate-js").each((function(){$(this).insertAfter($(this).parent().find(".pac-container"))}))}))}));
 //# sourceMappingURL=onload-estimate.js.map
 </script>
