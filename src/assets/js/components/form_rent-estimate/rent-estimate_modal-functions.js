@@ -1,11 +1,4 @@
-// Autocomplete restrictions
-var options = {
-  componentRestrictions: { country: "us" },
-};
-
 var map;
-var input = document.getElementById('pac_input');
-var autocomplete = new google.maps.places.Autocomplete(input, options);
 
 function initMap() {
   console.log("initMap!")
@@ -14,11 +7,16 @@ function initMap() {
     zoom: 13
   };
   map = new google.maps.Map(document.getElementById('map'), mapProp);
-  var autocomplete_mirror = autocomplete;
+  // Autocomplete restrictions
+  var options = {
+    componentRestrictions: { country: "us" },
+  };
+  var input = document.getElementById('pac_input');
+  var autocomplete = new google.maps.places.Autocomplete(input, options);
   // Bind the map's bounds (viewport) property to the autocomplete object,
   // so that the autocomplete requests use the current map bounds for the
   // bounds option in the request.
-  autocomplete_mirror.bindTo('bounds', map);
+  autocomplete.bindTo('bounds', map);
 
   var infowindow = new google.maps.InfoWindow();
   var infowindowContent = document.getElementById('infowindow-content');
@@ -28,10 +26,10 @@ function initMap() {
     anchorPoint: new google.maps.Point(0, -29)
   });
 
-  autocomplete_mirror.addListener('place_changed', function() {
+  autocomplete.addListener('place_changed', function() {
     infowindow.close();
     marker.setVisible(false);
-    var place = autocomplete_mirror.getPlace();
+    var place = autocomplete.getPlace();
     var inputValue = place.name + " " + place.formatted_address;
     console.log(inputValue);
     // Mirror autocomplete value to inputs with name=location
