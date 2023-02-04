@@ -69,5 +69,9 @@ function initMap() {
   });
 }
 
-window.initMap = initMap;
+//window.initMap = initMap;
 //google.maps.event.addDomListener(window, 'load', initMap);
+renderMap = () => {
+  loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCBFtGp6YxnEqcABn4HciClPotDeresTzE&callback=initMap&libraries=places");
+  window.initMap = this.initMap;
+}
