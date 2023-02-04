@@ -1,0 +1,1 @@
+{"version":3,"sources":["onboarding.css"],"names":[],"mappings":"AAAA,4CACI,qBAAsB,CACtB,UACJ","file":"onboarding.css","sourcesContent":[".card_social-link:hover .card_social-button {\r\n    background-color: #f80;\r\n    color: white;\r\n}"]}
