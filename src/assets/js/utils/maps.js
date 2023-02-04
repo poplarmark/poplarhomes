@@ -38,7 +38,7 @@ function initMap() {
     if (!place.geometry) {
       // User entered the name of a Place that was not suggested and
       // pressed the Enter key, or the Place Details request failed.
-      window.alert("No details available for input: '" + place.name + "'");
+      window.alert("Can't find location: '" + place.name + "', in the autocomplete list");
       return;
     }
 
@@ -46,7 +46,6 @@ function initMap() {
     if (place.geometry.viewport) {
       map.setCenter(place.geometry.location);
     } else {
-      
       map.fitBounds(place.geometry.viewport);
     }
     marker.setPosition(place.geometry.location);
