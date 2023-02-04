@@ -2,8 +2,8 @@ var map;
 function initMap() {
   console.log("initMap call")
   map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 40.749933, lng: -73.98633 },
-    zoom: 18
+    center: {lat: -33.8688, lng: 151.2195},
+    zoom: 13
   });
   // Autocomplete restrictions
   var options = {
@@ -44,10 +44,10 @@ function initMap() {
 
     // If the place has a geometry, then present it on a map.
     if (place.geometry.viewport) {
-      map.fitBounds(place.geometry.viewport);
-    } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(18);  // Why 17? Because it looks good.
+    } else {
+      
+      map.fitBounds(place.geometry.viewport);
     }
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
