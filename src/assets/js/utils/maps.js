@@ -1,5 +1,4 @@
 var map;
-
 function initMap() {
   console.log("initMap call")
   map = new google.maps.Map(document.getElementById('map'), {
@@ -17,23 +16,23 @@ function initMap() {
   // bounds option in the request.
   autocomplete.bindTo('bounds', map);
 
-  infowindow = new google.maps.InfoWindow();
-  infowindowContent = document.getElementById('infowindow-content');
-  infowindow.setContent(infowindowContent);
+  //infowindow = new google.maps.InfoWindow();
+  //infowindowContent = document.getElementById('infowindow-content');
+  //infowindow.setContent(infowindowContent);
   var marker = new google.maps.Marker({
     map: map,
     anchorPoint: new google.maps.Point(0, -29)
   });
 
   autocomplete.addListener('place_changed', function() {
-    infowindow.close();
+    //infowindow.close();
     marker.setVisible(false);
     var place = autocomplete.getPlace();
-    var inputValue = place.name + " " + place.formatted_address;
+    var inputValue = place.formatted_address;
     console.log(inputValue);
     // Mirror autocomplete value to inputs with name=location
     $(document).ready(function () {
-      $('input[name="location"]').val(inputValue.val());
+      $('input[name="location"]').val(inputValue);
     });
  
     if (!place.geometry) {
@@ -62,16 +61,11 @@ function initMap() {
       ].join(' ');
     }
 
-    infowindowContent.children['place-icon'].src = place.icon;
-    infowindowContent.children['place-name'].textContent = place.name;
-    infowindowContent.children['place-address'].textContent = address;
-    infowindow.open(map, marker);
+    //infowindowContent.children['place-icon'].src = place.icon;
+    //infowindowContent.children['place-name'].textContent = place.name;
+    //infowindowContent.children['place-address'].textContent = address;
+    //infowindow.open(map, marker);
   });
 }
 
-//window.initMap = initMap;
-//google.maps.event.addDomListener(window, 'load', initMap);
-renderMap = () => {
-  loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCBFtGp6YxnEqcABn4HciClPotDeresTzE&callback=initMap&libraries=places");
-  window.initMap = this.initMap;
-}
+window.initMap = initMap;
