@@ -19,6 +19,12 @@
     transform: translateY(-290%);
     transition: .5s all ease-in-out;
 }
+@media screen and (max-width: 1279px) and (min-width: 992px){
+    span.animated_text:first-child .line-break,
+    span.animated_text:last-child .line-break {
+        display: block;
+    }
+}
 @media screen and (max-width: 880px) and (min-width: 768px) {
     .section_residents-hero .section_subheader {
         max-width: 60%;
