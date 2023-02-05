@@ -20,6 +20,9 @@
     transition: .5s all ease-in-out;
 }
 @media screen and (max-width: 1279px) and (min-width: 992px){
+    .animation_word-rotation-mask .animated_text {
+        top: 153px;
+    }
     span.animated_text .line-break {
         display: block;
     }
