@@ -7,7 +7,7 @@
 
 /** Section stats end**/
 /** Section Who we are start **/
-.aboutus-whoweare_image-wrapper:hover + .aboutus-whoweare_image-wrapper {
+.aboutus-whoweare_image-wrapper:hover ~ .aboutus-whoweare_image-wrapper {
     scale: 0.85;
 }
 /** Section Who we are end **/
