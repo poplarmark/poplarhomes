@@ -11,7 +11,7 @@ const { src, series, parallel, dest, watch } = require("gulp");
 // const cssPath = 'src/assets/css/**/*.css';
 
 const jsPath = "src/assets/js/utils/onload-estimate.js";
-const cssPath = "src/assets/css/pages/residents/residents.css";
+const cssPath = "src/assets/css/pages/about-us/about-us.css";
 
 function jsBundler() {
   return src(jsPath)
