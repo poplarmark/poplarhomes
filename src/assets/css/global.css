@@ -46,12 +46,9 @@
     outline: none;
 }
 
-.form_richtext ul li::before {
-    content: "•";
-    color: #383F4A;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em
+.form_richtext ul li {
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 /** From end**/
