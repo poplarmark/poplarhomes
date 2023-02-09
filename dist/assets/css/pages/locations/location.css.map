@@ -1,0 +1,1 @@
+{"version":3,"sources":["location.css"],"names":[],"mappings":"AACA,oCACI,oBACI,UACJ,CACJ","file":"location.css","sourcesContent":["/** Section Badges start **/\r\n@media screen and (max-width: 569px) {\r\n    .location-stat_list {\r\n        width: 100%;\r\n    }   \r\n}\r\n/** Section Badges end **/"]}
