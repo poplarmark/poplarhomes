@@ -1,7 +1,22 @@
+/** Section hero start **/
+@media screen and (max-width: 991px) {
+    .section_location-hero {
+        background-image: none !important;
+    }
+}
+
+/** Section hero end **/
 /** Section Badges start **/
 @media screen and (max-width: 569px) {
     .location-stat_list {
         width: 100%;
-    }   
+    }
 }
+
+@media screen and (max-width: 569px) {
+    .location-stat_list {
+        width: 100%;
+    }
+}
+
 /** Section Badges end **/
