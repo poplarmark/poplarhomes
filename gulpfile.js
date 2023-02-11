@@ -10,7 +10,7 @@ const { src, series, parallel, dest, watch } = require("gulp");
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
 
-const jsPath = "src/assets/js/components/form_rent-estimate/rent-estimate_input-mirroring.js";
+const jsPath = "src/assets/js/components/form_rent-estimate/rent-estimate_modal-functions.js";
 const cssPath = "src/assets/css/pages/location/location.css";
 
 function jsBundler() {

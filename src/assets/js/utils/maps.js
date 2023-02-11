@@ -36,26 +36,31 @@ function initMap() {
         }
         if (place.address_components[i].types[j] == "administrative_area_level_1") {
           console.log(place.address_components[i].short_name); // state
+          var parsed_state = place.address_components[i].short_name;
           $(document).ready(function () {
-            $('input[name="original_property_state"]').val(place.address_components[i].short_name);
+            $('input[name="original_property_state"]').val(parsed_state);
           });
         }
         if (place.address_components[i].types[j] == "locality") {
           console.log(place.address_components[i].long_name); // city
+          var parsed_city = place.address_components[i].long_name;
           $(document).ready(function () {
-            $('input[name="original_property_city"]').val(place.address_components[i].long_name);
+            $('input[name="original_property_city"]').val(parsed_city);
           });
         }
         if (place.address_components[i].types[j] == "route") {
           console.log(place.address_components[i].long_name); // street
+          var parsed_street = place.address_components[i].long_name;
           $(document).ready(function () {
-            $('input[name="original_property_street"]').val(place.address_components[i].long_name);
+            $('input[name="original_property_street"]').val(parsed_street);
           });
         }
         if (place.address_components[i].types[j] == "postal_code") {
           console.log(place.address_components[i].long_name); // postal_code
+          var parsed_zipcode = place.address_components[i].long_name;
           $(document).ready(function () {
-            $('input[name="original_property_zip_code"]').val(place.address_components[i].long_name);
+            $('input[name="postal_code"]').val(parsed_zipcode);
+            $('input[name="original_property_zip_code"]').val(parsed_zipcode);
           });
         }
       }
