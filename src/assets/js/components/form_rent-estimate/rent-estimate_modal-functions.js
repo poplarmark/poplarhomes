@@ -7935,7 +7935,7 @@ function showModal() {
       property_type.length != 0) ||
     (!code_zebulon.includes(postal_input) && location_input.includes("zebulon"))
   ) {
-    modal_mismatch.style.display = "block";
+    modal_unserviced.style.display = "block";
   } else if (
     // Major
     (!code_portland.includes(postal_input) &&
@@ -9843,7 +9843,7 @@ function showModal() {
       !location_input.includes("zebulon") &&
       property_type.length != 0)
   ) {
-    // if user_input has subsidiary zipcodes but locations mismatch
+    // if user_input zipcode and location is not in the database
     modal_unserviced.style.display = "block";
   } else {
     modal_empty.style.display = "block";
