@@ -1,44 +1,77 @@
 var map;
 function initMap() {
-  console.log("initMap call")
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -33.8688, lng: 151.2195},
-    zoom: 13
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -33.8688, lng: 151.2195 },
+    zoom: 13,
   });
   // Autocomplete restrictions
   var options = {
     componentRestrictions: { country: "us" },
   };
-  var input = document.getElementById('pac_input');
+  var input = document.getElementById("pac_input");
   var autocomplete = new google.maps.places.Autocomplete(input, options);
   // Bind the map's bounds (viewport) property to the autocomplete object,
   // so that the autocomplete requests use the current map bounds for the
   // bounds option in the request.
-  autocomplete.bindTo('bounds', map);
+  autocomplete.bindTo("bounds", map);
 
   //infowindow = new google.maps.InfoWindow();
   //infowindowContent = document.getElementById('infowindow-content');
   //infowindow.setContent(infowindowContent);
   var marker = new google.maps.Marker({
     map: map,
-    anchorPoint: new google.maps.Point(0, -29)
+    anchorPoint: new google.maps.Point(0, -29),
   });
 
-  autocomplete.addListener('place_changed', function() {
-    //infowindow.close();
+  autocomplete.addListener("place_changed", function () {
+    // infowindow.close();
     marker.setVisible(false);
     var place = autocomplete.getPlace();
+    console.log(place.address_components);
+    // parse address
+    for (var i = 0; i < place.address_components.length; i++) {
+      for (var j = 0; j < place.address_components[i].types.length; j++) {
+        if (place.address_components[i].types[j] == "country") {
+          console.log(place.address_components[i].long_name); // country
+        }
+        if (place.address_components[i].types[j] == "administrative_area_level_1") {
+          console.log(place.address_components[i].short_name); // state
+          $(document).ready(function () {
+            $('input[name="original_property_state"]').val(place.address_components[i].short_name);
+          });
+        }
+        if (place.address_components[i].types[j] == "locality") {
+          console.log(place.address_components[i].long_name); // city
+          $(document).ready(function () {
+            $('input[name="original_property_city"]').val(place.address_components[i].long_name);
+          });
+        }
+        if (place.address_components[i].types[j] == "route") {
+          console.log(place.address_components[i].long_name); // street
+          $(document).ready(function () {
+            $('input[name="original_property_street"]').val(place.address_components[i].long_name);
+          });
+        }
+        if (place.address_components[i].types[j] == "postal_code") {
+          console.log(place.address_components[i].long_name); // postal_code
+          $(document).ready(function () {
+            $('input[name="original_property_zip_code"]').val(place.address_components[i].long_name);
+          });
+        }
+      }
+    }
     var inputValue = place.formatted_address;
-    console.log(inputValue);
-    // Mirror autocomplete value to inputs with name=location
+    // Mirror autocomplete value to its respective inputs
     $(document).ready(function () {
-      $('input[name="location"]').val(inputValue);
+      $('input[name="original_property_address"]').val(inputValue);
     });
- 
+
     if (!place.geometry) {
       // User entered the name of a Place that was not suggested and
       // pressed the Enter key, or the Place Details request failed.
-      window.alert("Can't find location: '" + place.name + "', in the autocomplete list");
+      window.alert(
+        "Can't find location: '" + place.name + "', in the autocomplete list"
+      );
       return;
     }
 
@@ -51,13 +84,19 @@ function initMap() {
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
 
-    var address = '';
+    var address = "";
     if (place.address_components) {
       address = [
-        (place.address_components[0] && place.address_components[0].short_name || ''),
-        (place.address_components[1] && place.address_components[1].short_name || ''),
-        (place.address_components[2] && place.address_components[2].short_name || '')
-      ].join(' ');
+        (place.address_components[0] &&
+          place.address_components[0].short_name) ||
+          "",
+        (place.address_components[1] &&
+          place.address_components[1].short_name) ||
+          "",
+        (place.address_components[2] &&
+          place.address_components[2].short_name) ||
+          "",
+      ].join(" ");
     }
 
     //infowindowContent.children['place-icon'].src = place.icon;
