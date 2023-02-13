@@ -28,6 +28,14 @@ function initMap() {
     marker.setVisible(false);
     var place = autocomplete.getPlace();
     console.log(place.address_components);
+    if (!place.geometry) {
+      // User entered the name of a Place that was not suggested and
+      // pressed the Enter key, or the Place Details request failed.
+      window.alert(
+        "Can't find location: '" + place.name + "', in the autocomplete list"
+      );
+      return;
+    }
     // parse address
     for (var i = 0; i < place.address_components.length; i++) {
       for (var j = 0; j < place.address_components[i].types.length; j++) {
@@ -68,19 +76,10 @@ function initMap() {
       }
     }
     var inputValue = place.formatted_address;
-    // Mirror autocomplete value to its respective inputs
+    // Set input value of address field using Google API
     $(document).ready(function () {
       $('input[name="original_property_address"]').val(inputValue);
     });
-
-    if (!place.geometry) {
-      // User entered the name of a Place that was not suggested and
-      // pressed the Enter key, or the Place Details request failed.
-      window.alert(
-        "Can't find location: '" + place.name + "', in the autocomplete list"
-      );
-      return;
-    }
 
     // If the place has a geometry, then present it on a map.
     if (place.geometry.viewport) {
@@ -115,8 +114,10 @@ function initMap() {
   // Locations map
   var locations_geocoder;
   var locations_map;
-  var locations_address = "{{wf {&quot;path&quot;:&quot;address-details&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}";
-  var locations_image = "https://uploads-ssl.webflow.com/631ada5b454cce3ae6474e07/63e3d8d5782ef44764b93261_icon_map-pin.svg";
+  var locations_address =
+    "{{wf {&quot;path&quot;:&quot;address-details&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}";
+  var locations_image =
+    "https://uploads-ssl.webflow.com/631ada5b454cce3ae6474e07/63e3d8d5782ef44764b93261_icon_map-pin.svg";
 
   locations_geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(44.85767897439299, -93.40209113112228);
@@ -132,7 +133,10 @@ function initMap() {
     navigationControl: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
-  locations_map = new google.maps.Map(document.getElementById("locations_map"),locations_map_options);
+  locations_map = new google.maps.Map(
+    document.getElementById("locations_map"),
+    locations_map_options
+  );
   if (locations_geocoder) {
     locations_geocoder.geocode(
       {
@@ -171,6 +175,32 @@ function initMap() {
       }
     );
   }
+
+  loadEstimate();
+}
+
+function loadEstimate() {
+  // move .pac-container inside #input_wrap-location
+  window.addEventListener("load", function () {
+    var child = document.getElementsByClassName("pac-container")[0];
+    jQuery(child).detach().appendTo("#input_wrap-location");
+    console.log("pac_container loaded");
+  });
+
+  // for non-chrome based browswers, move loading of $this script at the end of .pac-container
+  window.addEventListener("load", function () {
+    $(document).ready(function () {
+      $("#onload-estimate-js").each(function () {
+        $(this).insertAfter($(this).parent().find(".pac-container"));
+        console.log("pac_mover loader");
+      });
+    });
+  });
+
+  // prevent user from copy/pasting input values;
+  // user must only select value from autocomplete
+  const pasted_input = document.getElementById("pac_input");
+  pasted_input.onpaste = (e) => e.preventDefault();
 }
 
 window.initMap = initMap;
