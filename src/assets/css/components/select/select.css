@@ -8,24 +8,25 @@
     /*hide original SELECT element:*/
 }
 
-.select-selected {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: white;
-    min-height: 56px;
-}
-
 /*style the arrow inside the select element:*/
 .select-selected:after {
     position: absolute;
     content: "";
+    top: 50%;
+    transform: translateY(100%);
     right: 10px;
     width: 0;
     height: 0;
     border: 6px solid transparent;
     border-color: black white white white;
+}
+
+.select-selected.select-arrow-active:after {
+	transform: translateY(50%);
+}
+
+.select-selected.select-arrow-active {
+	border: 1px solid #f80;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
@@ -46,6 +47,16 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.select-selected {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    min-height: 56px;
 }
 
 .selected-items div {
