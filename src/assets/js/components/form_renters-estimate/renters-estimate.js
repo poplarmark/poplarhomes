@@ -31,9 +31,14 @@ function showRentals() {
       location.href = `https://www.poplarhomes.com/rental-properties-listing?beds=${beds}&lat=${latitude}&lng=${longitude}`;
     }
   });
+
+  loadEstimate();
 }
 
-window.addEventListener("load", function () {
-  var child = document.getElementsByClassName("pac-container")[0];
-  jQuery(child).detach().appendTo("#input_wrap-location");
-});
+function loadEstimate() {
+  window.addEventListener("load", function () {
+    var child = document.getElementsByClassName("pac-container")[0];
+    jQuery(child).detach().appendTo("#input_wrap-location");
+  }); 
+}
+
