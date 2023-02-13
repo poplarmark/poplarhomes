@@ -59,6 +59,10 @@
     border-bottom: 1px solid rgb(223, 223, 223);
 }
 
+.pac-item:hover {
+    background-color: rgba(255, 136, 0, 0.1);
+}
+
 .pac-item-query {
     font-family: 'Eina03', sans-serif;
     font-size: 0.875rem;
