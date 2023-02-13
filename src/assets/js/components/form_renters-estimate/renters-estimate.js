@@ -10,7 +10,7 @@ function showRentals() {
   var beds = document.getElementById("renters-estimate_input-bedroom").value;
   var baths = document.getElementById("renters-estimate_input-bathroom").value;
   var property_type = document.getElementById("property-type").value;
-  
+
   geocoder.geocode({ address: address }, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       var latitude = results[0].geometry.location.lat();
@@ -31,14 +31,8 @@ function showRentals() {
       location.href = `https://www.poplarhomes.com/rental-properties-listing?beds=${beds}&lat=${latitude}&lng=${longitude}`;
     }
   });
-
-  loadEstimate();
 }
-
-function loadEstimate() {
-  window.addEventListener("load", function () {
-    var child = document.getElementsByClassName("pac-container")[0];
-    jQuery(child).detach().appendTo("#input_wrap-location");
-  }); 
-}
-
+window.addEventListener("load", function () {
+  var child = document.getElementsByClassName("pac-container")[0];
+  jQuery(child).detach().appendTo("#input_wrap-location");
+});
