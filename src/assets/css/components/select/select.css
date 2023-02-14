@@ -72,9 +72,6 @@
 .select-items div:first-child {
     border-radius: 0;
     border-top: none;
-    border-left: 1px solid #f80;
-    border-right: 1px solid #f80;
-    border-bottom: none;
 }
 
 .select-items div:last-child {
