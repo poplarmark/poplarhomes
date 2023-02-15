@@ -4,6 +4,7 @@ rect {
 
 a:hover rect {
     display: block;
+    scale: 1.25;
 }
 
 g {
