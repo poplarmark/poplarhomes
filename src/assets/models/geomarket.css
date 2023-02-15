@@ -34,7 +34,7 @@ circle:hover {
 }
 
 #Greater_Seattle_Area:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -48,7 +48,7 @@ circle:hover {
 }
 
 #San_Francisco:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -62,29 +62,22 @@ circle:hover {
 }
 
 #Oakland:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #San_Jose {
     cursor: pointer;
+    font-size: 1.25rem;
     animation: 1s fadeIn;
     animation-delay: 0.25s;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
 
-#San_Jose .cls-12 {
-    font-size: 1.25rem;
-}
-
 #San_Jose:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
-
-#San_Jose:hover .cls-12 {
-    font-size: 1.25rem;
 }
 
 #Las_Vegas {
@@ -97,7 +90,7 @@ circle:hover {
 }
 
 #Las_Vegas:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -111,7 +104,7 @@ circle:hover {
 }
 
 #Inland_Empire:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -125,7 +118,7 @@ circle:hover {
 }
 
 #Greater_Los_Angeles:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -139,7 +132,7 @@ circle:hover {
 }
 
 #Orange_Riverside_Country:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -153,7 +146,7 @@ circle:hover {
 }
 
 #Greater_San_Diego:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -167,7 +160,7 @@ circle:hover {
 }
 
 #Phoenix_Scottsdale:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -181,23 +174,21 @@ circle:hover {
 }
 
 #Denver:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 #San_Antonio {
+    cursor: pointer;
+    font-size: 1.25rem;
     animation: 1s fadeIn;
     animation-delay: 1s;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
 
-#San_Antonio .cls-12 {
-    font-size: 1.25rem;
-}
-
 #San_Antonio:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -215,7 +206,7 @@ circle:hover {
 }
 
 #Austin:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -229,7 +220,7 @@ circle:hover {
 }
 
 #Houston:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -243,7 +234,7 @@ circle:hover {
 }
 
 #Kansas:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -257,7 +248,7 @@ circle:hover {
 }
 
 #St_Louis:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -271,7 +262,7 @@ circle:hover {
 }
 
 #Chicago:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -285,7 +276,7 @@ circle:hover {
 }
 
 #Nashville:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -299,7 +290,7 @@ circle:hover {
 }
 
 #Columbus:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -313,7 +304,7 @@ circle:hover {
 }
 
 #Charleston:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -327,7 +318,7 @@ circle:hover {
 }
 
 #Raleigh:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -341,7 +332,7 @@ circle:hover {
 }
 
 #Washington_DC:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -355,7 +346,7 @@ circle:hover {
 }
 
 #Springfield:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -369,7 +360,7 @@ circle:hover {
 }
 
 #Sacramento:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -383,7 +374,7 @@ circle:hover {
 }
 
 #Sta_Cruz:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -397,7 +388,7 @@ circle:hover {
 }
 
 #Long_Beach:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -411,7 +402,7 @@ circle:hover {
 }
 
 #Winston:hover {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
