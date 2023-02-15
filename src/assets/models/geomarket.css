@@ -2,16 +2,8 @@ rect {
     display: none;
 }
 
-a:hover rect {
-    display: block;
-}
-
 g {
     transition: all .25s ease;
-}
-
-g:hover text {
-    fill: white;
 }
 
 circle {
