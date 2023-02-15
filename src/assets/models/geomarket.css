@@ -1,3 +1,15 @@
+rect {
+    display: none;
+}
+
+a:hover rect {
+    display: block;
+}
+
+g {
+    transition: all .25s ease;
+}
+
 circle {
     cursor: pointer;
     transition: all .25s ease;
@@ -16,10 +28,6 @@ circle:hover {
     fill: #f80;
 }
 
-g {
-    transition: all .25s ease;
-}
-
 #Greater_Seattle_Area {
     cursor: pointer;
     font-size: 1.25rem;
@@ -28,6 +36,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Greater_Seattle_Area:hover {
     font-size: 1.5rem;
     fill: white;
@@ -42,6 +51,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #San_Francisco:hover {
     font-size: 1.5rem;
     fill: white;
@@ -56,6 +66,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Oakland:hover {
     font-size: 1.5rem;
     fill: white;
@@ -69,14 +80,17 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #San_Jose .cls-12 {
     font-size: 1.25rem;
 }
+
 #San_Jose:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #San_Jose:hover .cls-12 {
     font-size: 1.5rem;
 }
@@ -89,6 +103,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Las_Vegas:hover {
     font-size: 1.5rem;
     fill: white;
@@ -103,6 +118,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Inland_Empire:hover {
     font-size: 1.5rem;
     fill: white;
@@ -117,6 +133,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Greater_Los_Angeles:hover {
     font-size: 1.5rem;
     fill: white;
@@ -131,6 +148,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Orange_Riverside_Country:hover {
     font-size: 1.5rem;
     fill: white;
@@ -145,6 +163,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Greater_San_Diego:hover {
     font-size: 1.5rem;
     fill: white;
@@ -174,6 +193,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Denver:hover {
     font-size: 1.5rem;
     fill: white;
@@ -186,14 +206,17 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #San_Antonio .cls-12 {
     font-size: 1.25rem;
 }
+
 #San_Antonio:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #San_Antonio:hover .cls-12 {
     font-size: 1.5rem;
 }
@@ -206,6 +229,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Austin:hover {
     font-size: 1.5rem;
     fill: white;
@@ -235,6 +259,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Kansas:hover {
     font-size: 1.5rem;
     fill: white;
@@ -264,6 +289,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Chicago:hover {
     font-size: 1.5rem;
     fill: white;
@@ -278,6 +304,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Nashville:hover {
     font-size: 1.5rem;
     fill: white;
@@ -292,6 +319,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Columbus:hover {
     font-size: 1.5rem;
     fill: white;
@@ -321,11 +349,13 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Raleigh:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #Washington_DC {
     cursor: pointer;
     font-size: 1.25rem;
@@ -334,11 +364,13 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Washington_DC:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #Springfield {
     cursor: pointer;
     font-size: 1.25rem;
@@ -347,11 +379,13 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Springfield:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #Sacramento {
     cursor: pointer;
     font-size: 1.25rem;
@@ -360,11 +394,13 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Sacramento:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #Sta_Cruz {
     cursor: pointer;
     font-size: 1.25rem;
@@ -373,11 +409,13 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Sta_Cruz:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #Long_Beach {
     cursor: pointer;
     font-size: 1.25rem;
@@ -386,11 +424,13 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Long_Beach:hover {
     font-size: 1.5rem;
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
 #Winston {
     cursor: pointer;
     font-size: 1.25rem;
@@ -399,6 +439,7 @@ g {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 #Winston:hover {
     font-size: 1.5rem;
     fill: white;
@@ -416,4 +457,5 @@ g {
         opacity: 1;
     }
 }
+
 /** Homeowners' maps end **/
