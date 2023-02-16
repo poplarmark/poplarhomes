@@ -6,7 +6,7 @@ a {
     & .rect {
       display: block;
     }
-    & circle {
+    & .st6 {
         fill: #ff8800;
     }
   }
@@ -380,7 +380,7 @@ g {
   }
 }
 
-#Nashville #Nashville:hover #Columbus {
+#Columbus {
   cursor: pointer;
   font-size: 1.25rem;
   animation: 1s fadeIn;
