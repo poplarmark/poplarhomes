@@ -1,6 +1,6 @@
 a {
   &:hover {
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -9,7 +9,7 @@ a {
 g {
   transition: all 0.25s ease;
 
-  & rect {
+  & .rect {
     display: none;
   }
 }
@@ -26,7 +26,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -44,7 +44,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -62,7 +62,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -80,7 +80,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -98,7 +98,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -116,7 +116,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -134,7 +134,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -152,7 +152,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -170,7 +170,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -188,7 +188,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -206,7 +206,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -224,7 +224,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -242,7 +242,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -260,7 +260,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -278,7 +278,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -296,7 +296,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -314,7 +314,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -332,7 +332,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -350,7 +350,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -368,7 +368,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -386,7 +386,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -404,7 +404,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -422,7 +422,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -440,7 +440,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -458,7 +458,7 @@ g {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -475,7 +475,7 @@ g {
   &:hover {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -492,7 +492,7 @@ g {
   &:hover {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -508,7 +508,7 @@ g {
   &:hover {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -524,7 +524,7 @@ g {
   &:hover {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -540,7 +540,7 @@ g {
   &:hover {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    & rect {
+    & .rect {
       display: block;
     }
   }
@@ -556,7 +556,7 @@ g {
   &:hover {
     fill: white;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    & rect {
+    & .rect {
       display: block;
     }
   }
