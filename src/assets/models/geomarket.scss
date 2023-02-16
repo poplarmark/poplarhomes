@@ -1,7 +1,13 @@
 a {
+    position: relative;
+    z-index: 1;
   &:hover {
+    z-index: 2;
     & .rect {
       display: block;
+    }
+    & circle {
+        fill: #ff8800;
     }
   }
 }
