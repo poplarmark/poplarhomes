@@ -1,0 +1,39 @@
+/** Section hero start **/
+@media screen and (max-width: 991px) {
+    .section_location {
+        &-hero {
+            background-image: none !important;
+        }
+    }
+}
+
+/** Section hero end **/
+/** Section Badges start **/
+@media screen and (max-width: 569px) {
+    .location-stat {
+        &_list {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .location-stat {
+        &_list {
+            width: 100%;
+        }
+    }
+}
+
+/** Section Badges end **/
+
+/** Accordion start**/
+.accordion {
+    .form_richtext {
+        a {
+            color: #f80;
+            text-decoration: underline;
+        }
+    }
+}
+/** Accordion end**/
