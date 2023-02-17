@@ -1,3 +1,17 @@
+// Variables
+$primary_color: #ff8800;
+$drop_shadow: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+
+// Mixins
+@mixin city_base_style() {
+  cursor: pointer;
+  font-size: 1.25rem;
+  animation: 1s fadeIn;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
 a {
     position: relative;
     z-index: 1;
@@ -7,7 +21,7 @@ a {
       display: block;
     }
     & .st6 {
-        fill: #ff8800;
+        fill: $primary_color;
     }
   }
 }
@@ -21,16 +35,10 @@ g {
 }
 
 #Seattle {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -39,16 +47,10 @@ g {
 }
 
 #San_Francisco {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.15s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -57,16 +59,10 @@ g {
 }
 
 #Oakland {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.15s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -75,16 +71,10 @@ g {
 }
 
 #San_Jose {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.25s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -93,16 +83,10 @@ g {
 }
 
 #Cupertino {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.25s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -111,16 +95,10 @@ g {
 }
 
 #Las_Vegas {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.35s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -129,16 +107,10 @@ g {
 }
 
 #Inland_Empire {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.45s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -147,16 +119,10 @@ g {
 }
 
 #Los_Angeles {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.55s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -165,16 +131,10 @@ g {
 }
 
 #Orange_Country {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.65s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -183,16 +143,10 @@ g {
 }
 
 #Greater_San_Diego {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.75s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -201,16 +155,10 @@ g {
 }
 
 #Phoenix_Scottsdale {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.85s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -219,16 +167,10 @@ g {
 }
 
 #Denver {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 0.95s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -237,16 +179,10 @@ g {
 }
 
 #Boulder {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+ @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -255,16 +191,10 @@ g {
 }
 
 #San_Antonio {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -273,16 +203,10 @@ g {
 }
 
 #Austin {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.15s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -291,16 +215,10 @@ g {
 }
 
 #Houston {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.25s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -309,16 +227,10 @@ g {
 }
 
 #Kansas {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.35s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -327,16 +239,10 @@ g {
 }
 
 #St_Louis {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.45s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -345,16 +251,10 @@ g {
 }
 
 #Chicago {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.55s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -363,16 +263,10 @@ g {
 }
 
 #Nashville {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.65s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -381,16 +275,10 @@ g {
 }
 
 #Columbus {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.75s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -399,16 +287,10 @@ g {
 }
 
 #Charleston {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.85s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -417,16 +299,10 @@ g {
 }
 
 #Raleigh {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 1.95s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+  @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -435,16 +311,10 @@ g {
 }
 
 #Bowie {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+ @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -453,16 +323,10 @@ g {
 }
 
 #Springfield {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+ @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
 
     & .rect {
       display: block;
@@ -471,16 +335,10 @@ g {
 }
 
 #Portland {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+ @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
     & .rect {
       display: block;
     }
@@ -488,16 +346,10 @@ g {
 }
 
 #Sacramento {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-
+ @include city_base_style();
   &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
     & .rect {
       display: block;
     }
@@ -505,15 +357,9 @@ g {
 }
 
 #Sta_Cruz {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  &:hover {
+ @include city_base_style();  &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
     & .rect {
       display: block;
     }
@@ -521,15 +367,9 @@ g {
 }
 
 #Long_Beach {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  &:hover {
+ @include city_base_style();  &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
     & .rect {
       display: block;
     }
@@ -537,15 +377,9 @@ g {
 }
 
 #Winston {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  &:hover {
+ @include city_base_style();  &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
     & .rect {
       display: block;
     }
@@ -553,15 +387,9 @@ g {
 }
 
 #Cleveland {
-  cursor: pointer;
-  font-size: 1.25rem;
-  animation: 1s fadeIn;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  &:hover {
+ @include city_base_style();  &:hover {
     fill: white;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: $drop_shadow;
     & .rect {
       display: block;
     }
