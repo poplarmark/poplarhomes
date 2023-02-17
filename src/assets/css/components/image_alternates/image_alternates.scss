@@ -1,0 +1,17 @@
+/** Image alternates start **/
+.image_alternates {
+    &-front {
+        transition: all 120ms ease;
+    }
+    &-back {
+        transition: all 120ms ease;
+        display: none;
+    }
+    &:hover &-back {
+        display: inline-block;
+    }
+    &:hover &-front {
+        display: none;
+    } 
+}
+/** Image alternatesend **/
