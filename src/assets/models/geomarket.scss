@@ -7,21 +7,20 @@ $drop_shadow: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   cursor: pointer;
   font-size: 1.25rem;
   animation: 1s fadeIn;
-  animation-delay: 0s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
 
 a {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
   &:hover {
     z-index: 2;
     & .rect {
       display: block;
     }
     & .st6 {
-        fill: $primary_color;
+      fill: $primary_color;
     }
   }
 }
@@ -36,6 +35,7 @@ g {
 
 #Seattle {
   @include city_base_style();
+  animation-delay: 0s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -48,6 +48,7 @@ g {
 
 #San_Francisco {
   @include city_base_style();
+  animation-delay: 0.15s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -60,6 +61,7 @@ g {
 
 #Oakland {
   @include city_base_style();
+  animation-delay: 0.14s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -72,6 +74,7 @@ g {
 
 #San_Jose {
   @include city_base_style();
+  animation-delay: 0.18s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -84,6 +87,7 @@ g {
 
 #Cupertino {
   @include city_base_style();
+  animation-delay: 0.17s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -96,6 +100,7 @@ g {
 
 #Las_Vegas {
   @include city_base_style();
+  animation-delay: 0.19s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -108,6 +113,7 @@ g {
 
 #Inland_Empire {
   @include city_base_style();
+  animation-delay: 0.2s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -120,6 +126,7 @@ g {
 
 #Los_Angeles {
   @include city_base_style();
+  animation-delay: 0.21s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -132,6 +139,7 @@ g {
 
 #Orange_Country {
   @include city_base_style();
+  animation-delay: 0.22s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -144,6 +152,7 @@ g {
 
 #Greater_San_Diego {
   @include city_base_style();
+  animation-delay: 0.24s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -168,6 +177,7 @@ g {
 
 #Denver {
   @include city_base_style();
+  animation-delay: 0.26s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -179,7 +189,8 @@ g {
 }
 
 #Boulder {
- @include city_base_style();
+  @include city_base_style();
+  animation-delay: 0.25s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -192,6 +203,7 @@ g {
 
 #San_Antonio {
   @include city_base_style();
+  animation-delay: 0.27s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -204,6 +216,7 @@ g {
 
 #Austin {
   @include city_base_style();
+  animation-delay: 0.28s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -216,6 +229,7 @@ g {
 
 #Houston {
   @include city_base_style();
+  animation-delay: 0.29s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -240,6 +254,7 @@ g {
 
 #St_Louis {
   @include city_base_style();
+  animation-delay: 0.3s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -252,6 +267,7 @@ g {
 
 #Chicago {
   @include city_base_style();
+  animation-delay: 0.31s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -264,6 +280,7 @@ g {
 
 #Nashville {
   @include city_base_style();
+  animation-delay: 0.32s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -276,6 +293,7 @@ g {
 
 #Columbus {
   @include city_base_style();
+  animation-delay: 0.33s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -288,6 +306,7 @@ g {
 
 #Charleston {
   @include city_base_style();
+  animation-delay: 0.35s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -300,6 +319,7 @@ g {
 
 #Raleigh {
   @include city_base_style();
+  animation-delay: 0.37s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -311,7 +331,8 @@ g {
 }
 
 #Bowie {
- @include city_base_style();
+  @include city_base_style();
+  animation-delay: 0.38s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -323,7 +344,8 @@ g {
 }
 
 #Springfield {
- @include city_base_style();
+  @include city_base_style();
+  animation-delay: 0.12s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -335,7 +357,8 @@ g {
 }
 
 #Portland {
- @include city_base_style();
+  @include city_base_style();
+  animation-delay: 0.11s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -346,7 +369,8 @@ g {
 }
 
 #Sacramento {
- @include city_base_style();
+  @include city_base_style();
+  animation-delay: 0.13s;
   &:hover {
     fill: white;
     filter: $drop_shadow;
@@ -357,7 +381,9 @@ g {
 }
 
 #Sta_Cruz {
- @include city_base_style();  &:hover {
+  @include city_base_style();
+  &:hover {
+    animation-delay: 0.16s;
     fill: white;
     filter: $drop_shadow;
     & .rect {
@@ -367,7 +393,9 @@ g {
 }
 
 #Long_Beach {
- @include city_base_style();  &:hover {
+  @include city_base_style();
+  animation-delay: 0.23s;
+  &:hover {
     fill: white;
     filter: $drop_shadow;
     & .rect {
@@ -377,7 +405,9 @@ g {
 }
 
 #Winston {
- @include city_base_style();  &:hover {
+  @include city_base_style();
+  animation-delay: 0.36s;
+  &:hover {
     fill: white;
     filter: $drop_shadow;
     & .rect {
@@ -387,7 +417,9 @@ g {
 }
 
 #Cleveland {
- @include city_base_style();  &:hover {
+  @include city_base_style();
+  animation-delay: 0.34s;
+  &:hover {
     fill: white;
     filter: $drop_shadow;
     & .rect {
