@@ -3,7 +3,7 @@ const concat = require("gulp-concat");
 const terser = require("gulp-terser");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
 const { src, series, parallel, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
@@ -27,7 +27,7 @@ function cssBundler() {
   return src(cssPath)
     .pipe(sass().on("error", sass.logError))
     .pipe(sourcemaps.init())
-    .pipe(autoprefixer())
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
     .pipe(dest("dist/assets/css"));
 }
