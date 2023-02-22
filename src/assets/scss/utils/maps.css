@@ -71,15 +71,20 @@
 /** Autocomplete end **/
 
 /** Media queries for renters-estimate start **/
+@media screen and (max-width: 991px) {
+    .pac-container {
+        width: 100% !important;
+    }
+}
 @media screen and (min-width: 992px) {
     .pac-container {
-        width: 348px !important;
+        width: 359.67px !important;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .pac-container {
-        width: 396px !important;
+        width: 436.96px !important;
     }
 }
 
@@ -87,13 +92,13 @@
 /** Media queries for rent-estimate start **/
 @media screen and (min-width: 992px) {
     #form_rentestimate .pac-container {
-        width: 290px !important;
+        width: 300.09px !important;
     }
 }
 
 @media screen and (min-width: 1440px) {
     #form_rentestimate .pac-container {
-        width: 275px !important;
+        width: 304.33px !important;
     }
 }
 
