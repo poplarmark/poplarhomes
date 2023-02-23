@@ -1,83 +1,57 @@
+// variables
+$primary_color: #f80;
+
+// mixins
+@mixin select_base_style {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: -1px;
+  min-height: 56px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  user-select: none;
+  background-color: white;
+  cursor: pointer;
+}
+
 /*the container must be positioned relative:*/
 .property-select {
-    position: relative;
-    select {
-        display: none;
-    }
+  position: relative;
+  select {
+    display: none;
+  }
 }
 
 /*style the arrow inside the select element:*/
 .select {
-    &-selected {
-        &:after {
-            position: absolute;
-            content: "";
-            top: 50%;
-            transform: translateY(100%);
-            right: 10px;
-            width: 0;
-            height: 0;
-            border: 6px solid transparent;
-            border-color: black white white white;
-        }
+  /*style the items (options), including the selected item:*/
+  &-selected {
+    @include select_base_style();
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(100%);
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: black white white white;
     }
-    &-selected &-arrow-active {
-        border: 1px solid #f80;
-        /*point the arrow upwards when the select box is open (active):*/
-        &:after {
-            border-color: white white black white;
-            transform: translateY(50%);
-        }
+  }
+  &-selected &-arrow-active {
+    border: 1px solid $primary_color;
+    /*point the arrow upwards when the select box is open (active):*/
+    &:after {
+      border-color: white white black white;
+      transform: translateY(50%);
     }
-}
-
-/*style the items (options), including the selected item:*/
-.select-items div,
-.select-selected {
-    margin-top: -1px;
-    min-height: 56px;
-    padding: 8px 16px;
-    border-left: 1px solid #f80;
-    border-right: 1px solid #f80;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    border-top: 1px solid transparent;
-    cursor: pointer;
-    user-select: none;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.select-selected {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    background-color: white;
-    min-height: 56px;
-}
-
-.selected-items div {
-    border-top: 1px solid #f80;
-    border-left: 1px solid #f80;
-    border-right: 1px solid #f80;
-    border-bottom: none;
-}
-
-.select-items div:first-child {
-    border-radius: 0;
-    border-top: none;
-}
-
-.select-items div:last-child {
-    border-radius: 0 0 5px 5px;
-    border-bottom: 1px solid #f80;
-}
-
-/*style items (options):*/
-.select-items {
+  }
+  /*style items (options):*/
+  &-items {
     margin-top: -5px;
     position: absolute;
     border-radius: 0 0 5px 5px;
@@ -86,14 +60,31 @@
     left: 0;
     right: 0;
     z-index: 99;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
+    div {
+      @include select_base_style();
+      border-top: 1px solid $primary_color;
+      border-left: 1px solid $primary_color;
+      border-right: 1px solid $primary_color;
+      border-bottom: none;
+      &:first-child {
+        border-radius: 0;
+        border-top: none;
+      }
+      &:last-child {
+        border-radius: 0 0 5px 5px;
+        border-bottom: 1px solid $primary_color;
+      }
+      &:hover {
+        background-color: rgba(255, 136, 0, 0.1);
+      }
+    }
+  }
+  /*hide the items when the select box is closed:*/
+  &-hide {
     display: none;
+  }
 }
 
-.select-items div:hover,
 .same-as-selected {
-    background-color: rgba(255, 136, 0, 0.1);
+  background-color: rgba(255, 136, 0, 0.1);
 }
