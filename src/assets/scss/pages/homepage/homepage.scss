@@ -1,0 +1,138 @@
+/** Section Hero start **/
+@media screen and (min-width: 768px) and (max-width: 865px) {
+  .home-hero {
+    &_content {
+      &-left {
+      }
+    }
+    &_headers {
+      h1 {
+        .line-break {
+          display: block;
+        }
+      }
+    }
+  }
+}
+/** Section Hero end**/
+
+/** Word rotation start **/
+.animation_word-rotation-mask {
+  .animated_text {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 220px;
+  }
+  span.animated_text[data-show] {
+    top: 0;
+    transition: 0.5s all ease-in-out;
+  }
+  span.animated_text[data-up] {
+    transform: translateY(-500%);
+    transition: 0.5s all ease-in-out;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  span.animated_text {
+    &:last-child {
+      .line-break {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
+  span.animated_text {
+    &:nth-child(3) {
+      .line-break {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 937px) {
+  span.animated_text {
+    &:first-child {
+      .line-break {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  span.animated_text {
+    &:first-child,
+    &:nth-child(3) {
+      .line-break {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  span.animated_text {
+    &:nth-child(3) {
+      .line-break {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  span.animated_text {
+    .line-break {
+      display: block;
+    }
+  }
+
+  .word-rotation_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 572px) and (min-width: 480px) {
+  .animation_word-rotation-mask {
+    height: 160px;
+  }
+
+  span.animated_text {
+    &:not(:first-child) {
+      padding-top: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 533px) {
+  span.animated_text {
+    &:nth-child(2) {
+      padding-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  span.animated_text {
+    &:nth-child(3) {
+      padding-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 534px) and (min-width: 480px) {
+  .heading-style-h1.text-color-orange {
+    span.show-mobile {
+      display: block;
+    }
+  }
+}
+
+/** Word rotation end**/
