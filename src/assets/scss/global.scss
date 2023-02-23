@@ -43,13 +43,19 @@
 }
 
 /** Form start **/
-.form_input:focus-visible {
-    outline: none;
+.form_input {
+    &:focus-visible {
+        outline: none;
+    }
 }
 
-.form_richtext ul li {
-    list-style-type: disc;
-    list-style-position: inside;
+.form_richtext {
+    ul {
+        li {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+    }
 }
 
 /** From end**/
