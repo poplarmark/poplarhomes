@@ -1,0 +1,97 @@
+/** Word rotation start **/
+.animation_word-rotation-mask {
+  .animated_text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 120px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  span.animated_text[data-show] {
+    top: 0;
+    transform: translateY(-10%);
+    transition: 0.5s all ease-in-out;
+  }
+  span.animated_text[data-up] {
+    transform: translateY(-290%);
+    transition: 0.5s all ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1439px) and (min-width: 992px) {
+  .animation_word-rotation-mask {
+    .animated_text {
+      top: 153px;
+      .line-break {
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 880px) and (min-width: 768px) {
+  .section {
+    &_residents-hero &_subheader {
+      max-width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  span.animated_text {
+    .line-break {
+      display: inline;
+    }
+    &:nth-child(2),
+    &:last-child {
+      .line-break {
+        display: block;
+      }
+    }
+  }
+  .animation_word-rotation-mask {
+    span.animated_text[data-show] {
+      top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 300px) {
+  .animation_word-rotation-mask {
+    .animated_text {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .animation_word-rotation-mask {
+    span.animated_text {
+      &[data-show] {
+        top: 6px;
+      }
+      .line-break {
+        display: block;
+      }
+    }
+  }
+}
+/** Word rotation end **/
+/** Property management section start **/
+@media screen and (max-width: 520px) and (min-width: 480px) {
+  .renting-management {
+    &_features {
+      grid-template-columns: 1fr;
+    }
+    &_headers {
+      max-width: 100%;
+    }
+  }
+}
+/** Property management section end **/
