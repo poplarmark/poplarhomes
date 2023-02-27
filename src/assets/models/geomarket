@@ -533,7 +533,7 @@
 				<path class="st7" d="M1185.7,506L1185.7,506c0.3-0.2,0.5-0.4,0.8-0.6l-0.7,0.5L1185.7,506z"/>
 			</g>
 			<g id="Labels">
-				<a href="{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}" target="_blank">
+				<a href=`{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}` target="_blank">
 					<g id="Bowie">
 						<line class="st9" x1="1340.2" y1="364" x2="1401.3" y2="361.9"/>
 						<path class="st6" d="M1335,374.4c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8s9.8,4.4,9.8,9.8S1340.4,374.4,1335,374.4z"/>
