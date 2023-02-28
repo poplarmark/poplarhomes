@@ -25,7 +25,7 @@
     var domain_current = domain_protocol + "//" + domain_host;
 
 	document.getElementById("anchor_bowie").onclick = function () {
-		window.open(domain_current+"/locations/bowie-property-management";, "_blank");
+		window.open(domain_current+"/locations/bowie-property-management", "_blank");
 	};
 	</script>
 	<g id="Maps">
