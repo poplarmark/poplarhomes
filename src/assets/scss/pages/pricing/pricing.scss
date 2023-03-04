@@ -1,8 +1,25 @@
-.tablehead_icon-wrapper {
-    .pricing-portfolio {
-        &-nth-child-1:hover .tooltip-wrapper.pricing-portfolio-nth-child-1,
-        &-nth-child-2:hover .tooltip-wrapper.pricing-portfolio-nth-child-2 {
+.tablehead_icon-wrapper.pricing-portfolio-nth-child-1 {
+    &:hover {
+        .tooltip-wrapper.pricing-portfolio-nth-child-1 {
             display: block;
+        }
+    }
+}
+
+.tablehead_icon-wrapper.pricing-portfolio-nth-child-2 {
+    &:hover {
+        .tooltip-wrapper.pricing-portfolio-nth-child-2 {
+            display: block;
+        }
+    }
+}
+
+.section_pricing-and-features {
+    .table-pricing {
+        &_column:hover {
+            .table-pricing.background-color-grey {
+                background-color: white;
+            }
         }
     }
 }
