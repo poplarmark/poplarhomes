@@ -1,4 +1,4 @@
 <style>
-.section_pricing-and-features .table-pricing_column:hover .table-pricing_head.background-color-grey{background-color:#fff}@media screen and (max-width:991px){.section_pricing-and-features .table-pricing:first-child{height:280px}.section_pricing-and-features .table-pricing_mobile .section_pricing-and-features .table-pricing_column-border{height:275px}.section_pricing-and-features .table-pricing_mobile tbody tr{background-color:#fff}.section_pricing-and-features .table-pricing_mobile tbody tr.background-color-grey{background-color:#f7f7f7}}
+.section_pricing-and-features .table-pricing_column:hover .table-pricing_head.background-color-grey{background-color:#fff}@media screen and (max-width:991px){.section_pricing-and-features .table-pricing:first-child{height:280px}.section_pricing-and-features .table-pricing:first-child .table-pricing_mobile .table-pricing_column-border{height:275px}.section_pricing-and-features .table-pricing_mobile tbody tr{background-color:#fff}.section_pricing-and-features .table-pricing_mobile tbody tr.background-color-grey{background-color:#f7f7f7}}
 /*# sourceMappingURL=pricing.css.map */
 </style>

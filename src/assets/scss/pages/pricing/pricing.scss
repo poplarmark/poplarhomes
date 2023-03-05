@@ -15,10 +15,11 @@
         .table-pricing {
             &:first-child {
                 height: 280px;
+                .table-pricing_mobile .table-pricing_column-border {
+                    height: 275px;
+                }
             }
-            &_mobile &_column-border {
-                height: 275px;
-            }
+            
         }
         .table-pricing {
             &_mobile {
