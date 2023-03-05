@@ -13,6 +13,14 @@
 @media screen and (max-width: 991px) {
     .section_pricing-and-features {
         .table-pricing {
+            &:first-child {
+                height: 280px;
+            }
+            &_mobile &_column-border {
+                height: 275px;
+            }
+        }
+        .table-pricing {
             &_mobile {
                 tbody {
                     tr {
