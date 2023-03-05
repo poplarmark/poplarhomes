@@ -25,7 +25,7 @@ th {
   .background {
     &-color {
       &-grey {
-        background-color: $color-light;
+        background-color: $color-light-grey;
       }
       &-white {
         background-color: white;
@@ -96,6 +96,10 @@ th {
           top: 0;
           z-index: 1;
           width: 25vw;
+          min-width: 220px;
+          div {
+            white-space: none;
+          }
         }
       }
       tbody {
@@ -108,7 +112,7 @@ th {
           }
         }
         .background-color-grey {
-          background-color: $color-light;
+          background-color: $color-light-grey;
         }
         th {
           position: sticky;
