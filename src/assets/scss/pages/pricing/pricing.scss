@@ -1,37 +1,38 @@
 .section_pricing-and-features {
-    .table-pricing {
-        &_column:hover {
-            .table-pricing {
-                &_head.background-color-grey {
-                    background-color: white;
-                }
-            }
+  .table-pricing {
+    &_column:hover {
+      .table-pricing {
+        &_head.background-color-grey {
+          background-color: white;
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 991px) {
-    .section_pricing-and-features {
-        .table-pricing {
-            &:first-child {
-                height: 280px;
-                .table-pricing_mobile .table-pricing_column-border {
-                    height: 275px;
-                }
-            }
-            
+  .section_pricing-portfolio {
+    .table-pricing {
+      height: 280px;
+      .table-pricing_mobile {
+        .table-pricing_column-border {
+          height: 275px;
         }
-        .table-pricing {
-            &_mobile {
-                tbody {
-                    tr {
-                        background-color: white;
-                    }
-                    tr.background-color-grey {
-                        background-color: #f7f7f7;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
+  .section_pricing-and-features {
+    .table-pricing {
+      &_mobile {
+        tbody {
+          tr {
+            background-color: white;
+          }
+          tr.background-color-grey {
+            background-color: #f7f7f7;
+          }
+        }
+      }
+    }
+  }
 }
