@@ -14,18 +14,22 @@
   .icon-help.is-white {
     font-weight: 100;
   }
+  .tooltip_body {
+    font-size: 1rem;
+    font-weight: 100;
+  }
   .tablehead_title.text-color-white {
     color: white;
   }
   .section_pricing-portfolio {
     [role="table"][aria-labelledby][tabindex] {
-      height: 280px;
+      height: 310px;
       .table-pricing_mobile {
         thead {
           tr {
             th {
               .table-pricing_column-border {
-                height: 275px;
+                height: 305px;
               }
             }
           }
