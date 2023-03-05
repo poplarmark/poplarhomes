@@ -12,11 +12,17 @@
 
 @media screen and (max-width: 991px) {
   .section_pricing-portfolio {
-    .table-pricing {
+    [role="table"][aria-labelledby][tabindex] {
       height: 280px;
       .table-pricing_mobile {
-        .table-pricing_column-border {
-          height: 275px;
+        thead {
+          tr {
+            th {
+              .table-pricing_column-border {
+                height: 275px;
+              }
+            }
+          }
         }
       }
     }
