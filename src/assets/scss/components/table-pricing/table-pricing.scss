@@ -139,6 +139,11 @@ th.background-color-orange {
     height: 470px;
     overflow-y: auto;
   }
+
+  .table-pricing_mobile thead th {
+    min-width: 180px;
+  }
+
   .table-pricing_mobile .table-pricing_column-border {
     height: 466px;
   }
