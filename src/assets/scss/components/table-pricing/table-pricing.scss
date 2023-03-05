@@ -62,6 +62,10 @@ th.background-color-orange {
     width: 25vw;
     z-index: 1;
   }
+
+  .table-pricing_mobile thead th div {
+    white-space: none;
+  }
   .table-pricing_mobile td {
     padding: 4px 5px;
     text-align: center;
