@@ -11,6 +11,9 @@
 }
 
 @media screen and (max-width: 991px) {
+  .icon-help.is-white {
+    font-weight: 100;
+  }
   .section_pricing-portfolio {
     [role="table"][aria-labelledby][tabindex] {
       height: 280px;
