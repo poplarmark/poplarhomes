@@ -10,6 +10,14 @@
   }
 }
 
+.section_pricing-portfolio {
+  .table-pricing {
+    &_column {
+      z-index: unset;
+    }
+  }
+}
+
 @media screen and (max-width: 991px) {
   .icon-help.is-white {
     font-weight: 100;
