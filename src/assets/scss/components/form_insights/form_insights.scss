@@ -33,7 +33,7 @@ label {
         text-align: left;
         position: relative;
         top: 0.5rem;
-        margin-bottom: 8px;
+        margin-bottom: 1.25rem;
         span {
           margin-bottom: 0;
           font-family: "Eina03", sans-serif;
@@ -88,10 +88,10 @@ label {
     justify-content: center;
   }
   &-button {
-    border: 1px solid #f80;
+    border-style: none;
     -webkit-transition: 0.2s;
     transition: 0.2s;
-    color: #f80;
+    color: white;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -114,9 +114,9 @@ label {
     font-size: 1rem;
     line-height: 1.5;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #f80;
     &:hover {
-      background-color: rgba(255, 136, 0, 0.15);
+      background-color: #ff9224;
     }
   }
 }
