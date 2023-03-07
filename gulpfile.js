@@ -13,7 +13,7 @@ const sass = require("gulp-sass")(require("sass"));
 
 const jsPath =
   "src/assets/js/components/form_renters-estimate/renters-estimate.js";
-const cssPath = "src/assets/scss/pages/pricing/pricing.scss";
+const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
 
 function jsBundler() {
   return src(jsPath)
