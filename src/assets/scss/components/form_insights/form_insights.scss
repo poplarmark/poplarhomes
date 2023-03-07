@@ -10,15 +10,6 @@ label {
 }
 
 .hs {
-  &-error-msgs {
-    color: red;
-  }
-  &-error-msg {
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1em;
-    color: red;
-  }
   &-main-font-element {
     h1 {
       line-height: 1.5rem;
@@ -29,7 +20,7 @@ label {
       position: relative;
       margin-bottom: 1.5rem;
       label {
-        font-family: "Eina03",sans-serif;
+        font-family: "Eina03", sans-serif;
         font-size: 14px;
         font-weight: 600;
         color: white;
@@ -37,13 +28,25 @@ label {
         margin-bottom: 8px;
         position: relative;
         top: 0.5rem;
+        .hs {
+          &-error-msgs {
+            color: red;
+          }
+          &-error-msg {
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1em;
+            color: red;
+          }
+        }
         span {
           margin-bottom: 0;
           font-family: "Eina03", sans-serif;
-          color: #000;
-          font-size: 0.875rem;
+          color: white;
+          font-size: 14px;
           font-weight: 600;
           line-height: 1.5em;
+          margin-bottom: 8px;
         }
       }
       input {
