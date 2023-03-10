@@ -63,11 +63,9 @@
 }
 
 @media screen and (max-width: 479px) {
-  .table-pricing {
-    &_mobile {
-      .table-pricing_column-shadow {
-        height: 310px;
-      }
+  .table-pricing_mobile {
+    div.table-pricing_column-shadow {
+      height: 310px;
     }
   }
 }
