@@ -119,4 +119,20 @@ label {
       background-color: #ff9224;
     }
   }
+  &_user_resource_type {
+    ul.inputs-list.multi-container {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      label.hs-form-radio-display {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        input {
+          margin-right: 0.5rem;
+          width: 25%;
+        }
+      }
+    }
+  }
 }
