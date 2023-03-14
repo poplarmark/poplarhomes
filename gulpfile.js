@@ -13,7 +13,7 @@ const rename = require("gulp-rename");
 // const cssPath = 'src/assets/css/**/*.css';
 
 const jsPath ="src/assets/js/components/form_renters-estimate/renters-estimate.js";
-const cssPath = "src/assets/scss/pages/location/location.scss";
+const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
 
 function jsBundler() {
   return src(jsPath)

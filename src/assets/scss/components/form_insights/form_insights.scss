@@ -1,3 +1,10 @@
+%error_default {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1em;
+  color: red;
+}
+
 ul,
 li,
 ol {
@@ -15,14 +22,14 @@ label {
 }
 
 .hs {
+  &-main-font-element {
+    @extend %error_default;
+  }
   &-error-msgs {
     color: red;
   }
   &-error-msg {
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1em;
-    color: red;
+    @extend %error_default;
   }
   &-main-font-element {
     h1 {
