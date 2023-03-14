@@ -1,1 +1,0 @@
-{"version":3,"sources":["about-us.css"],"names":[],"mappings":"AACA,qBAGI,aAAc,CAFd,mBAAoB,CACpB,mBAEJ","file":"about-us.css","sourcesContent":["/** Section stats start**/\r\n.stats_animated-text {\r\n    font-family: inherit;\r\n    font-weight: inherit;\r\n    color: inherit;\r\n}\r\n\r\n/** Section stats end**/"]}
