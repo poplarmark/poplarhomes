@@ -31,7 +31,7 @@ function jsBundler() {
 function cssBundler() {
   return src(cssPath)
     .pipe(sass().on("error", sass.logError))
-    .pipe(rename({suffix: "@"+makeid()+".min",}))
+    .pipe(rename({suffix: "_v."+makeid()+".min",}))
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
