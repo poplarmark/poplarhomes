@@ -11,6 +11,10 @@ const rename = require("gulp-rename");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
+// Create random ID
+function makeid() {
+  return (Math.random() + 1).toString(36).substring(7);
+}
 
 const jsPath ="src/assets/js/components/form_renters-estimate/renters-estimate.js";
 const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
@@ -27,7 +31,7 @@ function jsBundler() {
 function cssBundler() {
   return src(cssPath)
     .pipe(sass().on("error", sass.logError))
-    .pipe(rename({suffix: ".min",}))
+    .pipe(rename({suffix: "@"+makeid()+".min",}))
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
