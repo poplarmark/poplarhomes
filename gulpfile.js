@@ -7,16 +7,17 @@ const autoprefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
 const { src, series, parallel, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const rename = require("gulp-rename");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
 
-const jsPath =
-  "src/assets/js/components/form_renters-estimate/renters-estimate.js";
-const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
+const jsPath ="src/assets/js/components/form_renters-estimate/renters-estimate.js";
+const cssPath = "src/assets/scss/pages/location/location.scss";
 
 function jsBundler() {
   return src(jsPath)
+    .pipe(rename({suffix: ".min",}))
     .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(sourcemaps.write("."))
@@ -26,6 +27,7 @@ function jsBundler() {
 function cssBundler() {
   return src(cssPath)
     .pipe(sass().on("error", sass.logError))
+    .pipe(rename({suffix: ".min",}))
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write("."))
