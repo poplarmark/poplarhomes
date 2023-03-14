@@ -63,9 +63,11 @@
 }
 
 @media screen and (max-width: 479px) {
-  .table-pricing_mobile {
-    div.table-pricing_column-shadow {
-      height: 310px;
+  .section_pricing-portfolio {
+    .table-pricing_mobile {
+      div.table-pricing_column-shadow {
+        height: 310px;
+      }
     }
   }
 }
