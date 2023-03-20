@@ -16,7 +16,7 @@ function makeid() {
   return (Math.random() + 1).toString(36).substring(7);
 }
 
-const jsPath ="src/assets/js/components/form_renters-estimate/renters-estimate.js";
+const jsPath ="src/assets/js/components/form_rent-estimate/rent-estimate_former.js";
 const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
 
 function jsBundler() {

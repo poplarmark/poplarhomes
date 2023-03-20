@@ -12,12 +12,14 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     }
   }
 
-  const wf_location = document.getElementById("pac_input");
+  var wf_location = document.getElementById("pac_input");
   let autocomplete_options = {
     //types: ["address"],
     //types: ["(regions)"],
     componentRestrictions: { country: "us" },
   };
+
+  console.log("google.maps.api: running")
   
   if (wf_location) {
     var autocomplete_component;
