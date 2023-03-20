@@ -1,6 +1,14 @@
-%error_default {
+$font-family-body-default: "Eina03", sans-serif;
+$font-family-body-weight-semibold: 700;
+$color-orange-primary: #f80;
+$color-orange-hover: #ff9224;
+$color-light-grey-default: #ccc;
+$border-orange-default: 1px solid $color-orange-primary;
+$border-light-default: 1px solid $color-light-grey-default;
+
+%error-style-default {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: $font-family-body-weight-semibold;
   line-height: 1em;
   color: red;
 }
@@ -18,18 +26,18 @@ label {
 .submitted-message {
   color: white;
   font-size: 1.5rem;
-  font-family: "Eina03", sans-serif;
+  font-family: $font-family-body-default;
 }
 
 .hs {
   &-main-font-element {
-    @extend %error_default;
+    @extend %error-style-default;
   }
   &-error-msgs {
     color: red;
   }
   &-error-msg {
-    @extend %error_default;
+    @extend %error-style-default;
   }
   &-main-font-element {
     h1 {
@@ -41,14 +49,14 @@ label {
       position: relative;
       margin-bottom: 1.5rem;
       label {
-        font-family: "Eina03", sans-serif;
+        font-family: $font-family-body-default;
         text-align: left;
         position: relative;
         top: 0.5rem;
         margin-bottom: 1.25rem;
         span {
           margin-bottom: 0;
-          font-family: "Eina03", sans-serif;
+          font-family: $font-family-body-default;
           color: white;
           font-size: 14px;
           font-weight: 600;
@@ -62,14 +70,14 @@ label {
         border-style: none;
         border-radius: 5px;
         font-size: 1rem;
-        font-family: "Eina03", sans-serif;
+        font-family: $font-family-body-default;
         background-color: white;
         color: #000;
         &:focus {
-          border: 1px solid #f80;
+          border: $border-orange-default;
         }
         &:focus-visible {
-          border: 1px solid #f80;
+          border: $border-orange-default;
           outline: none;
         }
         .multi-container {
@@ -87,7 +95,7 @@ label {
         height: 1rem;
         margin: 0 0.5rem 0 0;
         border-radius: 0.125rem;
-        border: 1px solid #ccc;
+        border: $color-light-grey-default;
       }
       span {
         margin-bottom: 0;
@@ -101,12 +109,8 @@ label {
   }
   &-button {
     border-style: none;
-    -webkit-transition: 0.2s;
     transition: 0.2s;
     color: white;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     height: auto;
     max-height: none;
@@ -122,13 +126,13 @@ label {
     -ms-flex-align: center;
     align-items: center;
     border-radius: 4px;
-    font-family: "Eina03", sans-serif;
+    font-family: $font-family-body-default;
     font-size: 1rem;
     line-height: 1.5;
     cursor: pointer;
-    background-color: #f80;
+    background-color: $color-orange-primary;
     &:hover {
-      background-color: #ff9224;
+      background-color: $color-orange-hover;
     }
   }
   &_user_resource_type {
