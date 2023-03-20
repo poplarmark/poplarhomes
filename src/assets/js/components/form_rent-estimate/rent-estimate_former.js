@@ -11,26 +11,17 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       }
     }
   }
-  let wf_location = document.querySelector("#pac_input");
-  let wf_header = document.querySelector("#autoaddress");
+
+  const wf_location = document.getElementById("pac_input");
   let autocomplete_options = {
     //types: ["address"],
     //types: ["(regions)"],
     componentRestrictions: { country: "us" },
   };
   
-  if (wf_header) {
-    let autocompleteHeader = new google.maps.places.Autocomplete(wf_header,autocomplete_options);
-    google.maps.event.addListener(
-      autocompleteHeader,
-      "place_changed",
-      function () {}
-    );
-  }
-  
   if (wf_location) {
     var autocomplete_component;
-    var autocomplete = new google.maps.places.Autocomplete(wf_location,autocomplete_options);
+    var autocomplete = new google.maps.places.Autocomplete(wf_location, autocomplete_options);
     google.maps.event.addListener(autocomplete, "place_changed", function () {
       let place = autocomplete.getPlace().address_components;
       let zipcode = document.getElementById("zipcode");
