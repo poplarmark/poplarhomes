@@ -770,9 +770,10 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
               autocomplete_component.state === "NC" ||
               autocomplete_component.state === "OH") &&
               autocomplete_component?.city && isLocalPartner) {
+                // Open subsidiary modal
                 const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
-                wf_form_subsidiarystyle.display = "block";
-                
+                wf_form_subsidiary.style.display = "block";
+              }
           if ((autocomplete_component?.state &&
               (autocomplete_component.state === "OR" ||
                autocomplete_component.state === "TN" ||
@@ -783,42 +784,16 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
                autocomplete_component.state === "MD")) ||
               (autocomplete_component?.city &&
               (autocomplete_component.city === "Las Vegas" || isLocalPartner))) {
-            $.magnificPopup.open({
-              items: {
-                src: $(".lyop-popup-form-wrapper"),
-                type: "inline",
-              },
-              removalDelay: 300,
-              mainClass: "mfp-fade",
-              closeOnBgClick: false,
-              closeOnContentClick: false,
-              closeBtnInside: true,
-            });
-            $(".mfp-close-btn-in .mfp-close").click(function () {
-              $.magnificPopup.close();
-              return false;
-            });
-            return false;
-          }
+                // Open main modal
+                const wf_form_main = document.getElementById("serviced-block_trigger-layer");
+                wf_form_main.style.display = "block";
+              }
           let propertyAddress = $("input#pac_input").val();
           console.log(propertyAddress);
-          $("span.area-address").text(propertyAddress);
           $(".address-map").attr("src","https://www.google.com/maps?q=" + propertyAddress + "&output=embed");
-          $.magnificPopup.open({
-            items: {
-            src: $(".out-of-bound-form-wrapper"),
-            type: "inline",
-          },
-            removalDelay: 300,
-            mainClass: "mfp-fade",
-            closeOnBgClick: false,
-            closeOnContentClick: false,
-            closeBtnInside: true,
-          });
-          $(".mfp-close-btn-in .mfp-close").click(function () {
-            $.magnificPopup.close();
-            return false;
-          });
+          // Open unserviced modal
+          const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
+          wf_form_unserviced.style.display = "block";
           return false;
         }
         rentEstimateFormValidator.showErrors();
@@ -980,14 +955,10 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
               utm_content: `${utm.UTMContent}`,
             };
   
-            pipeToGoogleSheet(
-              "https://script.google.com/macros/s/AKfycbwdTw0XzSPs4Y1Fou6jdLToblFjZneJZGRd2EEowbOMpTgX5te8/exec",
-              googleSheetData
-            );
+            pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwdTw0XzSPs4Y1Fou6jdLToblFjZneJZGRd2EEowbOMpTgX5te8/exec", googleSheetData);
             resetLyopForm();
             return false;
           }
-  
           let token = res.data.registerOwner.token;
           addProperty(property, utm, token);
         })
@@ -996,9 +967,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         });
     }
   
-    $lyopPopupForm
-      .find("input[type=text], input[type=tel], input[type=email], select")
-      .attr("required", "required");
+    $lyopPopupForm.find("input[type=text], input[type=tel], input[type=email], select").attr("required", "required");
     if ($lyopPopupForm.length) {
       lyopValidator = $lyopPopupForm.validate({
         rules: {
