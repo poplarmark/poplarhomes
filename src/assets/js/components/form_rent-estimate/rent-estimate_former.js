@@ -801,35 +801,34 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       });
     }
   
-    let $lyopPopupForm = $(".lyop-popup-form-wrapper form");
-    let $lyopPopup = $(".lyop-popup-form-wrapper");
+    let $wf_wrapper = $(".w-form");
+    let $wf_wrapper_form = $(".w-form form");
     let lyopValidator;
   
-    function resetLyopForm() {
+    function reset_wf_form() {
       setTimeout(function () {
-        $lyopPopupForm.find("input:not('submit')").val("");
-        $lyopPopupForm.find("#button_popup_submit").val("Sent");
-        $("form#rent-estimate").find("input, select").val("");
+        $wf_wrapper_form.find("input:not('submit')").val("");
+        $wf_wrapper_form.find(".rent-estimate-details-submit").val("Sent");
+        $("form#rent-estimate_button").find("input, select").val("");
   
         setTimeout(function () {
           $rentEstimateForm.trigger("reset");
-          $lyopPopup.removeClass("loading");
-          $lyopPopup.find(".lyop-form-details").hide();
-          $lyopPopup.find(".lyop-form-success").show();
-          $lyopPopupForm.find("#button_popup_submit").val("Send me my report");
+          // $wf_wrapper.find(".lyop-form-details").hide();
+          $wf_wrapper.find(".lyop-form-success").show();
+          $wf_wrapper_form.find(".rent-estimate-details-submit").val("Send me my report");
         }, 500);
       }, 2000);
   
       setTimeout(function () {
-        $lyopPopup.find(".lyop-form-details").hide();
-        $lyopPopup.find(".lyop-form-success").show();
+        $wf_wrapper.find(".lyop-form-details").hide();
+        $wf_wrapper.find(".lyop-form-success").show();
         $(".popup-success").hide();
-      }, 10000);
+      }, 3000);
     }
   
-    $lyopPopup.find(".lyop-form-success a.close-success").click(function () {
-      $.magnificPopup.close();
-    });
+    // $wf_wrapper.find(".lyop-form-success a.close-success").click(function () {
+    //   $.magnificPopup.close();
+    // });
   
     function addProperty(property, utm, token) {
       fetch("https://www.poplarhomes.com/graphql", {
@@ -899,7 +898,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       })
         .then((res) => res.json())
         .then((res) => {
-          resetLyopForm();
+          reset_wf_form();
         })
         .catch((error) => {
           console.log(error);
@@ -956,7 +955,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
             };
   
             pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwdTw0XzSPs4Y1Fou6jdLToblFjZneJZGRd2EEowbOMpTgX5te8/exec", googleSheetData);
-            resetLyopForm();
+            reset_wf_form();
             return false;
           }
           let token = res.data.registerOwner.token;
@@ -967,9 +966,9 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         });
     }
   
-    $lyopPopupForm.find("input[type=text], input[type=tel], input[type=email], select").attr("required", "required");
-    if ($lyopPopupForm.length) {
-      lyopValidator = $lyopPopupForm.validate({
+    $wf_wrapper_form.find("input[type=text], input[type=tel], input[type=email], select").attr("required", "required");
+    if ($wf_wrapper_form.length) {
+      lyopValidator = $wf_wrapper_form.validate({
         rules: {
           email: {
             required: true,
@@ -1003,15 +1002,14 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       });
     }
   
-    $lyopPopupForm.find("#rent-estimate-details-submit").click(function (event) {
+    $wf_wrapper_form.find(".rent-estimate-details-submit").click(function (event) {
       event.preventDefault();
-      if ($lyopPopupForm.valid()) {
-        $lyopPopup.addClass("loading");
+      if ($wf_wrapper_form.valid()) {
         let property = {
           type: $("#property-type").val(),
           propertyCategory: $("#property-type option:selected").attr("category_value"),
-          numBeds: $("#bedrooms").val(),
-          numBaths: $("#bathrooms").val(),
+          numBeds: $("#rent-estimate_input-bedroom").val(),
+          numBaths: $("#rent-estimate_input-bathroom").val(),
           street: autocomplete_component ? autocomplete_component.street_no + " " + autocomplete_component.route : $("#pac_input").val(),
           city: autocomplete_component && autocomplete_component.city ? autocomplete_component.city: "",
           state: autocomplete_component ? autocomplete_component.state : "",
@@ -1019,10 +1017,10 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         };
   
         let user = {
-          firstName: $lyopPopupForm.find("#fname").val(),
-          lastName: $lyopPopupForm.find("#lname").val(),
-          email: $lyopPopupForm.find("#email").val(),
-          phone: $lyopPopupForm.find("#phone").val(),
+          firstName: $wf_wrapper_form.find("#serviced_input-firstname").val(),
+          lastName: $wf_wrapper_form.find("#serviced_input-lastname").val(),
+          email: $wf_wrapper_form.find("#serviced_input-email").val(),
+          phone: $wf_wrapper_form.find("#serviced_input-phone").val(),
         };
         let utm = {
           UTMCampaign: sessionStorage.getItem("utm_campaign")
@@ -1051,15 +1049,15 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       return false;
     });
   
-    $("#oob-form")
+    $("#form_unserviced")
       .find("input[type=text], input[type=tel], input[type=email], select")
       .attr("required", "required");
-    let oobForm = $("#oob-form");
-    let oobValidator;
-    if (oobForm.length) {
-      oobValidator = oobForm.validate({
+    let form_unserviced = $("#form_unserviced");
+    let form_unserviced_validator;
+    if (form_unserviced.length) {
+      form_unserviced_validator = form_unserviced.validate({
         rules: {
-          "full-name": {
+          "full_name": {
             required: true,
           },
           email: {
@@ -1068,7 +1066,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
           },
         },
         messages: {
-          "full-name": {
+          "full_name": {
             required: "Full name is required",
           },
           email: {
@@ -1079,39 +1077,19 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       });
     }
   
-    $("#oob-form .btn-back").click(function () {
-      $.magnificPopup.close();
-      return false;
-    });
-  
-    $("#oob-form .change-location").click(function () {
-      $.magnificPopup.close();
-      $("#pac_input").val("");
-      setTimeout(function () {
-        $("#pac_input").focus();
-      }, 800);
-      return false;
-    });
-  
     let submitted = 0;
-    oobForm.find("#notify-me").click(function (event) {
+    form_unserviced.find("#submit-rent-estimate-notify").click(function (event) {
       event.preventDefault();
-      if (oobForm.valid()) {
+      if (form_unserviced.valid()) {
         if (submitted > 0) {
-          $(".form-success").append("<p>Awesome! You are just added to our wait list. We will update you as soon as we expand to your area.</p>");
-          setTimeout(function () {
-            submitted = 0;
-            $(".lyop-form").trigger("reset");
-            $(".form-success p").remove();
-            $.magnificPopup.close();
-          }, 5000);
+          $(".w-form-done").show() // Show success
         } else {
-          const fullName = $('input[name="full-name"]').val(),
+          const fullName = $('input[name="full_name"]').val(),
             email = $('input[name="email"]').val(),
             propertyAddress = $("#pac_input").val(),
             propertyType = $("#property-type").val(),
-            bedrooms = $("#bedrooms").val(),
-            bathrooms = $("#bathrooms").val(),
+            bedrooms = $("#rent-estimate_input-bedroom").val(),
+            bathrooms = $("#rent-estimate_input-bathroom").val(),
             utmSource = "WEB-organic",
             utmMedium = "rent estimate outbound form",
             utmCampaign = "",
@@ -1137,12 +1115,12 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
           pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
           submitted++;
           $(".form-success").append("<p>Awesome! You are just added to our wait list. We will update you as soon as we expand to your area.</p>");
-          setTimeout(function () {
-            submitted = 0;
-            $(".lyop-form").trigger("reset");
-            $(".form-success p").remove();
-            $.magnificPopup.close();
-          }, 5000);
+          // setTimeout(function () {
+          //   submitted = 0;
+          //   $(".lyop-form").trigger("reset");
+          //   $(".form-success p").remove();
+          //   $.magnificPopup.close();
+          // }, 5000);
           $(this).submit();
         }
       } else {
@@ -1184,7 +1162,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       if ($findPoplarHomeForm.valid()) {
         let address = $("#pac_input").val();
         let propertyType = $("#property-type").val();
-        let beds = $("#bedrooms").val();
+        let beds = $("#rent-estimate_input-bedroom").val();
         let query = `?q=${address}&propertyType=${propertyType}&beds=${beds}`;
         //window.location.replace("/rental-properties-listing" + query )
         window.open("/rental-properties-listing" + query);
