@@ -13,7 +13,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
   }
 
   const autocomplete_input = document.getElementById("pac_input");
-  let autocomplete_options = {
+  const autocomplete_options = {
     componentRestrictions: { country: "us" },
   };
   
@@ -22,7 +22,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     var autocomplete = new google.maps.places.Autocomplete(autocomplete_input, autocomplete_options);
     google.maps.event.addListener(autocomplete, "place_changed", function () {
       let place = autocomplete.getPlace().address_components;
-      let zipcode = document.getElementById("zipcode");
+      let zipcode = document.getElementById("rent-estimate_input-postal-code");
       const zipcode_initial_value = getGoogleAddressComponent(place, "postal_code", "short_name");
       zipcode.value = zipcode_initial_value;
   
