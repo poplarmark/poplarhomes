@@ -14,8 +14,8 @@ function initMap() {
   // Bind the map's bounds (viewport) property to the autocomplete object,
   // so that the autocomplete requests use the current map bounds for the
   // bounds option in the request.
-  autocomplete.bindTo("bounds", map);
 
+  autocomplete.bindTo("bounds", map);
   //infowindow = new google.maps.InfoWindow();
   //infowindowContent = document.getElementById('infowindow-content');
   //infowindow.setContent(infowindowContent);
@@ -32,9 +32,7 @@ function initMap() {
     if (!place.geometry) {
       // User entered the name of a Place that was not suggested and
       // pressed the Enter key, or the Place Details request failed.
-      window.alert(
-        "Can't find location: '" + place.name + "', in the autocomplete list"
-      );
+      window.alert("Can't find location: '" + place.name + "', in the autocomplete list");
       return;
     }
 
