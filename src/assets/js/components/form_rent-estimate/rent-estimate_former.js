@@ -43,7 +43,8 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     });
   }
   
-  $(document).ready(function () {
+  function initMap() {
+    
     const pipeToGoogleSheet = function (sheetURL, formData) {
       $.ajax({
         url: sheetURL,
@@ -1147,9 +1148,9 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         $(".default-dropdown").hide();
       }
     });
-    
+
     autocompleteBindLocation();
-  });
+  }
 
   function autocompleteBindLocation() {
     // move .pac-container inside #input_wrap-location
