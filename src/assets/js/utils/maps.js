@@ -114,10 +114,10 @@ function initMap() {
     //infowindow.open(map, marker);
   });
 
-  loadEstimate();
+  autocompleteBindLocation();
 }
 
-function loadEstimate() {
+function autocompleteBindLocation() {
   // move .pac-container inside #input_wrap-location
   window.addEventListener("load", function () {
     var child = document.getElementsByClassName("pac-container")[0];
