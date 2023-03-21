@@ -43,7 +43,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     });
   }
   
-  $(document).ready(function () {
+  function initMap() {
     autocompleteBindLocation();
     const pipeToGoogleSheet = function (sheetURL, formData) {
       $.ajax({
@@ -1148,7 +1148,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         $(".default-dropdown").hide();
       }
     });
-  });
+  }
 
   function autocompleteBindLocation() {
     // move .pac-container inside #input_wrap-location
