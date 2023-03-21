@@ -12,14 +12,14 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     }
   }
 
-  let wf_location = document.getElementById("pac_input");
+  const autocomplete_input = document.getElementById("pac_input");
   let autocomplete_options = {
     componentRestrictions: { country: "us" },
   };
   
-  if (wf_location) {
+  if (autocomplete_input) {
     var autocomplete_component;
-    var autocomplete = new google.maps.places.Autocomplete(wf_location, autocomplete_options);
+    var autocomplete = new google.maps.places.Autocomplete(autocomplete_input, autocomplete_options);
     google.maps.event.addListener(autocomplete, "place_changed", function () {
       let place = autocomplete.getPlace().address_components;
       let zipcode = document.getElementById("zipcode");
@@ -44,7 +44,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
   }
   
   function initMap() {
-    
+
     const pipeToGoogleSheet = function (sheetURL, formData) {
       $.ajax({
         url: sheetURL,
