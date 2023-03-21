@@ -12,14 +12,10 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     }
   }
 
-  var wf_location = document.getElementById("pac_input");
+  let wf_location = document.getElementById("pac_input");
   let autocomplete_options = {
-    //types: ["address"],
-    //types: ["(regions)"],
     componentRestrictions: { country: "us" },
   };
-
-  console.log("google.maps.api: running")
   
   if (wf_location) {
     var autocomplete_component;
@@ -1120,51 +1116,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         validator.showErrors();
       }
     });
-  
-    let $findPoplarHomeForm = $("#find-a-poplar-home");
-    let findPoplarHomeFormValidator;
-    $findPoplarHomeForm.find("input[type=text]").attr("required", "required");
-    if ($findPoplarHomeForm.length) {
-      findPoplarHomeFormValidator = $findPoplarHomeForm.validate({
-        rules: {
-          address: {
-            required: true,
-          },
-          bedrooms: {
-            number: true,
-          },
-          bathrooms: {
-            number: true,
-          },
-        },
-        messages: {
-          address: {
-            required: "Select a city or enter address.",
-          },
-          bedrooms: {
-            number: "Bedroom must be a number",
-          },
-          bathrooms: {
-            number: "Bathroom must be a number",
-          },
-        },
-      });
-    }
-    $findPoplarHomeForm.submit(function (event) {
-      event.preventDefault();
-      if ($findPoplarHomeForm.valid()) {
-        let address = $("#pac_input").val();
-        let propertyType = $("#property-type").val();
-        let beds = $("#rent-estimate_input-bedroom").val();
-        let query = `?q=${address}&propertyType=${propertyType}&beds=${beds}`;
-        //window.location.replace("/rental-properties-listing" + query )
-        window.open("/rental-properties-listing" + query);
-        return false;
-      }
-      findPoplarHomeFormValidator.showErrors();
-      return false;
-    });
-  
+   
     $(".default-dropdown ul li").click(function () {
       let selectedDefault = $(this).text();
       $("#pac_input").val(selectedDefault);
