@@ -780,7 +780,48 @@
       registerOwner(user, property, utm);
       return false;
     });
+    // Form serviced event handler
+    form_subsidiary.addEventListener('submit', (event) => {
+      event.preventDefault();
+      let property = {
+        type: property_type.value,
+        propertyCategory: $("#property-type option:selected").attr("category_value"),
+        numBeds: bedroom_count.value,
+        numBaths: bathroom_count.value,
+        street: autocomplete_component ? autocomplete_component.street_no + " " + autocomplete_component.route : autocomplete_input.value,
+        city: autocomplete_component && autocomplete_component.city ? autocomplete_component.city: "",
+        state: autocomplete_component ? autocomplete_component.state : "",
+        zipCode: autocomplete_component ? autocomplete_component.zip : "",
+      };
 
+      let user = {
+        firstName: serviced_input_firstname.value,
+        lastName: serviced_input_lastname.value,
+        email: serviced_input_email.value,
+        phone: serviced_input_phone.value,
+      };
+      let utm = {
+        UTMCampaign: sessionStorage.getItem("utm_campaign")
+          ? sessionStorage.getItem("utm_campaign")
+          : "",
+        UTMContent: sessionStorage.getItem("utm_content")
+          ? sessionStorage.getItem("utm_content")
+          : document.referrer,
+        UTMMedium: sessionStorage.getItem("utm_medium")
+          ? sessionStorage.getItem("utm_medium")
+          : "rent-estimate-popup",
+        UTMSource: sessionStorage.getItem("utm_source")
+          ? sessionStorage.getItem("utm_source")
+          : "organic",
+        UTMTerm: sessionStorage.getItem("utm_term")
+          ? sessionStorage.getItem("utm_term")
+          : "",
+      };
+
+      console.log(utm);
+      registerOwner(user, property, utm);
+      return false;
+    });
     // Form unserviced event handler
     let submitted = 0;
     form_unserviced.addEventListener('submmit', (event) => {
