@@ -716,7 +716,7 @@
            autocomplete_component?.city && isLocalPartner) {
              // Open subsidiary modal
              wf_form_main.style.display = "block;"
-             const wf_form_main_header = querySelector("#serviced-block_trigger-layer .modal_heading");
+             const wf_form_main_header = document.querySelector("#serviced-block_trigger-layer .modal_heading");
              wf_form_main_header.innerHTML = "One of our local partners serves your area!"; 
            }
        if ((autocomplete_component?.state &&
