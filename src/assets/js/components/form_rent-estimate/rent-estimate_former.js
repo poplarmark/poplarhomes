@@ -789,7 +789,7 @@
       return false;
     });
     // Form unserviced event handler
-    form_unserviced.addEventListener('submmit', (event) => {
+    form_unserviced.addEventListener('submit', (event) => {
       event.preventDefault();
         const fullName = unserviced_input_fullname.value,
               email = unserviced_input_email.value,
