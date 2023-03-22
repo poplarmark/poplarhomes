@@ -1,4 +1,5 @@
-function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
+function initMap () {
+  function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
     console.log(hasOwnProperty);
     if (!components.length) return;
     for (var i = 0; i < components.length; i++) {
@@ -49,7 +50,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     });
   }
   
-  function initMap() {
+  $(document).ready(function () {
     // Function for moving google autocomplete api to designated input field which is #pac_input
     autocompleteBindLocation();
     // Function for formatting phone
@@ -960,7 +961,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         console.log("Error!")
       }
     });
-  }
+  });
 
   // Function for formatting phone
   function phoneFormat() {
@@ -1011,5 +1012,6 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
     const pasted_input = document.getElementById("pac_input");
     pasted_input.onpaste = (e) => e.preventDefault();
   }
+}
 
   window.initMap = initMap;
