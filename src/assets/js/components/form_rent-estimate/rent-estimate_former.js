@@ -1,5 +1,5 @@
   // Modals
-  console.log("44");
+  console.log("46");
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -823,9 +823,9 @@
         // setTimeout(function() {
         //   window.location.reload();
         // }, 5000);
-        map.style.display = "none"; // Hide map
+        let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
+        form_unserviced_button_close.style.display = "none";
         form_unserviced.style.display = "none"; // Hide form_unserviced
-        console.log("Exiting form_unserviced")
         return false;
     });
   });
