@@ -12,8 +12,10 @@ const rename = require("gulp-rename");
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
 // Create random ID
-function makeid() {
-  return (Math.random() + 1).toString(36).substring(7);
+function timeStamp () {
+  let date = new Date();
+  let timestamp = date.getTime();
+  return timestamp;
 }
 
 const jsPath ="src/assets/js/components/form_rent-estimate/rent-estimate_former.js";
@@ -21,8 +23,8 @@ const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
 
 function jsBundler() {
   return src(jsPath)
-    .pipe(rename({suffix: "_v"+makeid()+".min",})) // with versioning
-    // .pipe(rename({suffix: ".min",}))
+    // .pipe(rename({suffix: "_v."+timeStamp()+".min",})) // with versioning
+    .pipe(rename({suffix: ".min",}))
     .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(sourcemaps.write("."))

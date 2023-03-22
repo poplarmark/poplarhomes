@@ -1,13 +1,10 @@
   // Modals
-  console.log("48");
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
-  const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
   const wf_form_empty = document.getElementById("emptyfield-block_trigger-layer");
   // Forms
   const form_rent_estimate = document.getElementById("form_rentestimate");
   const form_serviced = document.getElementById("form_serviced");
-  const form_subsidiary = document.getElementById("form_subsidiary");
   const form_unserviced = document.getElementById("form_unserviced");
   // Rent estimate form fields
   const autocomplete_input = document.getElementById("pac_input");
@@ -782,10 +779,11 @@
 
       console.log(utm);
       registerOwner(user, property, utm);
-      // setTimeout(function() {
-      //   window.location.reload();
-      // }, 5000);
       form_serviced.style.display = "none"; // Hide form_serviced
+      // Reload page after submission
+      setTimeout(function() {
+        window.location.reload();
+      }, 5000);
       return false;
     });
     // Form unserviced event handler
@@ -820,13 +818,14 @@
           Bathrooms: bathrooms,
         };
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
-        // setTimeout(function() {
-        //   window.location.reload();
-        // }, 5000);
         let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
         map.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
         form_unserviced.style.display = "none"; // Hide form_unserviced
+        // Reload page after submission
+        setTimeout(function() {
+          window.location.reload();
+        }, 5000);
         return false;
     });
   });
