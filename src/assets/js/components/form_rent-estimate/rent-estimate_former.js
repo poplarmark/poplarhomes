@@ -700,6 +700,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
            autocomplete_component?.city && isLocalPartner) {
              // Open subsidiary modal
              wf_form_subsidiary.style.display = "block";
+             wf_form_main.style.display = "none;"
            }
        if ((autocomplete_component?.state &&
            (autocomplete_component.state === "OR" ||
