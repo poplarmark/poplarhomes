@@ -1,5 +1,4 @@
-function initMap () {
-  function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
+function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
     console.log(hasOwnProperty);
     if (!components.length) return;
     for (var i = 0; i < components.length; i++) {
@@ -69,7 +68,6 @@ function initMap () {
     };
   
     const rent_estimate_form = getElementById("form_rentestimate");
-    let rent_estimate_form_validator;
     rent_estimate_form.addEventListener('submit', (event) => {
       
       const cities = [
@@ -1012,6 +1010,3 @@ function initMap () {
     const pasted_input = document.getElementById("pac_input");
     pasted_input.onpaste = (e) => e.preventDefault();
   }
-}
-
-  window.initMap = initMap;
