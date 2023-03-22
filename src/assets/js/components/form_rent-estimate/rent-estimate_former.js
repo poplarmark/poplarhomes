@@ -1,5 +1,5 @@
   // Modals
-  console.log("43");
+  console.log("44");
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -825,6 +825,7 @@
         // }, 5000);
         map.style.display = "none"; // Hide map
         form_unserviced.style.display = "none"; // Hide form_unserviced
+        console.log("Exiting form_unserviced")
         return false;
     });
   });
