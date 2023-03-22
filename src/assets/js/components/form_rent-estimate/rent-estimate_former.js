@@ -69,7 +69,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
   
     const rent_estimate_form = getElementById("form_rentestimate");
     rent_estimate_form.addEventListener('submit', (event) => {
-      
+      event.preventDefault();
       const cities = [
         "Accokeek",
         "Alameda",
@@ -690,38 +690,35 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         ];
         //Check if a value exists in the cities array
         const isLocalPartner = cities.find((city) => city === autocomplete_component.city);
-        if (rent_estimate_form.valid()) {
-          // Update content to Local Partners if under this city
-          if (autocomplete_component?.state &&
-             (autocomplete_component.state === "TX" ||
-              autocomplete_component.state === "SC" ||
-              autocomplete_component.state === "MO" ||
-              autocomplete_component.state === "NC" ||
-              autocomplete_component.state === "OH") &&
-              autocomplete_component?.city && isLocalPartner) {
-                // Open subsidiary modal
-                wf_form_subsidiary.style.display = "block";
-              }
-          if ((autocomplete_component?.state &&
-              (autocomplete_component.state === "OR" ||
-               autocomplete_component.state === "TN" ||
-               autocomplete_component.state === "CA" ||
-               autocomplete_component.state === "WA" ||
-               autocomplete_component.state === "CO" ||
-               autocomplete_component.state === "NV" ||
-               autocomplete_component.state === "MD")) ||
-              (autocomplete_component?.city &&
-              (autocomplete_component.city === "Las Vegas" || isLocalPartner))) {
-                // Open main modal
-                wf_form_main.style.display = "block";
-              }
-          $(".address-map").attr("src","https://www.google.com/maps?q=" + autocomplete_input.value + "&output=embed");
-          // Open unserviced modal
-          wf_form_unserviced.style.display = "block";
-          // return false;
-        }
+        // Update content to Local Partners if under this city
+        if (autocomplete_component?.state &&
+          (autocomplete_component.state === "TX" ||
+           autocomplete_component.state === "SC" ||
+           autocomplete_component.state === "MO" ||
+           autocomplete_component.state === "NC" ||
+           autocomplete_component.state === "OH") &&
+           autocomplete_component?.city && isLocalPartner) {
+             // Open subsidiary modal
+             wf_form_subsidiary.style.display = "block";
+           }
+       if ((autocomplete_component?.state &&
+           (autocomplete_component.state === "OR" ||
+            autocomplete_component.state === "TN" ||
+            autocomplete_component.state === "CA" ||
+            autocomplete_component.state === "WA" ||
+            autocomplete_component.state === "CO" ||
+            autocomplete_component.state === "NV" ||
+            autocomplete_component.state === "MD")) ||
+           (autocomplete_component?.city &&
+           (autocomplete_component.city === "Las Vegas" || isLocalPartner))) {
+             // Open main modal
+             wf_form_main.style.display = "block";
+           }
+       $(".address-map").attr("src","https://www.google.com/maps?q=" + autocomplete_input.value + "&output=embed");
+       // Open unserviced modal
+       wf_form_unserviced.style.display = "block";
+       // return false;
       console.log("Error in form validation!")
-      event.preventDefault();
       registerOwner();
       addProperty();
     });
