@@ -742,21 +742,21 @@
     form_serviced.addEventListener('submit', (event) => {
       event.preventDefault();
       let property = {
-        type: property_type.val(),
+        type: property_type.value,
         propertyCategory: $("#property-type option:selected").attr("category_value"),
-        numBeds: bedroom_count.val(),
-        numBaths: bathroom_count.val(),
-        street: autocomplete_component ? autocomplete_component.street_no + " " + autocomplete_component.route : autocomplete_input.val(),
+        numBeds: bedroom_count.value,
+        numBaths: bathroom_count.value,
+        street: autocomplete_component ? autocomplete_component.street_no + " " + autocomplete_component.route : autocomplete_input.value,
         city: autocomplete_component && autocomplete_component.city ? autocomplete_component.city: "",
         state: autocomplete_component ? autocomplete_component.state : "",
         zipCode: autocomplete_component ? autocomplete_component.zip : "",
       };
 
       let user = {
-        firstName: serviced_input_firstname.val(),
-        lastName: serviced_input_lastname.val(),
-        email: serviced_input_email.val(),
-        phone: serviced_input_phone.val(),
+        firstName: serviced_input_firstname.value,
+        lastName: serviced_input_lastname.value,
+        email: serviced_input_email.value,
+        phone: serviced_input_phone.value,
       };
       let utm = {
         UTMCampaign: sessionStorage.getItem("utm_campaign")
@@ -788,12 +788,12 @@
       if (submitted > 0) {
         $(".w-form-done").show() // Show success
       } else {
-        const fullName = unserviced_input_fullname.val(),
-              email = unserviced_input_email.val(),
-              propertyAddress =autocomplete_input.val(),
-              propertyType = property_type.val(),
-              bedrooms = bedroom_count.val(),
-              bathrooms = bathroom_count.val(),
+        const fullName = unserviced_input_fullname.value,
+              email = unserviced_input_email.value,
+              propertyAddress =autocomplete_input.value,
+              propertyType = property_type.value,
+              bedrooms = bedroom_count.value,
+              bathrooms = bathroom_count.value,
               utmSource = "WEB-organic",
               utmMedium = "rent estimate outbound form",
               utmCampaign = "",
@@ -943,7 +943,7 @@
             Name: `${user.firstName} ${user.lastName}`,
             Email: `${user.email}`,
             phone: `${user.phone}`,
-            Location: $("#pac_input").val(),
+            Location: autocomplete_input.value,
             "Submission Error": "true",
             utm_source: `WEB-${utm.UTMSource}`,
             utm_campaign: `${utm.UTMCampaign}`,
