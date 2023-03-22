@@ -21,7 +21,7 @@ const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
 
 function jsBundler() {
   return src(jsPath)
-    .pipe(rename({suffix: ".min",}))
+    .pipe(rename({suffix: "_v"+makeid()+".min",}))
     .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(sourcemaps.write("."))
