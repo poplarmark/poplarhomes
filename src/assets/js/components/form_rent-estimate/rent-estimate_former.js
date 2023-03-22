@@ -1,5 +1,5 @@
   // Modals
-  console.log("46");
+  console.log("48");
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -824,7 +824,8 @@
         //   window.location.reload();
         // }, 5000);
         let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
-        form_unserviced_button_close.style.display = "none";
+        map.style.display = "none";
+        form_unserviced_button_close.style.display = "none"; // Hide close button 
         form_unserviced.style.display = "none"; // Hide form_unserviced
         return false;
     });
