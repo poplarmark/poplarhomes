@@ -779,9 +779,9 @@
 
       console.log(utm);
       registerOwner(user, property, utm);
-      setTimeout(function() {
-        window.location.reload();
-      }, 3000);
+      // setTimeout(function() {
+      //   window.location.reload();
+      // }, 5000);
       return false;
     });
     // Form unserviced event handler
@@ -816,9 +816,9 @@
           Bathrooms: bathrooms,
         };
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
-        setTimeout(function() {
-          window.location.reload();
-        }, 3000);
+        // setTimeout(function() {
+        //   window.location.reload();
+        // }, 5000);
         return false;
     });
   });
