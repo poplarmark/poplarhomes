@@ -67,7 +67,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       });
     };
   
-    const rent_estimate_form = getElementById("form_rentestimate");
+    const rent_estimate_form = document.getElementById("form_rentestimate");
     rent_estimate_form.addEventListener('submit', (event) => {
       event.preventDefault();
       const cities = [
