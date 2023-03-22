@@ -11,8 +11,14 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       }
     }
   }
-
+  // Modals
+  const wf_form_main = document.getElementById("serviced-block_trigger-layer");
+  const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
+  const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
+  const wf_form_empty = document.getElementById("emptyfield-block_trigger-layer");
+  // Rent estimate form fields
   const autocomplete_input = document.getElementById("pac_input");
+  // Google API autocomplete restriction options
   const autocomplete_options = {
     componentRestrictions: { country: "us" },
   };
@@ -44,7 +50,11 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
   }
   
   function initMap() {
+    // Function for moving google autocomplete api to designated input field which is #pac_input
     autocompleteBindLocation();
+    // Function for formatting phone
+    phoneFormat();
+
     const pipeToGoogleSheet = function (sheetURL, formData) {
       $.ajax({
         url: sheetURL,
@@ -56,80 +66,12 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         },
       });
     };
-
-    // Format phone number to 10-digit US
-    $("input[name=phone]").keyup(function (e) {
-      var phone_input = this.value.replace(/\D/g, "").substring(0, 10);
-      // Backspace and Delete keys
-      var deleteKey = e.keyCode == 8 || e.keyCode == 46;
-      var len = phone_input.length;
-      if (len == 0) {
-        phone_input = phone_input;
-      } else if (len < 3) {
-        phone_input = "(" + phone_input;
-      } else if (len == 3) {
-        phone_input = "(" + phone_input + (deleteKey ? "" : ") ");
-      } else if (len < 6) {
-        phone_input = "(" + phone_input.substring(0, 3) + ") " + phone_input.substring(3, 6);
-      } else if (len == 6) {
-        phone_input = "(" + phone_input.substring(0, 3) + ") " + phone_input.substring(3, 6) + (deleteKey ? "" : "-");
-      } else {
-        phone_input = "(" + phone_input.substring(0, 3) + ") " + phone_input.substring(3, 6) + "-" + phone_input.substring(6, 10);
-      }
-      this.value = phone_input;
-    });
   
-    let $rentEstimateForm = $("#form_rentestimate");
-    let rentEstimateFormValidator;
-    $rentEstimateForm.find("input[type=text], input[type=number], input[type=email], select").attr("required", "required");
-    if ($rentEstimateForm.length) {
-      rentEstimateFormValidator = $rentEstimateForm.validate({
-        rules: {
-          address: {
-            required: true,
-          },
-          zipcode: {
-            required: true,
-          },
-          bedrooms: {
-            required: true,
-            number: true,
-            min: 1,
-          },
-          bathrooms: {
-            required: true,
-            number: true,
-            min: 1,
-          },
-          "property-type": {
-            required: true,
-          },
-        },
-        messages: {
-          address: {
-            required: "Select a city or enter address.",
-          },
-          zipcode: {
-            required: "Enter zipcode",
-          },
-          bedrooms: {
-            required: "Required",
-            number: "Must be a number",
-            min: "Must be greater than 1",
-          },
-          bathrooms: {
-            required: "Required",
-            number: "Must be a number",
-            min: "Must be greater than 1",
-          },
-          "property-type": {
-            required: "Property Type is required",
-          },
-        },
-      });
-  
-      $rentEstimateForm.submit(function (event) {
-        const cities = [
+    const rent_estimate_form = getElementById("form_rentestimate");
+    let rent_estimate_form_validator;
+    rent_estimate_form.addEventListener('submit', (event) => {
+      
+      const cities = [
         "Accokeek",
         "Alameda",
         "Alamo",
@@ -749,9 +691,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         ];
         //Check if a value exists in the cities array
         const isLocalPartner = cities.find((city) => city === autocomplete_component.city);
-  
-        event.preventDefault();
-        if ($rentEstimateForm.valid()) {
+        if (rent_estimate_form.valid()) {
           // Update content to Local Partners if under this city
           if (autocomplete_component?.state &&
              (autocomplete_component.state === "TX" ||
@@ -761,7 +701,6 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
               autocomplete_component.state === "OH") &&
               autocomplete_component?.city && isLocalPartner) {
                 // Open subsidiary modal
-                const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
                 wf_form_subsidiary.style.display = "block";
               }
           if ((autocomplete_component?.state &&
@@ -775,50 +714,20 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
               (autocomplete_component?.city &&
               (autocomplete_component.city === "Las Vegas" || isLocalPartner))) {
                 // Open main modal
-                const wf_form_main = document.getElementById("serviced-block_trigger-layer");
                 wf_form_main.style.display = "block";
               }
-          let propertyAddress = $("input#pac_input").val();
-          console.log(propertyAddress);
-          $(".address-map").attr("src","https://www.google.com/maps?q=" + propertyAddress + "&output=embed");
+          $(".address-map").attr("src","https://www.google.com/maps?q=" + autocomplete_input.value + "&output=embed");
           // Open unserviced modal
-          const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
           wf_form_unserviced.style.display = "block";
-          return false;
+          // return false;
         }
-        rentEstimateFormValidator.showErrors();
-        return false;
-      });
-    }
+      console.log("Error in form validation!")
+      event.preventDefault();
+      registerOwner();
+      addProperty();
+    });
   
-    let $wf_wrapper = $(".w-form");
-    let $wf_wrapper_form = $(".w-form form");
-    let lyopValidator;
-  
-    function reset_wf_form() {
-      setTimeout(function () {
-        $wf_wrapper_form.find("input:not('submit')").val("");
-        $wf_wrapper_form.find(".rent-estimate-details-submit").val("Sent");
-        $("form#rent-estimate_button").find("input, select").val("");
-  
-        setTimeout(function () {
-          $rentEstimateForm.trigger("reset");
-          // $wf_wrapper.find(".lyop-form-details").hide();
-          $wf_wrapper.find(".lyop-form-success").show();
-          $wf_wrapper_form.find(".rent-estimate-details-submit").val("Send me my report");
-        }, 500);
-      }, 2000);
-  
-      setTimeout(function () {
-        $wf_wrapper.find(".lyop-form-details").hide();
-        $wf_wrapper.find(".lyop-form-success").show();
-        $(".popup-success").hide();
-      }, 3000);
-    }
-  
-    // $wf_wrapper.find(".lyop-form-success a.close-success").click(function () {
-    //   $.magnificPopup.close();
-    // });
+    const wf_wrapper_form = document.querySelector(".w-form form");
   
     function addProperty(property, utm, token) {
       fetch("https://www.poplarhomes.com/graphql", {
@@ -956,45 +865,9 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         });
     }
   
-    $wf_wrapper_form.find("input[type=text], input[type=tel], input[type=email], select").attr("required", "required");
-    if ($wf_wrapper_form.length) {
-      lyopValidator = $wf_wrapper_form.validate({
-        rules: {
-          email: {
-            required: true,
-            email: true,
-          },
-          fname: {
-            required: true,
-          },
-          lname: {
-            required: true,
-          },
-          phone: {
-            required: true,
-          },
-        },
-        messages: {
-          email: {
-            required: "Email is required",
-            email: "This is not a valid email address",
-          },
-          fname: {
-            required: "First name is required",
-          },
-          lname: {
-            required: "Last name is required",
-          },
-          phone: {
-            required: "Phone number is required",
-          },
-        },
-      });
-    }
-  
-    $wf_wrapper_form.find(".rent-estimate-details-submit").click(function (event) {
+    wf_wrapper_form.find(".rent-estimate-details-submit").click(function (event) {
       event.preventDefault();
-      if ($wf_wrapper_form.valid()) {
+      if (wf_wrapper_form.valid()) {
         let property = {
           type: $("#property-type").val(),
           propertyCategory: $("#property-type option:selected").attr("category_value"),
@@ -1007,10 +880,10 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         };
   
         let user = {
-          firstName: $wf_wrapper_form.find("#serviced_input-firstname").val(),
-          lastName: $wf_wrapper_form.find("#serviced_input-lastname").val(),
-          email: $wf_wrapper_form.find("#serviced_input-email").val(),
-          phone: $wf_wrapper_form.find("#serviced_input-phone").val(),
+          firstName: wf_wrapper_form.find("#serviced_input-firstname").val(),
+          lastName: wf_wrapper_form.find("#serviced_input-lastname").val(),
+          email: wf_wrapper_form.find("#serviced_input-email").val(),
+          phone: wf_wrapper_form.find("#serviced_input-phone").val(),
         };
         let utm = {
           UTMCampaign: sessionStorage.getItem("utm_campaign")
@@ -1035,37 +908,7 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         registerOwner(user, property, utm);
         return false;
       }
-      lyopValidator.showErrors();
-      return false;
     });
-  
-    $("#form_unserviced")
-      .find("input[type=text], input[type=tel], input[type=email], select")
-      .attr("required", "required");
-    let form_unserviced = $("#form_unserviced");
-    let form_unserviced_validator;
-    if (form_unserviced.length) {
-      form_unserviced_validator = form_unserviced.validate({
-        rules: {
-          "full_name": {
-            required: true,
-          },
-          email: {
-            required: true,
-            email: true,
-          },
-        },
-        messages: {
-          "full_name": {
-            required: "Full name is required",
-          },
-          email: {
-            required: "Email is required",
-            email: "This is not a valid email address",
-          },
-        },
-      });
-    }
   
     let submitted = 0;
     form_unserviced.find("#submit-rent-estimate-notify").click(function (event) {
@@ -1114,42 +957,37 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
           $(this).submit();
         }
       } else {
-        validator.showErrors();
-      }
-    });
-   
-    $(".default-dropdown ul li").click(function () {
-      let selectedDefault = $(this).text();
-      $("#pac_input").val(selectedDefault);
-      $(".default-dropdown").hide();
-    });
-  
-    $("#pac_input").click(function () {
-      let address = $(this);
-      if (!address.val()) {
-        $("#pac_input-error").css("display", "none");
-        $(".default-dropdown").show();
-      }
-    });
-    $("#pac_input").keyup(function () {
-      if ($(this).val().length > 0) {
-        $(".default-dropdown").hide();
-        return;
-      }
-      $(".default-dropdown").show();
-    });
-    $(document).click(function (event) {
-      if (!$(event.target).is("#pac_input")) {
-        $(".default-dropdown").hide();
-      }
-    });
-    $(document).keyup(function (e) {
-      if (e.key === "Escape") {
-        $(".default-dropdown").hide();
+        console.log("Error!")
       }
     });
   }
 
+  // Function for formatting phone
+  function phoneFormat() {
+    // Format phone number to 10-digit US
+    $("input[name=phone]").keyup(function (e) {
+      var phone_input = this.value.replace(/\D/g, "").substring(0, 10);
+      // Backspace and Delete keys
+      var deleteKey = e.keyCode == 8 || e.keyCode == 46;
+      var len = phone_input.length;
+      if (len == 0) {
+        phone_input = phone_input;
+      } else if (len < 3) {
+        phone_input = "(" + phone_input;
+      } else if (len == 3) {
+        phone_input = "(" + phone_input + (deleteKey ? "" : ") ");
+      } else if (len < 6) {
+        phone_input = "(" + phone_input.substring(0, 3) + ") " + phone_input.substring(3, 6);
+      } else if (len == 6) {
+        phone_input = "(" + phone_input.substring(0, 3) + ") " + phone_input.substring(3, 6) + (deleteKey ? "" : "-");
+      } else {
+        phone_input = "(" + phone_input.substring(0, 3) + ") " + phone_input.substring(3, 6) + "-" + phone_input.substring(6, 10);
+      }
+      this.value = phone_input;
+    });
+  }
+
+  // Function for moving google autocomplete to input field id=pac_input
   function autocompleteBindLocation() {
     // move .pac-container inside #input_wrap-location
     window.addEventListener("load", function () {
