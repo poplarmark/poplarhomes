@@ -1,4 +1,32 @@
-function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
+  // Modals
+  const wf_form_main = document.getElementById("serviced-block_trigger-layer");
+  const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
+  const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
+  const wf_form_empty = document.getElementById("emptyfield-block_trigger-layer");
+  // Forms
+  const form_rent_estimate = document.getElementById("form_rentestimate");
+  const form_serviced = document.getElementById("form_serviced");
+  const form_subsidiary = document.getElementById("form_subsidiary");
+  const form_unserviced = document.getElementById("form_unserviced");
+  // Rent estimate form fields
+  const autocomplete_input = document.getElementById("pac_input");
+  const property_type = document.getElementById("property-type");
+  const bedroom_count = document.getElementById("rent-estimate_input-bedroom");
+  const bathroom_count = document.getElementById("rent-estimate_input-bathroom");
+  // Form serviced form fields
+  const serviced_input_firstname = document.getElementById("serviced_input-firstname");
+  const serviced_input_lastname = document.getElementById("serviced_input-lastname");
+  const serviced_input_email = document.getElementById("serviced_input-email");
+  const serviced_input_phone = document.getElementById("serviced_input-phone");
+  // Form unserviced form fields
+  const unserviced_input_fullname = document.getElementById("unserviced_input-fullname");
+  const unserviced_input_email = document.getElementById("unserviced_input-email");
+  // Google API autocomplete restriction options
+  const autocomplete_options = {
+    componentRestrictions: { country: "us" },
+  };
+
+  function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
     console.log(hasOwnProperty);
     if (!components.length) return;
     for (var i = 0; i < components.length; i++) {
@@ -11,17 +39,6 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
       }
     }
   }
-  // Modals
-  const wf_form_main = document.getElementById("serviced-block_trigger-layer");
-  const wf_form_subsidiary = document.getElementById("subsidiary-block_trigger-layer");
-  const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
-  const wf_form_empty = document.getElementById("emptyfield-block_trigger-layer");
-  // Rent estimate form fields
-  const autocomplete_input = document.getElementById("pac_input");
-  // Google API autocomplete restriction options
-  const autocomplete_options = {
-    componentRestrictions: { country: "us" },
-  };
   
   if (autocomplete_input) {
     var autocomplete_component;
@@ -66,9 +83,8 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         },
       });
     };
-  
-    const rent_estimate_form = document.getElementById("form_rentestimate");
-    rent_estimate_form.addEventListener('submit', (event) => {
+    // Form rent estimate event handler
+    form_rent_estimate.addEventListener('submit', (event) => {
       event.preventDefault();
       const cities = [
         "Accokeek",
@@ -721,245 +737,231 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
         wf_form_unserviced.style.display = "block";
        // return false;
        }
-      console.log("Error in form validation!")
-      registerOwner();
-      addProperty();
     });
-  
-    const wf_wrapper_form = document.querySelector(".w-form form");
-  
-    function addProperty(property, utm, token) {
-      fetch("https://www.poplarhomes.com/graphql", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `${token}`,
-        },
-        body: JSON.stringify({
-          query: `mutation {
-                      addProperty(input: {
-                          property: {
-                              type: ${property.type},
-                              propertyCategory: ${property.propertyCategory},
-                              numBeds: ${property.numBeds},
-                              numBaths: ${property.numBaths},
-                              street: "${property.street}",
-                              city: "${property.city}",
-                              state: "${property.state}",
-                              zipCode: "${property.zipCode}",
-                              country: "USA"
-                          },
-                          UTMCampaign: "${utm.UTMCampaign}",
-                          UTMContent: "${utm.UTMContent}",
-                          UTMMedium: "${utm.UTMMedium}",
-                          UTMSource: "${utm.UTMSource}",
-                          UTMTerm: "${utm.UTMTerm}",
-                      }) {
-                          property {
-                              propertyID
-                              unitNumber
-                              name
-                              numBaths
-                              numBeds
-                              status
-                              type
-                              communityFeatures
-                              interiorFeatures
-                              exteriorFeatures
-                              appliances
-                              isFurnished
-                              petPolicy
-                              petInformation
-                              climateControls
-                              washerDryerType
-                              additionalRooms
-                              desiredLeaseRange
-                              storageType
-                              storageFee
-                              parkingTypes
-                              renterResponsibleUtilities
-                              ownerResponsibleUtilities
-                              latitude
-                              longitude
-                              totalArea
-                              street
-                              city
-                              state
-                              country
-                              county
-                              zipCode
-                          }
-                      }
-                  }`,
-        }),
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          reset_wf_form();
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  
-    function registerOwner(user, property, utm) {
-      fetch("https://www.poplarhomes.com/graphql", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          query: `mutation {
-                      registerOwner(input: {
-                          user: {
-                              firstName: "${user.firstName}",
-                              lastName: "${user.lastName}",
-                              email: "${user.email}",
-                              phone: "${user.phone}",
-                              UTMCampaign: "${utm.UTMCampaign}",
-                              UTMContent: "${utm.UTMContent}",
-                              UTMMedium: "${utm.UTMMedium}",
-                              UTMSource: "${utm.UTMSource}",
-                              UTMTerm: "${utm.UTMTerm}",
-                              leadSource: ONERENT_WEBSITE_GET_RENT_ESTIMATE_LANDING_PAGE
-                          }
-                      }) {
-                      token
-                      }
-                  }`,
-        }),
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          if (res.errors) {
-            let today = new Date(),
+    // Form serviced event handler
+    form_serviced.addEventListener('submit', (event) => {
+      event.preventDefault();
+      let property = {
+        type: property_type.val(),
+        propertyCategory: $("#property-type option:selected").attr("category_value"),
+        numBeds: bedroom_count.val(),
+        numBaths: bathroom_count.val(),
+        street: autocomplete_component ? autocomplete_component.street_no + " " + autocomplete_component.route : autocomplete_input.val(),
+        city: autocomplete_component && autocomplete_component.city ? autocomplete_component.city: "",
+        state: autocomplete_component ? autocomplete_component.state : "",
+        zipCode: autocomplete_component ? autocomplete_component.zip : "",
+      };
+
+      let user = {
+        firstName: serviced_input_firstname.val(),
+        lastName: serviced_input_lastname.val(),
+        email: serviced_input_email.val(),
+        phone: serviced_input_phone.val(),
+      };
+      let utm = {
+        UTMCampaign: sessionStorage.getItem("utm_campaign")
+          ? sessionStorage.getItem("utm_campaign")
+          : "",
+        UTMContent: sessionStorage.getItem("utm_content")
+          ? sessionStorage.getItem("utm_content")
+          : document.referrer,
+        UTMMedium: sessionStorage.getItem("utm_medium")
+          ? sessionStorage.getItem("utm_medium")
+          : "rent-estimate-popup",
+        UTMSource: sessionStorage.getItem("utm_source")
+          ? sessionStorage.getItem("utm_source")
+          : "organic",
+        UTMTerm: sessionStorage.getItem("utm_term")
+          ? sessionStorage.getItem("utm_term")
+          : "",
+      };
+
+      console.log(utm);
+      registerOwner(user, property, utm);
+      return false;
+    });
+
+    // Form unserviced event handler
+    let submitted = 0;
+    form_unserviced.addEventListener('submmit', (event) => {
+      event.preventDefault();
+      if (submitted > 0) {
+        $(".w-form-done").show() // Show success
+      } else {
+        const fullName = unserviced_input_fullname.val(),
+              email = unserviced_input_email.val(),
+              propertyAddress =autocomplete_input.val(),
+              propertyType = property_type.val(),
+              bedrooms = bedroom_count.val(),
+              bathrooms = bathroom_count.val(),
+              utmSource = "WEB-organic",
+              utmMedium = "rent estimate outbound form",
+              utmCampaign = "",
+              utmContent = "",
+              today = new Date(),
               date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate(),
               time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
               dateTime = date + " " + time;
- 
-            let googleSheetData = {
-              Timestamp: dateTime,
-              Name: `${user.firstName} ${user.lastName}`,
-              Email: `${user.email}`,
-              phone: `${user.phone}`,
-              Location: $("#pac_input").val(),
-              "Submission Error": "true",
-              utm_source: `WEB-${utm.UTMSource}`,
-              utm_campaign: `${utm.UTMCampaign}`,
-              utm_medium: `${utm.UTMMedium}`,
-              utm_content: `${utm.UTMContent}`,
-            };
-  
-            pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwdTw0XzSPs4Y1Fou6jdLToblFjZneJZGRd2EEowbOMpTgX5te8/exec", googleSheetData);
-            reset_wf_form();
-            return false;
-          }
-          let token = res.data.registerOwner.token;
-          addProperty(property, utm, token);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  
-    wf_wrapper_form.find(".rent-estimate-details-submit").click(function (event) {
-      event.preventDefault();
-      if (wf_wrapper_form.valid()) {
-        let property = {
-          type: $("#property-type").val(),
-          propertyCategory: $("#property-type option:selected").attr("category_value"),
-          numBeds: $("#rent-estimate_input-bedroom").val(),
-          numBaths: $("#rent-estimate_input-bathroom").val(),
-          street: autocomplete_component ? autocomplete_component.street_no + " " + autocomplete_component.route : $("#pac_input").val(),
-          city: autocomplete_component && autocomplete_component.city ? autocomplete_component.city: "",
-          state: autocomplete_component ? autocomplete_component.state : "",
-          zipCode: autocomplete_component ? autocomplete_component.zip : "",
+
+        const googleSheetData = {
+          Timestamp: dateTime,
+          utm_source: utmSource,
+          utm_campaign: utmCampaign,
+          utm_medium: utmMedium,
+          utm_content: utmContent,
+          "Full Name": fullName,
+          Email: email,
+          "Property Address": propertyAddress,
+          "Property Type": propertyType,
+          Bedrooms: bedrooms,
+          Bathrooms: bathrooms,
         };
-  
-        let user = {
-          firstName: wf_wrapper_form.find("#serviced_input-firstname").val(),
-          lastName: wf_wrapper_form.find("#serviced_input-lastname").val(),
-          email: wf_wrapper_form.find("#serviced_input-email").val(),
-          phone: wf_wrapper_form.find("#serviced_input-phone").val(),
-        };
-        let utm = {
-          UTMCampaign: sessionStorage.getItem("utm_campaign")
-            ? sessionStorage.getItem("utm_campaign")
-            : "",
-          UTMContent: sessionStorage.getItem("utm_content")
-            ? sessionStorage.getItem("utm_content")
-            : document.referrer,
-          UTMMedium: sessionStorage.getItem("utm_medium")
-            ? sessionStorage.getItem("utm_medium")
-            : "rent-estimate-popup",
-          UTMSource: sessionStorage.getItem("utm_source")
-            ? sessionStorage.getItem("utm_source")
-            : "organic",
-          UTMTerm: sessionStorage.getItem("utm_term")
-            ? sessionStorage.getItem("utm_term")
-            : "",
-        };
-  
-        console.log(utm);
-  
-        registerOwner(user, property, utm);
-        return false;
-      }
-    });
-  
-    let submitted = 0;
-    form_unserviced.find("#submit-rent-estimate-notify").click(function (event) {
-      event.preventDefault();
-      if (form_unserviced.valid()) {
-        if (submitted > 0) {
-          $(".w-form-done").show() // Show success
-        } else {
-          const fullName = $('input[name="full_name"]').val(),
-            email = $('input[name="email"]').val(),
-            propertyAddress = $("#pac_input").val(),
-            propertyType = $("#property-type").val(),
-            bedrooms = $("#rent-estimate_input-bedroom").val(),
-            bathrooms = $("#rent-estimate_input-bathroom").val(),
-            utmSource = "WEB-organic",
-            utmMedium = "rent estimate outbound form",
-            utmCampaign = "",
-            utmContent = "",
-            today = new Date(),
-            date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate(),
-            time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
-            dateTime = date + " " + time;
-  
-          const googleSheetData = {
-            Timestamp: dateTime,
-            utm_source: utmSource,
-            utm_campaign: utmCampaign,
-            utm_medium: utmMedium,
-            utm_content: utmContent,
-            "Full Name": fullName,
-            Email: email,
-            "Property Address": propertyAddress,
-            "Property Type": propertyType,
-            Bedrooms: bedrooms,
-            Bathrooms: bathrooms,
-          };
-          pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
-          submitted++;
-          $(".form-success").append("<p>Awesome! You are just added to our wait list. We will update you as soon as we expand to your area.</p>");
-          // setTimeout(function () {
-          //   submitted = 0;
-          //   $(".lyop-form").trigger("reset");
-          //   $(".form-success p").remove();
-          //   $.magnificPopup.close();
-          // }, 5000);
-          $(this).submit();
-        }
-      } else {
-        console.log("Error!")
+        pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
+        submitted++;
+        // $(".form-success").append("<p>Awesome! You are just added to our wait list. We will update you as soon as we expand to your area.</p>");
+        setTimeout(function () {
+          submitted = 0;
+        }, 5000);
+        $(this).submit();
       }
     });
   });
+
+  function addProperty(property, utm, token) {
+    fetch("https://www.poplarhomes.com/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `${token}`,
+      },
+      body: JSON.stringify({
+        query: `mutation {
+                    addProperty(input: {
+                        property: {
+                            type: ${property.type},
+                            propertyCategory: ${property.propertyCategory},
+                            numBeds: ${property.numBeds},
+                            numBaths: ${property.numBaths},
+                            street: "${property.street}",
+                            city: "${property.city}",
+                            state: "${property.state}",
+                            zipCode: "${property.zipCode}",
+                            country: "USA"
+                        },
+                        UTMCampaign: "${utm.UTMCampaign}",
+                        UTMContent: "${utm.UTMContent}",
+                        UTMMedium: "${utm.UTMMedium}",
+                        UTMSource: "${utm.UTMSource}",
+                        UTMTerm: "${utm.UTMTerm}",
+                    }) {
+                        property {
+                            propertyID
+                            unitNumber
+                            name
+                            numBaths
+                            numBeds
+                            status
+                            type
+                            communityFeatures
+                            interiorFeatures
+                            exteriorFeatures
+                            appliances
+                            isFurnished
+                            petPolicy
+                            petInformation
+                            climateControls
+                            washerDryerType
+                            additionalRooms
+                            desiredLeaseRange
+                            storageType
+                            storageFee
+                            parkingTypes
+                            renterResponsibleUtilities
+                            ownerResponsibleUtilities
+                            latitude
+                            longitude
+                            totalArea
+                            street
+                            city
+                            state
+                            country
+                            county
+                            zipCode
+                        }
+                    }
+                }`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        reset_wf_form();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  function registerOwner(user, property, utm) {
+    fetch("https://www.poplarhomes.com/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: `mutation {
+                    registerOwner(input: {
+                        user: {
+                            firstName: "${user.firstName}",
+                            lastName: "${user.lastName}",
+                            email: "${user.email}",
+                            phone: "${user.phone}",
+                            UTMCampaign: "${utm.UTMCampaign}",
+                            UTMContent: "${utm.UTMContent}",
+                            UTMMedium: "${utm.UTMMedium}",
+                            UTMSource: "${utm.UTMSource}",
+                            UTMTerm: "${utm.UTMTerm}",
+                            leadSource: ONERENT_WEBSITE_GET_RENT_ESTIMATE_LANDING_PAGE
+                        }
+                    }) {
+                    token
+                    }
+                }`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.errors) {
+          let today = new Date(),
+            date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate(),
+            time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
+            dateTime = date + " " + time;
+
+          let googleSheetData = {
+            Timestamp: dateTime,
+            Name: `${user.firstName} ${user.lastName}`,
+            Email: `${user.email}`,
+            phone: `${user.phone}`,
+            Location: $("#pac_input").val(),
+            "Submission Error": "true",
+            utm_source: `WEB-${utm.UTMSource}`,
+            utm_campaign: `${utm.UTMCampaign}`,
+            utm_medium: `${utm.UTMMedium}`,
+            utm_content: `${utm.UTMContent}`,
+          };
+
+          pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwdTw0XzSPs4Y1Fou6jdLToblFjZneJZGRd2EEowbOMpTgX5te8/exec", googleSheetData);
+          reset_wf_form();
+          return false;
+        }
+        let token = res.data.registerOwner.token;
+        addProperty(property, utm, token);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   // Function for formatting phone
   function phoneFormat() {
