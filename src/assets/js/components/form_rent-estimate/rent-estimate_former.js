@@ -21,6 +21,7 @@
   // Form unserviced form fields
   const unserviced_input_fullname = document.getElementById("unserviced_input-fullname");
   const unserviced_input_email = document.getElementById("unserviced_input-email");
+  const map = document.getElementById("map");
   // Google API autocomplete restriction options
   const autocomplete_options = {
     componentRestrictions: { country: "us" },
@@ -821,8 +822,8 @@
         // setTimeout(function() {
         //   window.location.reload();
         // }, 5000);
-        let map = document.getElementById("map"); // Hide map
-        map.style.display = "none"; // Hide form_unserviced
+        map.style.display = "none"; // Hide map
+        form_unserviced.style.display = "none"; // Hide form_unserviced
         return false;
     });
   });
