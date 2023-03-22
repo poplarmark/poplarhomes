@@ -714,10 +714,12 @@ function getGoogleAddressComponent(components, desiredComponent, desiredLength) 
              // Open main modal
              wf_form_main.style.display = "block";
            }
-       $(".address-map").attr("src","https://www.google.com/maps?q=" + autocomplete_input.value + "&output=embed");
-       // Open unserviced modal
-       wf_form_unserviced.style.display = "block";
+       else {
+        $(".address-map").attr("src","https://www.google.com/maps?q=" + autocomplete_input.value + "&output=embed");
+        // Open unserviced modal
+        wf_form_unserviced.style.display = "block";
        // return false;
+       }
       console.log("Error in form validation!")
       registerOwner();
       addProperty();
