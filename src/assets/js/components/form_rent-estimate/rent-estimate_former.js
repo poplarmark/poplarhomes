@@ -25,6 +25,18 @@
   const autocomplete_options = {
     componentRestrictions: { country: "us" },
   };
+  // Google sheet post
+  const pipeToGoogleSheet = function (sheetURL, formData) {
+    $.ajax({
+      url: sheetURL,
+      method: "GET",
+      dataType: "json",
+      data: formData,
+      success: function (data) {
+        console.log('Google Sheet -->', data);
+      },
+    });
+  };
 
   function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
     console.log(hasOwnProperty);
@@ -71,18 +83,7 @@
     autocompleteBindLocation();
     // Function for formatting phone
     phoneFormat();
-
-    const pipeToGoogleSheet = function (sheetURL, formData) {
-      $.ajax({
-        url: sheetURL,
-        method: "GET",
-        dataType: "json",
-        data: formData,
-        success: function (data) {
-          console.log('Google Sheet -->', data);
-        },
-      });
-    };
+    
     // Form rent estimate event handler
     form_rent_estimate.addEventListener('submit', (event) => {
       event.preventDefault();
