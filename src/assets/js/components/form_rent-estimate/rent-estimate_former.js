@@ -59,7 +59,9 @@
       let zipcode = document.getElementById("rent-estimate_input-postal-code");
       const zipcode_initial_value = getGoogleAddressComponent(place, "postal_code", "short_name");
       zipcode.value = zipcode_initial_value;
-  
+      if(zipcode.value == 'undefined') {
+        zipcode.value = '';
+      }
       autocomplete_component = {
         city: getGoogleAddressComponent(place, "locality", "long_name"),
         route: getGoogleAddressComponent(place, "route", "short_name"),
