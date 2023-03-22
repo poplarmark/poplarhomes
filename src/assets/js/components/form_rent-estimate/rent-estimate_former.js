@@ -716,6 +716,8 @@
            autocomplete_component?.city && isLocalPartner) {
              // Open subsidiary modal
              wf_form_main.style.display = "block;"
+             const wf_form_main_header = querySelector("#serviced-block_trigger-layer .modal_heading");
+             wf_form_main_header.innerHTML = "One of our local partners serves your area!"; 
            }
        if ((autocomplete_component?.state &&
            (autocomplete_component.state === "OR" ||
@@ -777,6 +779,9 @@
 
       console.log(utm);
       registerOwner(user, property, utm);
+      setTimeout(function() {
+        window.location.reload();
+      }, 3000);
       return false;
     });
     // Form unserviced event handler
@@ -784,7 +789,7 @@
       event.preventDefault();
         const fullName = unserviced_input_fullname.value,
               email = unserviced_input_email.value,
-              propertyAddress =autocomplete_input.value,
+              propertyAddress = autocomplete_input.value,
               propertyType = property_type.value,
               bedrooms = bedroom_count.value,
               bathrooms = bathroom_count.value,
@@ -811,6 +816,10 @@
           Bathrooms: bathrooms,
         };
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
+        setTimeout(function() {
+          window.location.reload();
+        }, 3000);
+        return false;
     });
   });
 
