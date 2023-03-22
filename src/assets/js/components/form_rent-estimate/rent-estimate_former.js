@@ -783,6 +783,7 @@
       // setTimeout(function() {
       //   window.location.reload();
       // }, 5000);
+      form_serviced.style.display = "none"; // Hide form_serviced
       return false;
     });
     // Form unserviced event handler
@@ -820,6 +821,8 @@
         // setTimeout(function() {
         //   window.location.reload();
         // }, 5000);
+        let map = document.getElementById("map"); // Hide map
+        map.style.display = "none"; // Hide form_unserviced
         return false;
     });
   });
