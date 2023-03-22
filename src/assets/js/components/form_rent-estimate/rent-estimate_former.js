@@ -780,12 +780,8 @@
       return false;
     });
     // Form unserviced event handler
-    let submitted = 0;
     form_unserviced.addEventListener('submmit', (event) => {
       event.preventDefault();
-      if (submitted > 0) {
-        $(".w-form-done").show() // Show success
-      } else {
         const fullName = unserviced_input_fullname.value,
               email = unserviced_input_email.value,
               propertyAddress =autocomplete_input.value,
@@ -815,13 +811,6 @@
           Bathrooms: bathrooms,
         };
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
-        submitted++;
-        // $(".form-success").append("<p>Awesome! You are just added to our wait list. We will update you as soon as we expand to your area.</p>");
-        setTimeout(function () {
-          submitted = 0;
-        }, 5000);
-        $(this).submit();
-      }
     });
   });
 
