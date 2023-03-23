@@ -787,10 +787,9 @@
           : "",
       };
 
-      let modal_loading = document.getElementsByClassName("modal_loading");
-      modal_loading_serviced = modal_loading[0];
+      let modal_loading = document.getElementsByClassName("modal_loading-box")[0];
       form_serviced.style.display = "none"; // Hide form_serviced
-      modal_loading_serviced.style.display = "block"; // Show loading display
+      modal_loading.style.display = "block"; // Show loading display
 
       console.log(utm);
       registerOwner(user, property, utm);
@@ -832,12 +831,11 @@
           Bathrooms: bathrooms,
         };
         let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
-        let modal_loading = document.getElementsByClassName("modal_loading");
-        modal_loading_unserviced = modal_loading[1];
+        let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
         map.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
         form_unserviced.style.display = "none"; // Hide form_unserviced
-        modal_loading_unserviced.style.display = "block";
+        modal_loading.style.display = "block";
         // Send to Google Sheet for piping
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
         // Reload page after submission
