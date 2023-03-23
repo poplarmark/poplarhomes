@@ -1,4 +1,4 @@
-  console.log("88");
+  console.log("90");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -20,7 +20,7 @@
   // Form unserviced form fields
   const unserviced_input_fullname = document.getElementById("unserviced_input-fullname");
   const unserviced_input_email = document.getElementById("unserviced_input-email");
-  const map = document.getElementById("map");
+  const unserviced_map = document.getElementById("unserviced_map");
   // Google API autocomplete restriction options
   const autocomplete_options = {
     componentRestrictions: { country: "us" },
@@ -839,7 +839,7 @@
         let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
         let modal_heading = document.querySelector(".modal_component > .modal_heading.for-modal-unserviced");
         let modal_subheading = document.querySelector(".modal_component > .text-color-white.for-modal-unserviced");
-        map.style.display = "none";
+        unserviced_map.style.display = "none";
         modal_heading.style.display = "none";
         modal_subheading.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
