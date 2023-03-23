@@ -188,6 +188,7 @@
         "Cheltenham",
         "Chesterfield",
         "Chevy Chase",
+        "Chicago",
         "Chino",
         "Chula Vista",
         "Churchton",
@@ -197,10 +198,12 @@
         "Clarksburg",
         "Clarksville",
         "Clayton",
+        "Cleveland",
         "Clinton",
         "College Park",
         "Colton",
         "Columbia",
+        "Columbus",
         "Commerce City",
         "Compton",
         "Concord",
@@ -575,6 +578,7 @@
         "Salado",
         "Sammamish",
         "San Anselmo",
+        "San Antonio",
         "San Bernardino",
         "San Bruno",
         "San Carlos",
@@ -587,6 +591,7 @@
         "San Jose",
         "San Juan Capistrano",
         "San Leandro",
+        "Saint Louis",
         "San Lorenzo",
         "San Luis Rey",
         "San Marcos",
@@ -635,6 +640,7 @@
         "Stanford",
         "Stanton",
         "Studio City",
+        "St. Louis",
         "Sugar Land",
         "Suitland",
         "Sullivan",
@@ -698,6 +704,7 @@
         "Wilmington",
         "Winfield",
         "Winnetka",
+        "Winston-Salem",
         "Woodbine",
         "Woodland Hills",
         "Woodland",
@@ -713,6 +720,7 @@
           (autocomplete_component.state === "TX" ||
            autocomplete_component.state === "SC" ||
            autocomplete_component.state === "MO" ||
+           autocomplete_component.state === "IL" ||
            autocomplete_component.state === "NC" ||
            autocomplete_component.state === "OH") &&
            autocomplete_component?.city && isLocalPartner) {
@@ -779,9 +787,12 @@
           : "",
       };
 
+      let modal_loading = document.querySelector("#serviced-block_trigger-layer .modal_loading");
+      form_serviced.style.display = "none"; // Hide form_serviced
+      modal_loading.style.display = "block"; // Show loading display
+
       console.log(utm);
       registerOwner(user, property, utm);
-      form_serviced.style.display = "none"; // Hide form_serviced
       // Reload page after submission
       setTimeout(function() {
         window.location.reload();
@@ -819,11 +830,14 @@
           Bedrooms: bedrooms,
           Bathrooms: bathrooms,
         };
-        pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);
         let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
+        let modal_loading = document.querySelector("#unserviced-block_trigger-layer .modal_loading");
         map.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
         form_unserviced.style.display = "none"; // Hide form_unserviced
+        modal_loading.style.display = "block";
+        // Send to Google Sheet for piping
+        pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
         // Reload page after submission
         setTimeout(function() {
           window.location.reload();
