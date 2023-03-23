@@ -788,7 +788,7 @@
       };
 
       let modal_loading = document.getElementsByClassName("modal_loading-box")[0];
-      let modal_heading = document.querySelector(".modal_component .modal_heading");
+      let modal_heading = document.querySelector(".modal_component > .modal_heading");
       modal_heading.style.display = "none";
       form_serviced.style.display = "none"; // Hide form_serviced
       modal_loading.style.display = "flex"; // Show loading display
@@ -834,7 +834,7 @@
         };
         let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
         let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
-        let modal_heading = document.querySelector(".modal_component .modal_heading");
+        let modal_heading = document.querySelector(".modal_component >.modal_heading");
         map.style.display = "none";
         modal_heading.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
