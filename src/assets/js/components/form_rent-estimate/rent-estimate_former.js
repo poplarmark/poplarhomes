@@ -1,4 +1,4 @@
-  console.log("80");
+  console.log("81");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -836,8 +836,10 @@
         let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
         let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
         let modal_heading = document.querySelector(".modal_component > .modal_heading.for-modal-unserviced");
+        let modal_subheading = document.querySelector(".modal_component > .text-color-white.for-modal-unserviced");
         map.style.display = "none";
         modal_heading.style.display = "none";
+        modal_subheading.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
         form_unserviced.style.display = "none"; // Hide form_unserviced
         modal_loading.style.display = "flex";
