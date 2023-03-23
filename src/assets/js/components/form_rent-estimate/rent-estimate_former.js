@@ -1,4 +1,4 @@
-  console.log("81");
+  console.log("86");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -797,9 +797,10 @@
       console.log(utm);
       registerOwner(user, property, utm);
       // Reload page after submission
-      setTimeout(function() {
-        window.location.reload();
-      }, 5000);
+      // setTimeout(function() {
+      //   window.location.reload();
+      // }, 5000);
+      form_serviced.reset();
       return false;
     });
     // Form unserviced event handler
@@ -846,9 +847,10 @@
         // Send to Google Sheet for piping
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
         // Reload page after submission
-        setTimeout(function() {
-          window.location.reload();
-        }, 5000);
+        // setTimeout(function() {
+        //   window.location.reload();
+        // }, 5000);
+        form_unserviced.reset();
         return false;
     });
   });
