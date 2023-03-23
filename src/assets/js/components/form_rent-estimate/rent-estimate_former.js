@@ -789,7 +789,7 @@
 
       let modal_loading = document.getElementsByClassName("modal_loading-box")[0];
       form_serviced.style.display = "none"; // Hide form_serviced
-      modal_loading.style.display = "block"; // Show loading display
+      modal_loading.style.display = "flex"; // Show loading display
 
       console.log(utm);
       registerOwner(user, property, utm);
@@ -835,7 +835,7 @@
         map.style.display = "none";
         form_unserviced_button_close.style.display = "none"; // Hide close button 
         form_unserviced.style.display = "none"; // Hide form_unserviced
-        modal_loading.style.display = "block";
+        modal_loading.style.display = "flex";
         // Send to Google Sheet for piping
         pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
         // Reload page after submission

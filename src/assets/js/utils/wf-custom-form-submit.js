@@ -15,8 +15,6 @@ Webflow.push(function () {
     const formAction = $form.attr("action"); // Form action (GET/POST)
     const formRedirect = $form.attr("data-redirect"); // Form redirect location
     const formData = $form.serialize(); // Form data
-    // Customizations
-    const modal_loading = document.getElementsByClassName("modal_loading-box"); // Loading display
 
     // Set waiting text
     if (buttonWaitingText) {
@@ -33,8 +31,6 @@ Webflow.push(function () {
           window.location = formRedirect;
           return;
         }
-        
-        modal_loading.style.display = "none";
 
         $form
         //.hide() // optional hiding of form
