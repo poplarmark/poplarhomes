@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V27");
+console.log("INITIALIZED RENT ESTIMATE V28");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -765,7 +765,6 @@ $(document).ready(function () {
   });
   // Form serviced event handler
   form_serviced.addEventListener('submit', (event) => {
-    event.preventDefault();
     
     let form_serviced_button_close = document.querySelector("#serviced-block_trigger-layer .modal_component > .modal_button-close");
     let modal_loading = document.getElementsByClassName("modal_loading-box")[0];
@@ -776,17 +775,25 @@ $(document).ready(function () {
     let error_message_phone = document.querySelector("#serviced_input-phone + ._wf-error-message");
 
     if (serviced_input_firstname.value == '' || serviced_input_firstname == null) {
-      error_message_first_name.style.opacity = "1";      
+      error_message_first_name.style.opacity = "1";
+      e.preventDefault();
+      return false;
     } 
     else if (serviced_input_lastname.value == '' || serviced_input_lastname == null) {
       error_message_last_name.style.opacity = "1";
+      e.preventDefault();
+      return false;
     }
     else if (serviced_input_email.value == '' || serviced_input_email.value == null)  {
       error_message_email.style.opacity = "1";
+      e.preventDefault();
+      return false;
     }
     else if (checkEmail(serviced_input_email.value) == false) {
       error_message_email.style.opacity = "1";
       error_message_email.innerHTML = "Invalid mail";
+      e.preventDefault();
+      return false;
     }
     else if (serviced_input_phone.value == '' || serviced_input_phone.value == null)  {
       error_message_phone.style.opacity = "1";
@@ -794,6 +801,8 @@ $(document).ready(function () {
     else if (checkPhoneFormat(serviced_input_phone.value) == false) {
       error_message_phone.style.opacity = "1";
       error_message_phone.innerHTML = "Invalid number";
+      e.preventDefault();
+      return false;
     }
     else {
       let property = {
@@ -854,7 +863,6 @@ $(document).ready(function () {
   });
   // Form unserviced event handler
   form_unserviced.addEventListener('submit', (event) => {
-    event.preventDefault();
     let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
     let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
     let modal_heading = document.querySelector(".modal_component > .modal_heading.for-modal-unserviced");
@@ -864,13 +872,19 @@ $(document).ready(function () {
     
     if (unserviced_input_fullname.value == '' || unserviced_input_fullname == null) {
       error_message_fullname.style.opacity = "1";
+      e.preventDefault();
+      return false;
     }
     else if (unserviced_input_email.value == '' || unserviced_input_email.value == null) {
       error_message_email.style.opacity = "1";
+      e.preventDefault();
+      return false;
     }
     else if (checkEmail(unserviced_input_email.value) == false) {
       error_message_email.style.opacity = "1";
       error_message_email.innerHTML = "Invalid email";
+      e.preventDefault();
+      return false;
     }
     else {
       const fullName = unserviced_input_fullname.value,
