@@ -18,7 +18,7 @@ function timeStamp () {
   return timestamp;
 }
 
-const jsPath ="src/assets/js/components/form_rent-estimate/rent-estimate_former.js";
+const jsPath ="src/assets/js/utils/autocomplete_location_bind.js";
 const cssPath = "src/assets/scss/components/form_insights/form_insights.scss";
 
 function jsBundler() {

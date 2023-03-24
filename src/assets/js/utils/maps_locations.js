@@ -111,13 +111,11 @@ function initMap() {
     //infowindow.open(map, marker);
   });
 
-  // Locations map
+  // Locations map 
   var locations_geocoder;
   var locations_map;
-  var locations_address =
-    "{{wf {&quot;path&quot;:&quot;address-details&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}";
-  var locations_image =
-    "https://uploads-ssl.webflow.com/631ada5b454cce3ae6474e07/63e3d8d5782ef44764b93261_icon_map-pin.svg";
+  const locations_address = "{{wf {&quot;path&quot;:&quot;address-details&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}";
+  const locations_image = "https://uploads-ssl.webflow.com/631ada5b454cce3ae6474e07/63e3d8d5782ef44764b93261_icon_map-pin.svg";
 
   locations_geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(44.85767897439299, -93.40209113112228);
