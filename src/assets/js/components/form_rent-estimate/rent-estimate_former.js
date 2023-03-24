@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE");
+console.log("INITIALIZED RENT ESTIMATE V26");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
