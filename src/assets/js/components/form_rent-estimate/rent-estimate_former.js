@@ -77,7 +77,7 @@
           autocomplete_component.zip = this.value;
           console.log("Updated zipcode.value:", this.value)
         }
-        if (checkZip(zipcode_value) == "undefined") {
+        if (autocomplete_component.zip == "undefined") {
           zipcode.value = '';
         }
         else {
