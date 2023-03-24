@@ -1,4 +1,4 @@
-  console.log("INITIALIZED RENT ESTIMATE V24");
+  console.log("INITIALIZED RENT ESTIMATE");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -12,6 +12,7 @@
   const property_type = document.getElementById("property-type");
   const bedroom_count = document.getElementById("rent-estimate_input-bedroom");
   const bathroom_count = document.getElementById("rent-estimate_input-bathroom");
+  const rent_estimate_button = document.getElementById("rent-estimate_button");
   // Form serviced form fields
   const serviced_input_firstname = document.getElementById("serviced_input-firstname");
   const serviced_input_lastname = document.getElementById("serviced_input-lastname");
@@ -77,10 +78,14 @@
         let zipcode_error_message = document.getElementsByClassName("error_message_zipcode")[0];
         if (checkZip(this.value)) {
           zipcode_error_message.style.display = "none";
+          rent_estimate_button.disabled = false;
+          rent_estimate_button.style.opacity = "1";
           autocomplete_component.zip = this.value;
           console.log("Updated zip_value:", this.value) 
         }
         else {
+          rent_estimate_button.disabled = true;
+          rent_estimate_button.style.opacity = "0.5";
           zipcode_error_message.style.display = "block";
         }
       });
