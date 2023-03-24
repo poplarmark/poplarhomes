@@ -1,4 +1,4 @@
-  console.log("INITIALIZED RENT ESTIMATE V15");
+  console.log("INITIALIZED RENT ESTIMATE V16");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -59,23 +59,22 @@
       let place = autocomplete.getPlace().address_components;
       let zipcode = document.getElementById("rent-estimate_input-postal-code");
       let zipcode_initial_value = getGoogleAddressComponent(place, "postal_code", "short_name");
-      zipcode.value = zipcode_initial_value;
 
       autocomplete_component = {
         city: getGoogleAddressComponent(place, "locality", "long_name"),
         route: getGoogleAddressComponent(place, "route", "short_name"),
         state: getGoogleAddressComponent(place,"administrative_area_level_1","short_name"),
         street_no: getGoogleAddressComponent(place,"street_number","long_name"),
-        zip: zipcode.value,
+        zip: zipcode_initial_value,
       };
        // Test zipcode validity
       zipcode.addEventListener('change', function() {
-        let zipcode_value = zipcode.value;
+        let zipcode_value = zipcode_initial_value;;
         let zipcode_error_message = document.getElementsByClassName("error_message_zipcode")[0];
-        if (this.value == 'undefined') {
+        if (zipcode_value == 'undefined') {
           this.value = '';
         }
-        if (zipcode_value.length > 1 && this.value != 'undefined') {
+        if (zipcode_value.length > 1 && zipcode_value != 'undefined') {
           if (checkZip(zipcode_value)) {
             zipcode_error_message.style.display = "none";
             autocomplete_component.zip = this.value;
