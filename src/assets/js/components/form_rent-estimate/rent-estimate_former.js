@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V37");
+console.log("INITIALIZED RENT ESTIMATE V38");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -802,7 +802,7 @@ $(document).ready(function () {
         ? sessionStorage.getItem("utm_term")
         : "",
     };
-    
+    console.log(property);
     modal_heading.style.display = "none";
     form_serviced_button_close.style.display = "none"; // Hide close button 
     form_serviced.style.display = "none"; // Hide form_serviced
