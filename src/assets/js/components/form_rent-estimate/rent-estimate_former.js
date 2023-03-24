@@ -1,4 +1,4 @@
-  console.log("INITIALIZED RENT ESTIMATE V23");
+  console.log("INITIALIZED RENT ESTIMATE V24");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -37,7 +37,7 @@
       },
     });
   };
-  // Parse address from google.maps.api
+
   function getGoogleAddressComponent(components, desiredComponent, desiredLength) {
     console.log(hasOwnProperty);
     if (!components.length) return;
@@ -58,8 +58,12 @@
     google.maps.event.addListener(autocomplete, "place_changed", function () {
       let place = autocomplete.getPlace().address_components;
       let zipcode = document.getElementById("rent-estimate_input-postal-code");
-      let zipcode_initial_value = getGoogleAddressComponent(place, "postal_code", "short_name");
+      const zipcode_initial_value = getGoogleAddressComponent(place, "postal_code", "short_name");
       zipcode.value = zipcode_initial_value;
+
+      if(zipcode.value == 'undefined') {
+        zipcode.value = '';
+      }
 
       autocomplete_component = {
         city: getGoogleAddressComponent(place, "locality", "long_name"),
@@ -68,23 +72,16 @@
         street_no: getGoogleAddressComponent(place,"street_number","long_name"),
         zip: zipcode.value,
       };
-       // Test zipcode validity
+  
       zipcode.addEventListener('change', function() {
-        let zipcode_value = zipcode.value;
         let zipcode_error_message = document.getElementsByClassName("error_message_zipcode")[0];
-        if (zipcode_value == 'undefined') {
-          zipcode.value = '';
-          zipcode_error_message.innerHTML = "Must not be undefined"; 
+        if (checkZip(this.value)) {
+          zipcode_error_message.style.display = "none";
+          autocomplete_component.zip = this.value;
+          console.log("Updated zip_value:", this.value) 
         }
-        if (this.value.toString().length > 1 && zipcode_value != 'undefined') {
-          if (checkZip(zipcode_value)) {
-            zipcode_error_message.style.display = "none";
-            autocomplete_component.zip = this.value;
-            console.log("Updated zipcode.value:", this.value) 
-          }
-          else {
-            zipcode_error_message.style.display = "block";
-          }
+        else {
+          zipcode_error_message.style.display = "block";
         }
       });
   
