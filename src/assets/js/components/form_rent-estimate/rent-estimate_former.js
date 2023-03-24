@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V26");
+console.log("INITIALIZED RENT ESTIMATE V27");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -770,10 +770,10 @@ $(document).ready(function () {
     let form_serviced_button_close = document.querySelector("#serviced-block_trigger-layer .modal_component > .modal_button-close");
     let modal_loading = document.getElementsByClassName("modal_loading-box")[0];
     let modal_heading = document.querySelector(".modal_component > .modal_heading");
-    let error_message_first_name = document.querySelector("#serviced_input-firstname + .wf-error-message");
-    let error_message_last_name = document.querySelector("#serviced_input-lastname + .wf-error-message");
-    let error_message_email = document.querySelector("#serviced_input-email + .wf-error-message");
-    let error_message_phone = document.querySelector("#serviced_input-phone + .wf-error-message");
+    let error_message_first_name = document.querySelector("#serviced_input-firstname + ._wf-error-message");
+    let error_message_last_name = document.querySelector("#serviced_input-lastname + ._wf-error-message");
+    let error_message_email = document.querySelector("#serviced_input-email + ._wf-error-message");
+    let error_message_phone = document.querySelector("#serviced_input-phone + ._wf-error-message");
 
     if (serviced_input_firstname.value == '' || serviced_input_firstname == null) {
       error_message_first_name.style.opacity = "1";      
@@ -859,8 +859,8 @@ $(document).ready(function () {
     let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
     let modal_heading = document.querySelector(".modal_component > .modal_heading.for-modal-unserviced");
     let modal_subheading = document.querySelector(".modal_component > .text-color-white.for-modal-unserviced");
-    let error_message_fullname = document.querySelector("#unserviced_input-fullname + .wf-error-message");
-    let error_message_email = document.querySelector("#unserviced_input-email + .wf-error-message");
+    let error_message_fullname = document.querySelector("#unserviced_input-fullname + ._wf-error-message");
+    let error_message_email = document.querySelector("#unserviced_input-email + ._wf-error-message");
     
     if (unserviced_input_fullname.value == '' || unserviced_input_fullname == null) {
       error_message_fullname.style.opacity = "1";
