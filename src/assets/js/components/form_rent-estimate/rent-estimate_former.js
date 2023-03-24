@@ -1,4 +1,4 @@
-  console.log("INITIALIZED RENT ESTIMATE");
+  console.log("INITIALIZED RENT ESTIMATE V2");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -73,10 +73,11 @@
         let zipcode_value = zipcode.value;
         let zipcode_error_message = document.getElementsByClassName("error_message_zipcode")[0];
         if (checkZip(zipcode_value)) {
+          zipcode_error_message.style.display = "none";
           autocomplete_component.zip = this.value;
           console.log("Updated zipcode.value:", this.value)
         }
-        if (zipcode_value == 'undefined') {
+        if (checkZip(zipcode_value) == "undefined") {
           zipcode.value = '';
         }
         else {
