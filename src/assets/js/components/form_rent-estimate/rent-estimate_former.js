@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V36");
+console.log("INITIALIZED RENT ESTIMATE V37");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -807,11 +807,6 @@ $(document).ready(function () {
     form_serviced_button_close.style.display = "none"; // Hide close button 
     form_serviced.style.display = "none"; // Hide form_serviced
     modal_loading.style.display = "flex"; // Show loading display
-    
-    error_message_first_name.style.opacity = "0";
-    error_message_last_name.style.opacity = "0";
-    error_message_email.style.opacity = "0";
-    error_message_phone.style.opacity = "0";
 
     console.log(utm);
     console.log(registerOwner)
@@ -867,9 +862,6 @@ $(document).ready(function () {
     form_unserviced_button_close.style.display = "none"; // Hide close button 
     form_unserviced.style.display = "none"; // Hide form_unserviced
     modal_loading.style.display = "flex";
-
-    error_message_fullname.style.opacity = "0";
-    error_message_email.style.opacity = "0";
 
     // Send to Google Sheet for piping
     pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
