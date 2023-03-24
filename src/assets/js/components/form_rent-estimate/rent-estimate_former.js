@@ -1,4 +1,4 @@
-  console.log("INITIALIZED RENT ESTIMATE V17");
+  console.log("INITIALIZED RENT ESTIMATE V18");
   // Modals
   const wf_form_main = document.getElementById("serviced-block_trigger-layer");
   const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -65,7 +65,7 @@
         route: getGoogleAddressComponent(place, "route", "short_name"),
         state: getGoogleAddressComponent(place,"administrative_area_level_1","short_name"),
         street_no: getGoogleAddressComponent(place,"street_number","long_name"),
-        zip: zipcode_initial_value,
+        zip: zipcode.value,
       };
        // Test zipcode validity
       zipcode.addEventListener('change', function() {
