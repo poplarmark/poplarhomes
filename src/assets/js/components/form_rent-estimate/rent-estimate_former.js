@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V28");
+console.log("INITIALIZED RENT ESTIMATE V29");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -776,23 +776,23 @@ $(document).ready(function () {
 
     if (serviced_input_firstname.value == '' || serviced_input_firstname == null) {
       error_message_first_name.style.opacity = "1";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     } 
     else if (serviced_input_lastname.value == '' || serviced_input_lastname == null) {
       error_message_last_name.style.opacity = "1";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else if (serviced_input_email.value == '' || serviced_input_email.value == null)  {
       error_message_email.style.opacity = "1";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else if (checkEmail(serviced_input_email.value) == false) {
       error_message_email.style.opacity = "1";
       error_message_email.innerHTML = "Invalid mail";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else if (serviced_input_phone.value == '' || serviced_input_phone.value == null)  {
@@ -801,7 +801,7 @@ $(document).ready(function () {
     else if (checkPhoneFormat(serviced_input_phone.value) == false) {
       error_message_phone.style.opacity = "1";
       error_message_phone.innerHTML = "Invalid number";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else {
@@ -872,18 +872,18 @@ $(document).ready(function () {
     
     if (unserviced_input_fullname.value == '' || unserviced_input_fullname == null) {
       error_message_fullname.style.opacity = "1";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else if (unserviced_input_email.value == '' || unserviced_input_email.value == null) {
       error_message_email.style.opacity = "1";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else if (checkEmail(unserviced_input_email.value) == false) {
       error_message_email.style.opacity = "1";
       error_message_email.innerHTML = "Invalid email";
-      e.preventDefault();
+      event.preventDefault();
       return false;
     }
     else {
