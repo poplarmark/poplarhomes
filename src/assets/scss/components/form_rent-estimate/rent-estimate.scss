@@ -4,6 +4,14 @@
     padding-right: 8px;
 }
 
+.error_message_zipcode {
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    color: orange;
+    display: none;
+}
+
 @media screen and (max-width: 991px) {
     #input_wrap-location {
         grid-column-start: span 2;
