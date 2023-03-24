@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V35");
+console.log("INITIALIZED RENT ESTIMATE V36");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -101,7 +101,7 @@ $(document).ready(function () {
   phoneFormat();
   // Form rent estimate event handler
   form_rent_estimate.addEventListener('submit', (event) => {
-    event.preventDefault();
+   
     const cities = [
       "Accokeek",
       "Alameda",
@@ -766,14 +766,9 @@ $(document).ready(function () {
   // Form serviced event handler
   form_serviced.addEventListener('submit', (event) => {
     
-    let error_messages_array = [];
     let form_serviced_button_close = document.querySelector("#serviced-block_trigger-layer .modal_component > .modal_button-close");
     let modal_loading = document.getElementsByClassName("modal_loading-box")[0];
     let modal_heading = document.querySelector(".modal_component > .modal_heading");
-    let error_message_first_name = document.querySelector("#serviced_input-firstname + ._wf-error-message");
-    let error_message_last_name = document.querySelector("#serviced_input-lastname + ._wf-error-message");
-    let error_message_email = document.querySelector("#serviced_input-email + ._wf-error-message");
-    let error_message_phone = document.querySelector("#serviced_input-phone + ._wf-error-message");
     let property = {
       type: property_type.value,
       propertyCategory: $("#property-type option:selected").attr("category_value"),
@@ -784,7 +779,6 @@ $(document).ready(function () {
       state: autocomplete_component ? autocomplete_component.state : "",
       zipCode: autocomplete_component ? autocomplete_component.zip : "",
     };
-
     let user = {
       firstName: serviced_input_firstname.value,
       lastName: serviced_input_lastname.value,
@@ -808,68 +802,35 @@ $(document).ready(function () {
         ? sessionStorage.getItem("utm_term")
         : "",
     };
+    
+    modal_heading.style.display = "none";
+    form_serviced_button_close.style.display = "none"; // Hide close button 
+    form_serviced.style.display = "none"; // Hide form_serviced
+    modal_loading.style.display = "flex"; // Show loading display
+    
+    error_message_first_name.style.opacity = "0";
+    error_message_last_name.style.opacity = "0";
+    error_message_email.style.opacity = "0";
+    error_message_phone.style.opacity = "0";
 
-    if (serviced_input_firstname.value === '' || serviced_input_firstname.value == null) {
-      error_message_first_name.style.opacity = "1";
-      error_messages_array.push("Error");
-    } 
-    if (serviced_input_lastname.value === '' || serviced_input_lastname.value == null) {
-      error_message_last_name.style.opacity = "1";
-      error_messages_array.push("Error");
-    }
-    if (serviced_input_email.value === '' || serviced_input_email.value == null)  {
-      error_message_email.style.opacity = "1";
-      error_messages_array.push("Error");
-    }
-    if (checkEmail(serviced_input_email.value) == false) {
-      error_message_email.style.opacity = "1";
-      error_message_email.innerHTML = "Invalid mail";
-      error_messages_array.push("Error");
-    }
-    if (serviced_input_phone.value === '' || serviced_input_phone.value == null)  {
-      error_message_phone.style.opacity = "1";
-      error_messages_array.push("Error");
-    }
-    if (checkPhoneFormat(serviced_input_phone.value) == false) {
-      error_message_phone.style.opacity = "1";
-      error_message_phone.innerHTML = "Invalid number";
-      error_messages_array.push("Error");
-    }
-    if (error_messages_array.length > 0) {
-      event.preventDefault();
-      return false;
-    }
-    if (error_messages_array == 0 ) {
-      modal_heading.style.display = "none";
-      form_serviced_button_close.style.display = "none"; // Hide close button 
-      form_serviced.style.display = "none"; // Hide form_serviced
-      modal_loading.style.display = "flex"; // Show loading display
-      
-      error_message_first_name.style.opacity = "0";
-      error_message_last_name.style.opacity = "0";
-      error_message_email.style.opacity = "0";
-      error_message_phone.style.opacity = "0";
-
-      console.log(utm);
-      registerOwner(user, property, utm);
-      // Reload page after submission
-      // setTimeout(function() {
-      //   window.location.reload();
-      // }, 5000);
-      form_rent_estimate.reset();
-      form_serviced.reset();
-      return false;
-    }
+    console.log(utm);
+    console.log(registerOwner)
+    registerOwner(user, property, utm);
+    // Reload page after submission
+    // setTimeout(function() {
+    //   window.location.reload();
+    // }, 5000);
+    form_rent_estimate.reset();
+    form_serviced.reset();
+    return false;
   });
   // Form unserviced event handler
   form_unserviced.addEventListener('submit', (event) => {
-    let error_messages_array = [];
+    
     let form_unserviced_button_close = document.querySelector("#unserviced-block_trigger-layer .modal_component > .modal_button-close");
     let modal_loading = document.getElementsByClassName("modal_loading-box")[1];
     let modal_heading = document.querySelector(".modal_component > .modal_heading.for-modal-unserviced");
     let modal_subheading = document.querySelector(".modal_component > .text-color-white.for-modal-unserviced");
-    let error_message_fullname = document.querySelector("#unserviced_input-fullname + ._wf-error-message");
-    let error_message_email = document.querySelector("#unserviced_input-email + ._wf-error-message");
 
     const fullName = unserviced_input_fullname.value,
             email = unserviced_input_email.value,
@@ -900,43 +861,25 @@ $(document).ready(function () {
       Bathrooms: bathrooms,
     };
     
-    if (unserviced_input_fullname.value === '' || unserviced_input_fullname.value == null) {
-      error_message_fullname.style.opacity = "1";
-      error_messages_array.push("Error");
-    }
-    if (unserviced_input_email.value === '' || unserviced_input_email.value == null) {
-      error_message_email.style.opacity = "1";
-      error_messages_array.push("Error");
-    }
-    if (checkEmail(unserviced_input_email.value) == false) {
-      error_message_email.style.opacity = "1";
-      error_message_email.innerHTML = "Invalid email";
-    }
-    if (error_messages_array.length > 0) {
-      event.preventDefault();
-      return false;
-    }
-    if (error_messages_array == 0) {
-      unserviced_map.style.display = "none";
-      modal_heading.style.display = "none";
-      modal_subheading.style.display = "none";
-      form_unserviced_button_close.style.display = "none"; // Hide close button 
-      form_unserviced.style.display = "none"; // Hide form_unserviced
-      modal_loading.style.display = "flex";
+    unserviced_map.style.display = "none";
+    modal_heading.style.display = "none";
+    modal_subheading.style.display = "none";
+    form_unserviced_button_close.style.display = "none"; // Hide close button 
+    form_unserviced.style.display = "none"; // Hide form_unserviced
+    modal_loading.style.display = "flex";
 
-      error_message_fullname.style.opacity = "0";
-      error_message_email.style.opacity = "0";
+    error_message_fullname.style.opacity = "0";
+    error_message_email.style.opacity = "0";
 
-      // Send to Google Sheet for piping
-      pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
-      // Reload page after submission
-      // setTimeout(function() {
-      //   window.location.reload();
-      // }, 5000);
-      form_rent_estimate.reset();
-      form_unserviced.reset();
-      return false;
-    }
+    // Send to Google Sheet for piping
+    pipeToGoogleSheet("https://script.google.com/macros/s/AKfycbwZSqwAs6FBluPYSz1kTQwVRFCA4KDXV85rvFUcIVplO97w_Mq6ZW2D2cm3afKpnnvG/exec", googleSheetData);     
+    // Reload page after submission
+    // setTimeout(function() {
+    //   window.location.reload();
+    // }, 5000);
+    form_rent_estimate.reset();
+    form_unserviced.reset();
+    return false;
   });
 });
 
@@ -1102,18 +1045,4 @@ function autocompleteBindLocation() {
 // Zipcode validation
 function checkZip(value) {
   return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(value);
-}
-
-// Email validation
-function checkEmail(mail) {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
-    return (true)
-  }
-    return (false)
-}
-
-// Phone validation
-function checkPhoneFormat(phone) {
-  let phone_format = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-  return phone_format.test(phone);
 }
