@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V30");
+console.log("INITIALIZED RENT ESTIMATE V31");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -922,9 +922,9 @@ $(document).ready(function () {
     form_unserviced.reset();
     return false;
     }
+    event.preventDefault();
+    return false;
   });
-  event.preventDefault();
-  return false;
 });
 
 function addProperty(property, utm, token) {
