@@ -1,4 +1,4 @@
-console.log("INITIALIZED RENT ESTIMATE V38");
+console.log("initialized: rent estimate");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -81,7 +81,7 @@ if (autocomplete_input) {
         rent_estimate_button.disabled = false;
         rent_estimate_button.style.opacity = "1";
         autocomplete_component.zip = this.value;
-        console.log("Updated zip_value:", this.value) 
+        // console.log("Updated zip_value:", this.value) 
       }
       else {
         rent_estimate_button.disabled = true;
@@ -802,14 +802,14 @@ $(document).ready(function () {
         ? sessionStorage.getItem("utm_term")
         : "",
     };
-    console.log(property);
+    // console.log(property);
     modal_heading.style.display = "none";
     form_serviced_button_close.style.display = "none"; // Hide close button 
     form_serviced.style.display = "none"; // Hide form_serviced
     modal_loading.style.display = "flex"; // Show loading display
 
-    console.log(utm);
-    console.log(registerOwner)
+    // console.log(utm);
+    // console.log(registerOwner)
     registerOwner(user, property, utm);
     // Reload page after submission
     // setTimeout(function() {
@@ -1015,7 +1015,7 @@ function autocompleteBindLocation() {
   window.addEventListener("load", function () {
     var child = document.getElementsByClassName("pac-container")[0];
     jQuery(child).detach().appendTo("#input_wrap-location");
-    console.log("pac_container loaded");
+    console.log("google.maps.api: binded");
   });
 
   // for non-chrome based browswers, move loading of $this script at the end of .pac-container
@@ -1023,7 +1023,7 @@ function autocompleteBindLocation() {
     $(document).ready(function () {
       $("#onload-estimate-js").each(function () {
         $(this).insertAfter($(this).parent().find(".pac-container"));
-        console.log("pac_mover loader");
+        // console.log("pac_mover loader");
       });
     });
   });
