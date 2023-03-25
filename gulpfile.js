@@ -11,7 +11,7 @@ const rename = require("gulp-rename");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
-const jsPath ="src/assets/js/components/form_rent-estimate/rent-estimate_former.js";
+const jsPath ="src/assets/js/components/form_rent-estimate/poplarhomes-rent-estimate.js";
 const cssPath = "src/assets/scss/components/form_rent-estimate/rent-estimate.scss";
 
 function jsBundler() {
