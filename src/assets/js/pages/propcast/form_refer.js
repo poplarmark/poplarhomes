@@ -7,7 +7,7 @@ Webflow.push(function() {
   /* Any form on the page */
   $('#form_refer').submit(function(e) {
     e.preventDefault();
-
+   
   	const $form = $(this); // The submitted form
     const $submit = $('[type=submit]', $form); // Submit button of form
     const buttonText = $submit.val(); // Original button text
