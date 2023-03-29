@@ -4,6 +4,11 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
   $(this).submit(function (e) {
     // when the form submits
     e.preventDefault(); //stop the form from submitting to webflow
+    const current_form = document.querySelector("form");
+    const $form = $(this); // The submitted form
+    const $submit = $("[type=submit]", $form); // Submit button of form
+    const buttonText = $submit.val(); // Original button text
+    const buttonWaitingText = $submit.attr("data-wait"); // Waiting button text value
     const formData = new FormData(e.target); // get the form data
     const parsedFormData = [...formData.entries()].map((dataObject) => ({
       // convert data to array
@@ -88,6 +93,10 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
             },
           }),
     };
+     // Set waiting text
+     if (buttonWaitingText) {
+      $submit.val(buttonWaitingText);
+    }
     const final_data = JSON.stringify(data); // turn that javascript object into a json string
     $.ajax({
       url: e.target.action,
@@ -100,15 +109,22 @@ $('form[action^="https://api.hsforms.com"]').each(function (i) {
         if (response) {
           if (response.inlineMessage) {
             const parent = $(e.target).parent();
-            parent.children("form").css("display", "none") // hide form
+            // hide form parent.children("form").css("display", "none")
+            // Reset text
+            $submit.val(buttonText);
+            current_form.reset();
             parent.children(".w-form-done").show(); // replace .w-form-done with your own form done section
           }
         }
       },
       error: function () {
           console.log("error on the form submission")
+          // Reset text
+          $submit.val(buttonText);
           $(e.target).css('display', 'none').siblings('.w-form-fail').show() // replace .w-form-fail with your own form done section
       }
     });
   });
 });
+
+phoneFormat();
