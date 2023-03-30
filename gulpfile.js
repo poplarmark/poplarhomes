@@ -11,7 +11,7 @@ const rename = require("gulp-rename");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
-const jsPath ="src/assets/js/utils/hubspot-form-intercept.js";
+const jsPath ="src/assets/js/pages/mna/form_contact-us_V.0.1.0.js";
 const cssPath = "src/assets/scss/global.scss";
 
 function jsBundler() {
