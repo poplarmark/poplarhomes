@@ -3,7 +3,10 @@
     display: none !important;
     visibility: hidden !important;
 }
-
+a.btn-pagination.w--current {
+    background-color:#ff7300!important;
+    color:white!important;
+}
 /** Webflow end **/
 /** Slider start **/
 .w-slider {
