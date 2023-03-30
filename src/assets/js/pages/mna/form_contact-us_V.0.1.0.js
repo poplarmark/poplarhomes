@@ -16,7 +16,7 @@ Webflow.push(function () {
     const formAction = $form.attr("action"); // Form action (GET/POST)
     const formRedirect = $form.attr("data-redirect"); // Form redirect location
     const formData = $form.serialize(); // Form data
-
+    const formHeader = document.querySelector(".form_contact-us-wrapper > .modal_heading");
     const formID = $form.attr("id");
 
     // Set waiting text
@@ -42,6 +42,7 @@ Webflow.push(function () {
         .show() // Show success
         .siblings(".w-form-fail")
         .hide(); // Hide failure
+        formHeader.style.display = "none";
     })
     .fail((res) => {
       $form
