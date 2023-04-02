@@ -93,11 +93,13 @@ if (autocomplete_input) {
     console.log("ADDRESS:", autocomplete_component);
   });
 }
-
+console.log("Run: 1")
 $(document).ready(function () {
+  console.log("Run: 2")
   // Function for moving google autocomplete api to designated input field which is #pac_input
   autocompleteBindLocation();
   // Function for formatting phone
+  console.log("Run: 3")
   phoneFormat();
   // Form rent estimate event handler
   form_rent_estimate.addEventListener('submit', (event) => {
@@ -873,8 +875,9 @@ $(document).ready(function () {
     form_unserviced.reset();
     return false;
   });
+  console.log("Run: 4")
 });
-
+console.log("Run: 5")
 function addProperty(property, utm, token) {
   fetch("https://www.poplarhomes.com/graphql", {
     method: "POST",
