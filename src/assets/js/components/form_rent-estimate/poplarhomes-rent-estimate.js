@@ -1,4 +1,4 @@
-console.log("initialized: rent estimate");
+console.log("initialized: rent estimate V1");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -94,6 +94,8 @@ if (autocomplete_input) {
   });
 }
 console.log("Run: 1")
+// Function for moving google autocomplete api to designated input field which is #pac_input
+autocompleteBindLocation();
 $(document).ready(function () {
   console.log("Run: 2")
   // Function for formatting phone
@@ -874,8 +876,6 @@ $(document).ready(function () {
     return false;
   });
   console.log("Run: 4")
-  // Function for moving google autocomplete api to designated input field which is #pac_input
-  autocompleteBindLocation();
 });
 console.log("Run: 5")
 function addProperty(property, utm, token) {
@@ -1026,7 +1026,7 @@ function autocompleteBindLocation() {
     $(document).ready(function () {
       $("#onload-estimate-js").each(function () {
         $(this).insertAfter($(this).parent().find(".pac-container"));
-        // console.log("pac_mover loader");
+        console.log("pac_mover loader");
       });
     });
   });
