@@ -96,8 +96,6 @@ if (autocomplete_input) {
 console.log("Run: 1")
 $(document).ready(function () {
   console.log("Run: 2")
-  // Function for moving google autocomplete api to designated input field which is #pac_input
-  autocompleteBindLocation();
   // Function for formatting phone
   console.log("Run: 3")
   phoneFormat();
@@ -876,6 +874,8 @@ $(document).ready(function () {
     return false;
   });
   console.log("Run: 4")
+  // Function for moving google autocomplete api to designated input field which is #pac_input
+  autocompleteBindLocation();
 });
 console.log("Run: 5")
 function addProperty(property, utm, token) {
