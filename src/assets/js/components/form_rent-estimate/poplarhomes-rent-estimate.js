@@ -1,4 +1,4 @@
-console.log("initialized: rent estimate V1");
+console.log("initialized: rent estimate V.0.1.1");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -1016,25 +1016,17 @@ function registerOwner(user, property, utm) {
 function autocompleteBindLocation() {
   // move .pac-container inside #input_wrap-location
   window.addEventListener("load", function () {
-    var child = document.getElementsByClassName("pac-container")[0];
-    jQuery(child).detach().appendTo("#input_wrap-location");
+    let pasted_input = document.getElementById("pac_input");
+    let child = document.getElementsByClassName("pac-container")[0];
+    let destination = document.getElementById("input_wrap-location");
+    let fragment = document.createDocumentFragment();
+    fragment.appendChild(child);
+    destination.appendChild(fragment);
+    // prevent user from copy/pasting input values;
+    // user must only select value from autocomplete
+    pasted_input.onpaste = (e) => e.preventDefault();
     console.log("google.maps.api: binded");
   });
-
-  // for non-chrome based browswers, move loading of $this script at the end of .pac-container
-  window.addEventListener("load", function () {
-    $(document).ready(function () {
-      $("#onload-estimate-js").each(function () {
-        $(this).insertAfter($(this).parent().find(".pac-container"));
-        console.log("pac_mover loader");
-      });
-    });
-  });
-
-  // prevent user from copy/pasting input values;
-  // user must only select value from autocomplete
-  const pasted_input = document.getElementById("pac_input");
-  pasted_input.onpaste = (e) => e.preventDefault();
 }
 
 // Zipcode validation
