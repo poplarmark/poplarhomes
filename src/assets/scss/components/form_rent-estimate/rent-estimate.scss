@@ -1,81 +1,145 @@
 #property-type,
 #rent-estimate_input-bedroom,
 #rent-estimate_input-bathroom {
-    padding-right: 8px;
+  padding-right: 8px;
 }
 
 .error_message_zipcode {
-    position: absolute;
-    left: 0;
-    bottom: -2rem;
-    color: orange;
-    display: none;
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  color: orange;
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  #rent-estimate_button {
+    justify-self: stretch;
+  }
 }
 
 @media screen and (max-width: 991px) {
-    #input_wrap-location {
-        grid-column-start: span 2;
-        -ms-grid-column-span: 2;
-        grid-column-end: span 2;
-        -ms-grid-row: span 1;
-        grid-row-start: span 1;
-        -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-    }
+  #input_wrap-location {
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
 
-    #input_wrap-bedroom,
-    #input_wrap-bathroom {
-        -ms-grid-column: span 1;
-        grid-column-start: span 1;
-        -ms-grid-column-span: 1;
-        grid-column-end: span 1;
-        -ms-grid-row: span 1;
-        grid-row-start: span 1;
-        -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-    }
+  #input_wrap-bedroom,
+  #input_wrap-bathroom {
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
 
-    #rent-estimate_button {
-        margin-top: 1rem;
-        -ms-grid-row: span 1;
-        grid-row-start: span 1;
-        -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-        -ms-grid-column: span 3;
-        grid-column-start: span 3;
-        -ms-grid-column-span: 3;
-        grid-column-end: span 3;
-    }
+  #rent-estimate_button {
+    margin-top: 1rem;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column: span 3;
+    grid-column-start: span 3;
+    -ms-grid-column-span: 3;
+    grid-column-end: span 3;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  #form_rentestimate {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #input_wrap-location {
+    -ms-grid-column: span 3;
+    grid-column-start: span 3;
+    -ms-grid-column-span: 3;
+    grid-column-end: span 3;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
+  #input_wrap-zipcode {
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
+  #input_wrap-bathroom,
+  #input_wrap-bedroom {
+    -ms-grid-column: span 2;
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
+  #input_wrap-property-type {
+    -ms-grid-column: span 4;
+    grid-column-start: span 4;
+    -ms-grid-column-span: 4;
+    grid-column-end: span 4;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
+  #rent-estimate_button {
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column: span 4;
+    grid-column-start: span 4;
+    -ms-grid-column-span: 4;
+    grid-column-end: span 4;
+  }
 }
 
 @media screen and (max-width: 479px) {
+  .form_rentestimate-block {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .form_rentestimate-block {
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    }
+  #input_wrap-location,
+  #input_wrap-zipcode,
+  #input_wrap-property-type {
+    -ms-grid-column: span 2;
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+  }
 
-    #input_wrap-location,
-    #input_wrap-zipcode,
-    #input_wrap-property-type {
-        -ms-grid-column: span 2;
-        grid-column-start: span 2;
-        -ms-grid-column-span: 2;
-        grid-column-end: span 2;
-        -ms-grid-row: span 1;
-        grid-row-start: span 1;
-        -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-    }
-
-    #rent-estimate_button {
-        -ms-grid-row: span 1;
-        grid-row-start: span 1;
-        -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-        -ms-grid-column: span 2;
-        grid-column-start: span 2;
-        -ms-grid-column-span: 2;
-        grid-column-end: span 2;
-    }
+  #rent-estimate_button {
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column: span 2;
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    justify-self: center;
+  }
 }
