@@ -1,0 +1,47 @@
+/** Accordion start**/
+.accordion {
+    a {
+        color: #f80;
+        text-decoration: underline;
+    }
+}
+/** Accordion end**/
+/** Section Intro Banner start**/
+@media screen and (min-width: 1279px) {
+    .section {
+        &_intro-banner {
+            p {
+                max-width: 94%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }   
+    }
+}
+/** Section Intro Banner end**/
+/** Section Badge start**/
+@media screen and (min-width: 1220px) {
+    .section {
+        &_badge {
+            p {
+                max-width: 87%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }   
+    }
+}
+/** Section Badge end**/
+/** Section Device start**/
+@media screen and (min-width: 1279px) {
+    .section {
+        &_intro-banner {
+            p {
+                max-width: 94%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }   
+    }
+}
+/** Section Device end**/
