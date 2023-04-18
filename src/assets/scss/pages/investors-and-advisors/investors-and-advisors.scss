@@ -1,0 +1,17 @@
+@media screen and (min-width: 1310px) {
+    .news-and-updates {
+        div:last-child {
+            a:last-child {
+                .news-and-updates_content-title {
+                    max-width: 22rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1316px) {
+    .iap-outro_headers {
+        max-width: 43rem;
+    }
+}
