@@ -11,8 +11,8 @@ const rename = require("gulp-rename");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
-const jsPath ="src/assets/js/pages/mna/form_contact-us_V.0.1.0.js";
-const cssPath = "src/assets/scss/global.scss";
+const jsPath ="src/assets/js/utils/wf-custom-form-submit copy.js";
+const cssPath = "src/assets/scss/pages/rent-estimate/rent-estimate.scss";
 
 function jsBundler() {
   return src(jsPath)
@@ -36,3 +36,9 @@ function cssBundler() {
 
 exports.jsBundler = jsBundler;
 exports.cssBundler = cssBundler;
+
+/***
+ * 
+ *   <div id="geomarket-model"></div><script> var Webflow = Webflow || []; Webflow.push(function() { $.get('https://raw.githubusercontent.com/poplarmark/poplarhomes/main/dist/assets/models/geomarket', function(data) { $('#geomarket-model').append(data); }); });</script>
+ * 
+ ***/
