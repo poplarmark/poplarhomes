@@ -1,0 +1,126 @@
+.device {
+  &_laptop {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    font-size: 0;
+    perspective: 2400px;
+    perspective-origin: 50% 100%;
+    opacity: 0;
+    transition: 500ms opacity;
+    img {
+      display: block;
+      max-width: 100%;
+      backface-visibility: hidden;
+    }
+  }
+  &_laptop.is-loaded {
+    opacity: 1;
+  }
+  &_laptop.is-opened {
+    .device_part {
+      .is-top {
+        transform: translate3d(0, 0, -11px) rotateX(90deg) scale(1, 1); // Change for opening and closing
+      }
+    }
+  }
+  &_part {
+    display: inline-block;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: 50% 100%;
+    transition: 900ms;
+    .is-top {
+      transform-origin: 50% 0;
+      transform: translate3d(0, 0, -11px) rotateX(90deg);
+      transition: 900ms;
+    }
+    .is-bottom {
+      transform-origin: 50% 0;
+      transform: translate3d(0, 0, 0) rotateX(90deg);
+    }
+    .is-top,
+    .is-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &_part.is-top {
+    transform: translate3d(0, 0, 0) rotateX(-90deg);
+  }
+  &_part.is-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0) rotateX(-90deg);
+  }
+  &_cover {
+    position: relative;
+  }
+  &_screen {
+    display: block;
+    position: absolute;
+    top: 6%;
+    left: 1.5rem;
+    width: 97%;
+    border-radius: 6px;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 1px);
+    max-height: 100%;
+    overflow-y: scroll;
+    img {
+      width: 99%;
+    }
+  }
+  // &_floaters {
+  //   img {
+  //     position: absolute;
+  //     width: 100%;
+  //     z-index: 4;
+  //   }
+  // }
+}
+
+@media screen and (min-width: 1280px) {
+  .device {
+    &_screen {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .device {
+    &_screen {
+      left: 1.25rem;
+      width: 96%;
+      img {
+        width: 99%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .device {
+    &_screen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      left: 0;
+      img {
+        width: 95%;
+      }
+    }
+  }
+}
+
+// .device_laptop:hover .device_part.is-top {
+//   transform: translate3d(0, 0, 0) rotateX(0deg);
+// }
