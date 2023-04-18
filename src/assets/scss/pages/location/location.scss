@@ -1,4 +1,14 @@
 /** Section hero start **/
+@media screen and (min-width: 992px) {
+    .location-hero {
+        &_contents {
+            .section_subheader {
+                max-width: 32rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 991px) {
     .section_location {
         &-hero {
