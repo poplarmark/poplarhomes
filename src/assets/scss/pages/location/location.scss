@@ -37,6 +37,47 @@
 
 /** Section Badges end **/
 
+/** Section hero start **/
+@media screen and (max-width: 767px) {
+    .location-others {
+        &_city-wrapper {
+            & > div {
+                min-width: 220px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .location-others {
+        &_city-wrapper {
+            & > div {
+                min-width: 180px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .location-others {
+        &_city-wrapper {
+            & > div {
+                min-width: 140px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 325px) {
+    .location-others {
+        &_city-wrapper {
+            & > div {
+                min-width: 120px;
+            }
+        }
+    }
+}
+/** Section hero end **/
+
 /** Accordion start**/
 .accordion {
     .form_richtext {
