@@ -28,6 +28,7 @@ $color-orange-primary: #f80;
     border: 1px solid black;
     min-height: 56px;
     transition: all 0.3s ease;
+    background-color: white;
     &:focus {
       border: 1px solid $color-orange-primary;
     }
