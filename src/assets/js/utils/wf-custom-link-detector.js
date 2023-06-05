@@ -13,10 +13,10 @@ if (document.URL === "https://poplarhomes.com/homeowners/") {
 } else if (document.URL === "https://poplarhomes.com/residents/") {
   for_residents_underline.style.opacity = 1;
   for_residents_text.style.color = "#f80";
-} else if (document.URL === "https://poplarhomes.com/rentestimate/") {
+} else if (document.URL === "https://poplarhomes.com/rent-estimate/") {
   for_rentestimate_underline.style.opacity = 1;
   for_rentestimate_text.style.color = "#f80";
-} else if (document.URL === "https://poplarhomes.com/aboutpoplar/") {
+} else if (document.URL === "https://poplarhomes.com/about-poplar/") {
   for_aboutpoplar_underline.style.opacity = 1;
   for_aboutpoplar_text.style.color = "#f80";
 }
