@@ -5,7 +5,7 @@ const for_residents_text = document.querySelector(".navbar-main_link:nth-child(2
 const for_rentestimate_underline = document.getElementsByClassName("navbar-main_link-underline")[3];
 const for_rentestimate_text = document.querySelector(".navbar-main_link:nth-child(4) div:first-child");
 const for_aboutpoplar_underline = document.getElementsByClassName("navbar-main_link-underline")[4];
-const for_aboutpoplar_text = document.querySelector(".navbar-main_link:nth-child(4) div:first-child");
+const for_aboutpoplar_text = document.querySelector(".navbar-main_link:nth-child(5) div:first-child");
 
 if (document.URL === "https://poplarhomes.com/homeowners/") {
   for_homeowners_underline.style.opacity = 1;
