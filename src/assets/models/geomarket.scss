@@ -428,6 +428,18 @@ g {
   }
 }
 
+#Dayton {
+  @include city_base_style();
+  animation-delay: 0.34s;
+  &:hover {
+    fill: white;
+    filter: $drop_shadow;
+    & .rect {
+      display: block;
+    }
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
