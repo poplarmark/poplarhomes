@@ -428,6 +428,19 @@ g {
   }
 }
 
+#Oakland {
+  @include city_base_style();
+  animation-delay: 0.14s;
+  &:hover {
+    fill: white;
+    filter: $drop_shadow;
+
+    & .rect {
+      display: block;
+    }
+  }
+}
+
 #Dayton {
   @include city_base_style();
   animation-delay: 0.34s;
