@@ -1,6 +1,10 @@
 .location-licensing {
     &_paragraph * {
         font-size: inherit;
+        a {
+            color: #f80;
+            text-decoration: underline;
+        }
     }
 }
 /** Section hero start **/
