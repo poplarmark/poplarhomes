@@ -12,7 +12,7 @@ const rename = require("gulp-rename");
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
 const jsPath ="src/assets/js/utils/wf-custom-form-submit copy.js";
-const cssPath = "src/assets/scss/global.scss";
+const cssPath = "src/assets/scss/pages/location/location.scss";
 
 function jsBundler() {
   return src(jsPath)

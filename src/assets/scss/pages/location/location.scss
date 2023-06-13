@@ -6,6 +6,11 @@
                 max-width: 33rem;
             }
         }
+        .location-licensing {
+            &_paragraph * {
+                font-size: inherit;
+            }
+        }
     }
 }
 
