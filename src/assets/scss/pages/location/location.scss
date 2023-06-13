@@ -3,7 +3,9 @@
         font-size: inherit;
         a {
             color: #f80;
-            text-decoration: underline;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
