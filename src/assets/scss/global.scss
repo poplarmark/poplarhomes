@@ -44,7 +44,7 @@ a.btn-pagination.w--current {
         display: none;
     }
 }
-
+/** Navbar end **/
 /** Form start **/
 .form_input {
     &:focus-visible {
@@ -60,9 +60,19 @@ a.btn-pagination.w--current {
         }
     }
 }
-
 /** From end**/
-/** Navbar end **/
+/** Footer start **/
+.footer {
+    &-main {
+        &_parag {
+            a {
+                color: #f80;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/** Footer end **/
 /** Bootstrap specific start **/
 @font-face {
     font-family: "Glyphicons Halflings";
