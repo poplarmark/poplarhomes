@@ -52,6 +52,8 @@ $primary_color: #f80;
   }
   /*style items (options):*/
   &-items {
+    max-height: 500px;
+    overflow: auto;
     margin-top: -5px;
     position: absolute;
     border-radius: 0 0 5px 5px;
