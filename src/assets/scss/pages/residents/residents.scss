@@ -1,4 +1,10 @@
 /** Word rotation start **/
+.select {
+  &-items {
+    max-height: 500px;
+    overflow: auto;
+  }
+}
 .animation_word-rotation-mask {
   .animated_text {
     padding-top: 1rem;
