@@ -1,4 +1,5 @@
 $color-orange-primary: #ff7300;
+$color-dark-primary: #383f4a;
 
 .geomarket-map_container {
   padding: 3.2rem 0.8rem;
@@ -24,6 +25,68 @@ $color-orange-primary: #ff7300;
       animation: none;
       transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      .data-tooltip {
+        opacity: 1;
+        pointer-events: auto;
+        left: 50%;
+        -webkit-transform: translateX(-47%);
+        -moz-transform: translateX(-47%);
+        -ms-transform: translateX(-47%);
+        -o-transform: translateX(-47%);
+        transform: translateX(-47%);
+      }
+    }
+    .data-tooltip {
+      background: $color-dark-primary;
+      bottom: 100%;
+      color: #fff;
+      display: block;
+      font-size: 0.875rem;
+      left: -28px;
+      margin-bottom: 15px;
+      opacity: 0;
+      padding: 0.55rem 1rem;
+      pointer-events: none;
+      position: absolute;
+      min-width: 100%;
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      transform: translateY(10px);
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -ms-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      /* This bridges the gap so you can mouse into the data-tooltip without it disappearing */
+      &:before {
+        bottom: -20px;
+        content: " ";
+        display: block;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+      /* CSS Triangles - see Trevor's post */
+      &:after {
+        border-left: solid transparent 10px;
+        border-right: solid transparent 10px;
+        border-top: solid $color-dark-primary 10px;
+        bottom: -10px;
+        content: " ";
+        height: 0;
+        left: 50%;
+        margin-left: -13px;
+        position: absolute;
+        width: 0;
+        }
     }
   }
   .state-nevada {
@@ -88,7 +151,7 @@ $color-orange-primary: #ff7300;
   }
   .state-carolina-north {
     top: 55%;
-    left: 85%
+    left: 85%;
   }
   .state-carolina-south {
     top: 61%;
@@ -106,4 +169,13 @@ $color-orange-primary: #ff7300;
   100% {
     box-shadow: 0 0 0 0 rgb(254 252 242 / 0%);
   }
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .point .data-tooltip {
+  display: none;
+}
+
+.lte8 .point:hover .data-tooltip {
+  display: block;
 }
