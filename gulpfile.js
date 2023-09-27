@@ -11,8 +11,8 @@ const rename = require("gulp-rename");
 // Edit working path here
 // const jsPath = 'src/assets/js/**/*.js';
 // const cssPath = 'src/assets/css/**/*.css';
-const jsPath ="src/assets/js/utils/wf-custom-form-submit copy.js";
-const cssPath = "src/assets/models/geomarket.scss";
+const jsPath ="src/assets/models/geomarket-map.js";
+const cssPath = "src/assets/models/geomarket-map.scss";
 
 function jsBundler() {
   return src(jsPath)

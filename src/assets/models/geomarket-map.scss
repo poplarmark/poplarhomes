@@ -1,0 +1,109 @@
+$color-orange-primary: #ff7300;
+
+.geomarket-map_container {
+  padding: 3.2rem 0.8rem;
+  position: relative;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+  .point {
+    cursor: pointer;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: $color-orange-primary;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 rgba($color-orange-primary, 0.4);
+    animation: pulse 3s infinite;
+    &:hover {
+      animation: none;
+      transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+  .state-nevada {
+    top: 40%;
+    left: 22%;
+  }
+  .state-colorado {
+    top: 47%;
+    left: 40%;
+  }
+  .state-texas {
+    top: 72%;
+    left: 50%;
+  }
+  .state-arizona {
+    top: 60%;
+    left: 29%;
+  }
+  .state-california {
+    top: 46%;
+    left: 16%;
+  }
+  .state-oregon {
+    top: 24%;
+    left: 19%;
+  }
+  .state-washington {
+    top: 13%;
+    left: 21%;
+  }
+  .state-missouri {
+    top: 49%;
+    left: 61%;
+  }
+  .state-wisconsin {
+    top: 28%;
+    left: 65%;
+  }
+  .state-ohio {
+    top: 41%;
+    left: 77%;
+  }
+  .state-illinois {
+    top: 43%;
+    left: 67%;
+  }
+  .state-michigan {
+    top: 32%;
+    left: 73%;
+  }
+  .state-indiana {
+    top: 42%;
+    left: 72%;
+  }
+  .state-maryland {
+    top: 42%;
+    left: 87%;
+  }
+  .state-tennessee {
+    top: 57%;
+    left: 72%;
+  }
+  .state-carolina-north {
+    top: 55%;
+    left: 85%
+  }
+  .state-carolina-south {
+    top: 61%;
+    left: 82%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(254 252 242 / 50%);
+  }
+  70% {
+    box-shadow: 0 0 0 25px rgb(254 252 242 / 0%);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(254 252 242 / 0%);
+  }
+}
