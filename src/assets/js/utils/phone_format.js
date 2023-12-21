@@ -27,7 +27,7 @@ function phoneFormat() {
         phone_input.substring(0, 3) +
         ") " +
         phone_input.substring(3, 6) +
-        "-" +
+        "-" + 
         phone_input.substring(6, 10);
     }
     this.value = phone_input;
