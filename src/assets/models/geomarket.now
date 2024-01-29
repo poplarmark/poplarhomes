@@ -127,10 +127,21 @@
 </g>
 </svg>
 <script>
+// clicks
 var domain_protocol = window.location.protocol;
 var domain_host = window.location.hostname;
 var domain_current = domain_protocol + "//" + domain_host;
 document.getElementById("anchor_washington").onclick = function () {
 	window.open(domain_current+"/locations/bowie-property-management", "_blank");
 };
+</script>
+<script>
+// hovers
+document.getElementById('anchor_washington').addEventListener('mouseover', function () {
+    document.getElementById('pm_block_washington').style.display = 'block';
+});
+
+document.getElementById('anchor_washington').addEventListener('mouseout', function () {
+    document.getElementById('pm_block_washington').style.display = 'none';
+});
 </script>
