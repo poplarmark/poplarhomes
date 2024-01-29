@@ -196,6 +196,9 @@ document.getElementById('anchor_missouri').addEventListener('mouseover', functio
 		hoverCount = 0; // Reset the hover count
     }
 });
+document.getElementById('pm_block_missouri').addEventListener('mouseover', function () {
+    document.getElementById('pm_block_missouri').classList.remove('visible');
+});
 document.getElementById('anchor_carolina_north').addEventListener('mouseover', function () {
     document.getElementById('pm_block_north_carolina').style.display = 'block';
 });
