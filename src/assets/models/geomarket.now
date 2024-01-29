@@ -188,7 +188,7 @@ document.getElementById('anchor_texas').addEventListener('mouseout', function ()
 });
 document.getElementById('anchor_missouri').addEventListener('mouseover', function () {
     hoverCount++;
-    if (hoverCount === 2) {
+    if (hoverCount >= 2) {
         document.getElementById('pm_block_missouri').classList.remove('visible');
     }
 });
@@ -222,5 +222,12 @@ document.getElementById('anchor_maryland').addEventListener('mouseover', functio
 
 document.getElementById('anchor_maryland').addEventListener('mouseout', function () {
     document.getElementById('pm_block_maryland').style.display = 'none';
+});
+document.getElementById('anchor_tennessee').addEventListener('mouseover', function () {
+    document.getElementById('pm_block_tennessee').style.display = 'block';
+});
+
+document.getElementById('anchor_tennessee').addEventListener('mouseout', function () {
+    document.getElementById('pm_block_tennessee').style.display = 'none';
 });
 </script>
