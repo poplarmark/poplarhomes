@@ -190,6 +190,7 @@ document.getElementById('anchor_missouri').addEventListener('mouseover', functio
     hoverCount++;
     if (hoverCount === 2) {
         document.getElementById('pm_block_missouri').classList.remove('visible');
+		hoverCount = 0; // Reset the hover count
     }
 });
 document.getElementById('anchor_missouri').addEventListener('mouseout', function () {
