@@ -15,6 +15,8 @@
 	.st9{font-size:24px;}
 	.st10{font-family:'Eina03,sans-serif';}
 	.st11{font-size:10px;}
+
+	#pm_block_missouri.visible {display: block;}
 </style>
 <g id="Map">
 	<path class="st0" d="M1191.2,500.9l1.4-0.6L1191.2,500.9z"/>
@@ -127,6 +129,7 @@
 </g>
 </svg>
 <script>
+let hoverCount = 0;
 // hovers
 document.getElementById('anchor_washington').addEventListener('mouseover', function () {
     document.getElementById('pm_block_washington').style.display = 'block';
@@ -184,11 +187,13 @@ document.getElementById('anchor_texas').addEventListener('mouseout', function ()
     document.getElementById('pm_block_texas').style.display = 'none';
 });
 document.getElementById('anchor_missouri').addEventListener('mouseover', function () {
-    document.getElementById('pm_block_missouri').style.display = 'block';
+    hoverCount++;
+    if (hoverCount === 2) {
+        document.getElementById('pm_block_missouri').classList.remove('visible');
+    }
 });
-
 document.getElementById('anchor_missouri').addEventListener('mouseout', function () {
-    document.getElementById('pm_block_missouri').style.display = 'none';
+    document.getElementById('pm_block_missouri').classList.add('visible');
 });
 document.getElementById('anchor_carolina_north').addEventListener('mouseover', function () {
     document.getElementById('pm_block_north_carolina').style.display = 'block';
