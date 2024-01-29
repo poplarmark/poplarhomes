@@ -186,17 +186,11 @@ document.getElementById('anchor_texas').addEventListener('mouseover', function (
 document.getElementById('anchor_texas').addEventListener('mouseout', function () {
     document.getElementById('pm_block_texas').style.display = 'none';
 });
-document.getElementById('anchor_missouri').addEventListener('mouseout', function () {
-	if (hoverCount === 1) {
-        document.getElementById('pm_block_missouri').classList.add('visible');
-    }
-});
 document.getElementById('anchor_missouri').addEventListener('mouseover', function () {
-    hoverCount++;
-    if (hoverCount === 2) {
-        document.getElementById('pm_block_missouri').classList.remove('visible');
-		hoverCount = 0; // Reset the hover count
-    }
+	document.getElementById('pm_block_missouri').classList.add('visible');
+});
+document.getElementById('pm_block_missouri').addEventListener('mouseout', function () {
+    document.getElementById('pm_block_missouri').classList.remove('visible');
 });
 document.getElementById('anchor_carolina_north').addEventListener('mouseover', function () {
     document.getElementById('pm_block_north_carolina').style.display = 'block';
