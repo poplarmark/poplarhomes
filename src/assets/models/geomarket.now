@@ -140,49 +140,42 @@ document.getElementById('anchor_washington').addEventListener('mouseout', functi
 document.getElementById('anchor_oregon').addEventListener('mouseover', function () {
     document.getElementById('pm_block_oregon').style.display = 'block';
 });
-
 document.getElementById('anchor_oregon').addEventListener('mouseout', function () {
     document.getElementById('pm_block_oregon').style.display = 'none';
 });
 document.getElementById('anchor_california_north').addEventListener('mouseover', function () {
     document.getElementById('pm_block_california').style.display = 'block';
 });
-
 document.getElementById('anchor_california_north').addEventListener('mouseout', function () {
     document.getElementById('pm_block_california').style.display = 'none';
 });
 document.getElementById('anchor_california_south').addEventListener('mouseover', function () {
     document.getElementById('pm_block_california').style.display = 'block';
 });
-
 document.getElementById('anchor_california_south').addEventListener('mouseout', function () {
     document.getElementById('pm_block_california').style.display = 'none';
 });
 document.getElementById('anchor_nevada').addEventListener('mouseover', function () {
     document.getElementById('pm_block_nevada').style.display = 'block';
 });
-
 document.getElementById('anchor_nevada').addEventListener('mouseout', function () {
     document.getElementById('pm_block_nevada').style.display = 'none';
 });
 document.getElementById('anchor_arizona').addEventListener('mouseover', function () {
     document.getElementById('pm_block_arizona').style.display = 'block';
 });
-
 document.getElementById('anchor_arizona').addEventListener('mouseout', function () {
     document.getElementById('pm_block_arizona').style.display = 'none';
 });
 document.getElementById('anchor_colorado').addEventListener('mouseover', function () {
     document.getElementById('pm_block_colorado').style.display = 'block';
 });
-
 document.getElementById('anchor_colorado').addEventListener('mouseout', function () {
     document.getElementById('pm_block_colorado').style.display = 'none';
 });
 document.getElementById('anchor_texas').addEventListener('mouseover', function () {
     document.getElementById('pm_block_texas').style.display = 'block';
 });
-
 document.getElementById('anchor_texas').addEventListener('mouseout', function () {
     document.getElementById('pm_block_texas').style.display = 'none';
 });
@@ -196,48 +189,39 @@ document.getElementById('anchor_missouri').addEventListener('mouseover', functio
 		hoverCount = 0; // Reset the hover count
     }
 });
-document.getElementById('pm_block_missouri').addEventListener('mouseout', function () {
-    document.getElementById('pm_block_missouri').classList.remove('visible');
-});
 document.getElementById('anchor_carolina_north').addEventListener('mouseover', function () {
     document.getElementById('pm_block_north_carolina').style.display = 'block';
 });
-
 document.getElementById('anchor_carolina_north').addEventListener('mouseout', function () {
     document.getElementById('pm_block_north_carolina').style.display = 'none';
 });
 document.getElementById('anchor_carolina_south').addEventListener('mouseover', function () {
     document.getElementById('pm_block_south_carolina').style.display = 'block';
 });
-
 document.getElementById('anchor_carolina_south').addEventListener('mouseout', function () {
     document.getElementById('pm_block_south_carolina').style.display = 'none';
 });
 document.getElementById('anchor_ohio').addEventListener('mouseover', function () {
     document.getElementById('pm_block_ohio').style.display = 'block';
 });
-
 document.getElementById('anchor_ohio').addEventListener('mouseout', function () {
     document.getElementById('pm_block_ohio').style.display = 'none';
 });
 document.getElementById('anchor_maryland').addEventListener('mouseover', function () {
     document.getElementById('pm_block_maryland').style.display = 'block';
 });
-
 document.getElementById('anchor_maryland').addEventListener('mouseout', function () {
     document.getElementById('pm_block_maryland').style.display = 'none';
 });
 document.getElementById('anchor_tennessee').addEventListener('mouseover', function () {
     document.getElementById('pm_block_tennessee').style.display = 'block';
 });
-
 document.getElementById('anchor_tennessee').addEventListener('mouseout', function () {
     document.getElementById('pm_block_tennessee').style.display = 'none';
 });
 document.getElementById('anchor_illinois').addEventListener('mouseover', function () {
     document.getElementById('pm_block_illinois').style.display = 'block';
 });
-
 document.getElementById('anchor_illinois').addEventListener('mouseout', function () {
     document.getElementById('pm_block_illinois').style.display = 'none';
 });
