@@ -230,4 +230,11 @@ document.getElementById('anchor_tennessee').addEventListener('mouseover', functi
 document.getElementById('anchor_tennessee').addEventListener('mouseout', function () {
     document.getElementById('pm_block_tennessee').style.display = 'none';
 });
+document.getElementById('anchor_illinois').addEventListener('mouseover', function () {
+    document.getElementById('pm_block_illinois').style.display = 'block';
+});
+
+document.getElementById('anchor_illinois').addEventListener('mouseout', function () {
+    document.getElementById('pm_block_illinois').style.display = 'none';
+});
 </script>
