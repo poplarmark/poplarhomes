@@ -128,3 +128,11 @@
 	<text transform="matrix(1 0 0 1 258.5943 183.5323)" class="st7 st8 st9">OR</text>
 </g>
 </svg>
+<script>
+var domain_protocol = window.location.protocol;
+var domain_host = window.location.hostname;
+var domain_current = domain_protocol + "//" + domain_host;
+document.getElementById("anchor_washington").onclick = function () {
+	window.open(domain_current+"/locations/bowie-property-management", "_blank");
+};
+</script>
