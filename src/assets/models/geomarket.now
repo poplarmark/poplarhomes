@@ -3,19 +3,21 @@
 <svg version="1.1" id="Geomarket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1519.7 872.2" style="enable-background:new 0 0 1519.7 872.2;" xml:space="preserve">
 <style type="text/css">
+	text {z-index: 10;pointer-events: none;}
 	.st0{fill:none;}
 	.st1{fill:#F0A700;}
 	.st2{fill:#E2CCA3;}
 	.st3{fill:#E3D0A4;}
 	.st4{fill:#E1CDA5;}
 	.st5{fill:#A7A7BB;}
-	.st6{fill:#F77500;}
+	.st6{fill:#F77500;z-index: 20;}
+	.st6:hover{fill: #f80;}
 	.st7{fill:#FFFFFF;}
-	.st8{font-family:inherit;}
+	.st8{font-family:inherit;font-weight: 700;}
 	.st9{font-size:24px;}
 	.st10{font-family:inherit;}
 	.st11{font-size:10px;}
-
+	.st6,text {cursor: pointer;transition: all 0.25s;}
 	#pm_block_missouri.visible {display: block;}
 </style>
 <g id="Map">
