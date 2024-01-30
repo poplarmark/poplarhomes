@@ -11,9 +11,9 @@
 	.st5{fill:#A7A7BB;}
 	.st6{fill:#F77500;}
 	.st7{fill:#FFFFFF;}
-	.st8{font-family:'Eina03,sans-serif';}
+	.st8{font-family:inherit;}
 	.st9{font-size:24px;}
-	.st10{font-family:'Eina03,sans-serif';}
+	.st10{font-family:inherit;}
 	.st11{font-size:10px;}
 
 	#pm_block_missouri.visible {display: block;}
