@@ -187,10 +187,17 @@ document.getElementById('anchor_missouri').addEventListener('mouseover', functio
 });
 document.getElementById('anchor_missouri').addEventListener('mouseover', function () {
     hoverCount++;
+	console.log(hoverCount);
     if (hoverCount === 2) {
-		console.log(hoverCount);
         document.getElementById('pm_block_missouri').classList.remove('visible');
 		hoverCount = 0; // Reset the hover count
+    }
+});
+document.getElementById('pm_block_missouri').addEventListener('mouseout', function () {
+	const classToShow = 'visible';
+    // Remove the class "visible" from the element on mouseout
+    if (event.target.classList.contains(classToShow)) {
+        event.target.classList.remove(classToShow);
     }
 });
 document.getElementById('anchor_carolina_north').addEventListener('mouseover', function () {
@@ -229,15 +236,5 @@ document.getElementById('anchor_illinois').addEventListener('mouseover', functio
 document.getElementById('anchor_illinois').addEventListener('mouseout', function () {
     document.getElementById('pm_block_illinois').style.display = 'none';
 });
-//detect if other elements are hovered that are not overflowed
-document.addEventListener('mouseover', function (event) {
-    const pm_block_overflowed = document.querySelector('.overflow_block');
 
-    // Check if the hovered element does not have the specified class
-    if (!event.target.classList.contains('overflow_block')) {
-        // Handle the case when elements other than the one with the specified class are hovered
-		console.log('Hovered element does not have the class .overflow_block');
-		hoverCount === 2;
-    }
-});
 </script>
