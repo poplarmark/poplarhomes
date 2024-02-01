@@ -132,12 +132,12 @@
 </g>
 </svg>
 <script>
-// hovers
+// Globals
+const classToShow = 'visible';
+const locationsPmBlockElements = document.querySelectorAll('.locations_pm-block');
+// hover events
 document.addEventListener('mouseover', function (event) {
-    const classToShow = 'visible';
     const toggleElements = document.querySelectorAll('.toggle-element');
-    const locationsPmBlockElements = document.querySelectorAll('.locations_pm-block');
-
     // Check if the hovered element has the specified class
     if (event.target.classList.contains('toggle-element')) {
         // Hide all locations_pm-block elements
@@ -153,5 +153,12 @@ document.addEventListener('mouseover', function (event) {
             specificLocationsPmBlock.classList.add(classToShow);
         }
     }
+});
+// remove Property Manager popups when clicking
+document.addEventListener('click', function () {
+    // Remove the class "visible" from all locations_pm-block elements
+    locationsPmBlockElements.forEach(function (element) {
+        element.classList.remove(classToShow);
+    });
 });
 </script>
