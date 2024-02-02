@@ -21,30 +21,7 @@ a.btn-pagination.w--current {
         height: 1.25em;
     }
 }
-
 /** Slider end **/
-/** Navbar start **/
-.navbar-main_link {
-    &-underline {
-        transform: translateX(-50%) scale3d(0.75, 1, 1) !important;
-        transition: all 120ms ease;
-    }
-    &:hover &-underline {
-        transform: translateX(-50%) scale3d(1.2, 1, 1) !important;
-    }
-}
-
-.navbar-main_link.w--current .navbar-main_link-underline,
-.navbar-main_link:hover .navbar-main_link-underline {
-    opacity: 100
-}
-
-@media screen and (max-width: 767px) {
-    .navbar-main_link-underline {
-        display: none;
-    }
-}
-/** Navbar end **/
 /** Form start **/
 .form_input {
     &:focus-visible {
