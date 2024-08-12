@@ -1,4 +1,4 @@
-console.log("initialized: rent estimate V.2");
+console.log("initialized: rent estimate V.0.1.1");
 // Modals
 const wf_form_main = document.getElementById("serviced-block_trigger-layer");
 const wf_form_unserviced = document.getElementById("unserviced-block_trigger-layer");
@@ -14,14 +14,35 @@ const bedroom_count = document.getElementById("rent-estimate_input-bedroom");
 const bathroom_count = document.getElementById("rent-estimate_input-bathroom");
 const rent_estimate_button = document.getElementById("rent-estimate_button");
 // Form serviced form fields
-const serviced_input_firstname = document.getElementById("serviced_input-firstname");
-const serviced_input_lastname = document.getElementById("serviced_input-lastname");
-const serviced_input_email = document.getElementById("serviced_input-email");
-const serviced_input_phone = document.getElementById("serviced_input-phone");
+const serviced_input_location = document.getElementById("re-serviced_property_address");
+const serviced_input_zipcode = document.getElementById("re-serviced_zipcode");
+const serviced_input_state = document.getElementById("re-serviced_state");
+const serviced_input_city = document.getElementById("re-serviced_city");
+const serviced_input_street = document.getElementById("re-serviced_street");
+const serviced_input_bedroom = document.getElementById("re-serviced_number_of_bedroom");
+const serviced_input_bathroom = document.getElementById("re-serviced_number_of_bathroom");
+const serviced_input_firstname = document.getElementById("re-serviced_firstname");
+const serviced_input_lastname = document.getElementById("re-serviced_lastname");
+const serviced_input_email = document.getElementById("re-serviced_email");
+const serviced_input_phone = document.getElementById("re-serviced_phone");
+const serviced_input_property_type = document.getElementById("re-serviced_property_type");
+const serviced_input_unit_type = document.getElementById('re-serviced_unit_type__c');
 // Form unserviced form fields
-const unserviced_input_fullname = document.getElementById("unserviced_input-fullname");
-const unserviced_input_email = document.getElementById("unserviced_input-email");
+const unserviced_input_location = document.getElementById("re-unserviced_property_address");
+const unserviced_input_zipcode = document.getElementById("re-unserviced_zipcode");
+const unserviced_input_state = document.getElementById("re-unserviced_state");
+const unserviced_input_city = document.getElementById("re-unserviced_city");
+const unserviced_input_street = document.getElementById("re-unserviced_street");
+const unserviced_input_bedroom = document.getElementById("re-unserviced_number_of_bedroom");
+const unserviced_input_bathroom = document.getElementById("re-unserviced_number_of_bathroom");
+const unserviced_input_fullname = document.getElementById("re-unserviced_input-fullname");
+const unserviced_input_email = document.getElementById("re-unserviced_input-email");
+const unserviced_input_property_type = document.getElementById("re-unserviced_property_type");
 const unserviced_map = document.getElementById("unserviced_map");
+// Close buttons
+const close_button_modal_serviced = document.getElementById("button_close-modal_serviced");
+const close_button_form_serviced = document.getElementById("button_close-form_serviced");
+
 // Google API autocomplete restriction options
 const autocomplete_options = {
   componentRestrictions: { country: "us" },
@@ -77,6 +98,32 @@ if (autocomplete_input) {
         zipcode_error_message.style.display = "block";
       }
     });
+
+      // Mirror the value to serviced input values
+      serviced_input_location.value = autocomplete_input.value;
+      unserviced_input_location.value = autocomplete_input.value;
+      serviced_input_zipcode.value = autocomplete_component.zip;
+      unserviced_input_zipcode.value = autocomplete_component.zip;
+      serviced_input_street.value = autocomplete_component.route+autocomplete_component.street_no;
+      unserviced_input_street.value = autocomplete_component.route+autocomplete_component.street_no;
+
+      // Create a new option element for city dropdown
+      const new_option_city = document.createElement('option');
+      new_option_city.value = autocomplete_component.city;
+      new_option_city.textContent = autocomplete_component.city;
+      new_option_city.selected = true; // Set the option as selected
+      // Add the new option to the select element
+      serviced_input_city.appendChild(new_option_city);
+      unserviced_input_city.appendChild(new_option_city);
+
+      // Create a new option element for state dropdown
+      const new_option_state = document.createElement('option');
+      new_option_state.value = autocomplete_component.state;
+      new_option_state.textContent = autocomplete_component.state;
+      new_option_state.selected = true; // Set the option as selected
+      // Add the new option to the select element
+      serviced_input_state.appendChild(new_option_state);
+      unserviced_input_state.appendChild(new_option_state);
 
     console.log("ADDRESS:", autocomplete_component);
   });
@@ -717,6 +764,36 @@ $(document).ready(function () {
       ];
       //Check if a value exists in the cities array
       const isLocalPartner = cities.find((city) => city === autocomplete_component.city);
+     // Mirror property_type values
+      const property_type_value = property_type.value;
+      console.log("property_type_value: ", property_type_value);
+      serviced_input_property_type.value = property_type_value;
+      unserviced_input_property_type.value = property_type_value;
+      console.log("serviced_property_type_value:", serviced_input_property_type.value);
+    /* const serviced_input_unit_type_value = serviced_input_unit_type.value;
+     * if (property_type_value === "Townhouse") {
+     *   // Create a new option element for state dropdown
+     *   const new_option_unite_type = document.createElement('option');
+     *   new_option_unite_type.value = "Unit";
+     *   new_option_unite_type.textContent = "Unit";
+     *   new_option_unite_type.selected = true; // Set the option as selected
+     *   // Add the new option to the select element
+     *  serviced_input_unit_type.appendChild(new_option_unite_type);
+     * }
+     */
+      // Mirror bedroom count values
+      const bedroom_count_value = bedroom_count.value;
+      console.log("bedroom_count_value: ", bedroom_count_value);
+      serviced_input_bedroom.value = bedroom_count_value;
+      unserviced_input_bedroom.value = bedroom_count_value;
+      console.log("serviced_input_bedroom_value: ",serviced_input_bedroom.value);
+      // Mirror bathroom count values
+      const bathroom_count_value = bathroom_count.value;
+      console.log("bathroom_count_value: ", bathroom_count_value);
+      serviced_input_bathroom.value = bathroom_count_value;
+      unserviced_input_bathroom.value = bathroom_count_value;
+      console.log("serviced_input_bathroom_value: ",serviced_input_bathroom.value);
+
       // Update content to Local Partners if under this city
       if (autocomplete_component?.state &&
         (autocomplete_component.state === "TX" ||
@@ -749,9 +826,12 @@ $(document).ready(function () {
       // Open unserviced modal
       wf_form_unserviced.style.display = "block";
       // return false;
+      this.style.display = "block";
       }
-  });
+    });
 });
+
+
 // Function for moving google autocomplete to input field id=pac_input
 function autocompleteBindLocation() {
   // move .pac-container inside #input_wrap-location
@@ -769,7 +849,11 @@ function autocompleteBindLocation() {
   });
 }
 
+// Modal buttons
+
+
 // Zipcode validation
 function checkZip(value) {
   return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(value);
 }
+
